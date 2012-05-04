@@ -106,8 +106,8 @@
 		6F6FB24115539E57000AE8EC /* OneHour4Me */ = {
 			isa = PBXGroup;
 			children = (
-				6F6FB24A15539E57000AE8EC /* MEAppDelegate.h */,
-				6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */,
+				6F6FB26E1553A209000AE8EC /* Classes */,
+				6F6FB2701553A235000AE8EC /* Resources */,
 				6F6FB24215539E57000AE8EC /* Supporting Files */,
 			);
 			path = OneHour4Me;
@@ -118,7 +118,6 @@
 			children = (
 				6F6FB24315539E57000AE8EC /* OneHour4Me-Info.plist */,
 				6F6FB24415539E57000AE8EC /* InfoPlist.strings */,
-				6F6FB24715539E57000AE8EC /* main.m */,
 				6F6FB24915539E57000AE8EC /* OneHour4Me-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -141,6 +140,23 @@
 				6F6FB25C15539E57000AE8EC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6F6FB26E1553A209000AE8EC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FB24A15539E57000AE8EC /* MEAppDelegate.h */,
+				6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */,
+				6F6FB24715539E57000AE8EC /* main.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		6F6FB2701553A235000AE8EC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,6 +429,7 @@
 				6F6FB26615539E57000AE8EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F6FB26715539E57000AE8EC /* Build configuration list for PBXNativeTarget "OneHour4MeTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +438,7 @@
 				6F6FB26915539E57000AE8EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
