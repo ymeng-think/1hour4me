@@ -1,0 +1,10 @@
+Question 1 - May 4, 2012
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After I updated to Xcode 4.2, I can no longer release anything. When I start typing "release" it suggest "release" but with a red line across.
+If I write it anyway it shows an error and displays these two messages:
+'release' is unavailable: not available in automatic reference counting mode Automatic Reference Counting forbids explicit message send of 'release'
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+You need to turn off Automatic Reference Counting. You do this by clicking on your project in the navigator (the top item in the finder-like thing on the left), then click on your 
+target, select "Build Settings" and turn off the option "Objective-C Automatic Reference Counting" (you can use the search field on the upper right to search it).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

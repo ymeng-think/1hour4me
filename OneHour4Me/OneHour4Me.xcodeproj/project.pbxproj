@@ -18,6 +18,10 @@
 		6F6FB25615539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
 		6F6FB25E15539E57000AE8EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FB25C15539E57000AE8EC /* InfoPlist.strings */; };
 		6F6FB26115539E57000AE8EC /* OneHour4MeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */; };
+		6F6FB2721553F480000AE8EC /* blackboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FB2711553F480000AE8EC /* blackboard@2x.png */; };
+		6FEBCABF1553F57B004FC1B1 /* welcome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCABE1553F57B004FC1B1 /* welcome.xib */; };
+		6FEBCAC31553F775004FC1B1 /* MEWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */; };
+		6FEBCAC91553FD12004FC1B1 /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC81553FD12004FC1B1 /* blackboard.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,11 @@
 		6F6FB25D15539E57000AE8EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F6FB25F15539E57000AE8EC /* OneHour4MeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneHour4MeTests.h; sourceTree = "<group>"; };
 		6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneHour4MeTests.m; sourceTree = "<group>"; };
+		6F6FB2711553F480000AE8EC /* blackboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blackboard@2x.png"; path = "../blackboard@2x.png"; sourceTree = "<group>"; };
+		6FEBCABE1553F57B004FC1B1 /* welcome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = welcome.xib; sourceTree = "<group>"; };
+		6FEBCAC11553F775004FC1B1 /* MEWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEWelcomeViewController.h; sourceTree = "<group>"; };
+		6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWelcomeViewController.m; sourceTree = "<group>"; };
+		6FEBCAC81553FD12004FC1B1 /* blackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +154,7 @@
 		6F6FB26E1553A209000AE8EC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6FEBCAC01553F72E004FC1B1 /* Controllers */,
 				6F6FB24A15539E57000AE8EC /* MEAppDelegate.h */,
 				6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */,
 				6F6FB24715539E57000AE8EC /* main.m */,
@@ -155,8 +165,36 @@
 		6F6FB2701553A235000AE8EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6FEBCABB1553F4EC004FC1B1 /* Images */,
+				6FEBCABD1553F50A004FC1B1 /* Xibs */,
 			);
-			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6FEBCABB1553F4EC004FC1B1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6FEBCAC81553FD12004FC1B1 /* blackboard.png */,
+				6F6FB2711553F480000AE8EC /* blackboard@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		6FEBCABD1553F50A004FC1B1 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				6FEBCABE1553F57B004FC1B1 /* welcome.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		6FEBCAC01553F72E004FC1B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6FEBCAC11553F775004FC1B1 /* MEWelcomeViewController.h */,
+				6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F6FB24615539E57000AE8EC /* InfoPlist.strings in Resources */,
+				6F6FB2721553F480000AE8EC /* blackboard@2x.png in Resources */,
+				6FEBCABF1553F57B004FC1B1 /* welcome.xib in Resources */,
+				6FEBCAC91553FD12004FC1B1 /* blackboard.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +309,7 @@
 			files = (
 				6F6FB24815539E57000AE8EC /* main.m in Sources */,
 				6F6FB24C15539E57000AE8EC /* MEAppDelegate.m in Sources */,
+				6FEBCAC31553F775004FC1B1 /* MEWelcomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +399,7 @@
 		6F6FB26515539E57000AE8EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OneHour4Me/OneHour4Me-Prefix.pch";
 				INFOPLIST_FILE = "OneHour4Me/OneHour4Me-Info.plist";
@@ -368,6 +411,7 @@
 		6F6FB26615539E57000AE8EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OneHour4Me/OneHour4Me-Prefix.pch";
 				INFOPLIST_FILE = "OneHour4Me/OneHour4Me-Info.plist";

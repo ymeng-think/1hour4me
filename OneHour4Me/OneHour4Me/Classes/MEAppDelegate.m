@@ -7,6 +7,7 @@
 //
 
 #import "MEAppDelegate.h"
+#import "MEWelcomeViewController.h"
 
 @implementation MEAppDelegate
 
@@ -15,8 +16,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    MEWelcomeViewController *welcomeController = [[MEWelcomeViewController alloc] initWithNibName:@"welcome" bundle:[NSBundle mainBundle]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeController];
+    navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    [self.window addSubview:navigationController.view];
+    
+    [navigationController release];
+    [welcomeController release];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
