@@ -14,10 +14,14 @@
 
 @implementation MEWelcomeViewController
 
+@synthesize header;
+
+static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        cursiveFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
     }
     return self;
 }
@@ -26,6 +30,7 @@
     [super viewDidLoad];
 	
     self.navigationController.navigationBar.hidden = YES;
+    self.header.font = cursiveFont;
 }
 
 - (void)viewDidUnload {

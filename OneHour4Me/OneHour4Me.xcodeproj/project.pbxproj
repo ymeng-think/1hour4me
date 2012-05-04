@@ -21,7 +21,9 @@
 		6FEBCABF1553F57B004FC1B1 /* welcome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCABE1553F57B004FC1B1 /* welcome.xib */; };
 		6FEBCAC31553F775004FC1B1 /* MEWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */; };
 		6FEBCAC91553FD12004FC1B1 /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC81553FD12004FC1B1 /* blackboard.png */; };
-		6FEBCACB1553FE1F004FC1B1 /* blackboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCACA1553FE1F004FC1B1 /* blackboard@2x.png */; };
+		6FEBCACF155400D3004FC1B1 /* activities.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCACE155400D3004FC1B1 /* activities.png */; };
+		6FEBCAD1155405FD004FC1B1 /* blackboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCAD0155405FD004FC1B1 /* blackboard@2x.png */; };
+		6FEBCAD41554063A004FC1B1 /* lucida-calligraphy-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCAD31554063A004FC1B1 /* lucida-calligraphy-italic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +57,9 @@
 		6FEBCAC11553F775004FC1B1 /* MEWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEWelcomeViewController.h; sourceTree = "<group>"; };
 		6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWelcomeViewController.m; sourceTree = "<group>"; };
 		6FEBCAC81553FD12004FC1B1 /* blackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard.png; sourceTree = "<group>"; };
-		6FEBCACA1553FE1F004FC1B1 /* blackboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard@2x.png"; sourceTree = "<group>"; };
+		6FEBCACE155400D3004FC1B1 /* activities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activities.png; sourceTree = "<group>"; };
+		6FEBCAD0155405FD004FC1B1 /* blackboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackboard@2x.png"; sourceTree = "<group>"; };
+		6FEBCAD31554063A004FC1B1 /* lucida-calligraphy-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lucida-calligraphy-italic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 		6F6FB2701553A235000AE8EC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6FEBCAD21554061A004FC1B1 /* Fonts */,
 				6FEBCABB1553F4EC004FC1B1 /* Images */,
 				6FEBCABD1553F50A004FC1B1 /* Xibs */,
 			);
@@ -174,8 +179,9 @@
 		6FEBCABB1553F4EC004FC1B1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6FEBCACE155400D3004FC1B1 /* activities.png */,
 				6FEBCAC81553FD12004FC1B1 /* blackboard.png */,
-				6FEBCACA1553FE1F004FC1B1 /* blackboard@2x.png */,
+				6FEBCAD0155405FD004FC1B1 /* blackboard@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -195,6 +201,14 @@
 				6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6FEBCAD21554061A004FC1B1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6FEBCAD31554063A004FC1B1 /* lucida-calligraphy-italic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +286,9 @@
 				6F6FB24615539E57000AE8EC /* InfoPlist.strings in Resources */,
 				6FEBCABF1553F57B004FC1B1 /* welcome.xib in Resources */,
 				6FEBCAC91553FD12004FC1B1 /* blackboard.png in Resources */,
-				6FEBCACB1553FE1F004FC1B1 /* blackboard@2x.png in Resources */,
+				6FEBCACF155400D3004FC1B1 /* activities.png in Resources */,
+				6FEBCAD1155405FD004FC1B1 /* blackboard@2x.png in Resources */,
+				6FEBCAD41554063A004FC1B1 /* lucida-calligraphy-italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

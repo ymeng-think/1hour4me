@@ -8,3 +8,18 @@ You need to turn off Automatic Reference Counting. You do this by clicking on yo
 target, select "Build Settings" and turn off the option "Objective-C Automatic Reference Counting" (you can use the search field on the upper right to search it).
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Question 2 - May 4, 2012
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adding Custom Fonts iOS 4
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+This tutorial will show you how to add your own custom fonts into an app for devices using iOS 4 and above.
+While working on a new app I was wondering how if there was anyway I could use the same font I had used for my logo and buttons within UITextViews and wherever else I wanted to a 
+display custom text
+  1) Add the .TTF or .OTF font file/s you wish to use as a resource
+  2) Open your info.plist and create a new key called UIAppFonts, set the key to be an array type.
+  3) For each font you want to use in your app, add it as a new object in the array with its full name and extension and save the info.plist when finished
+  4) Now in your code you can simply call
+         1.1 Default UIFont Example [UIFont fontWithName:@"Insert font name here" size:18]
+     to get the custom font to use with your UILabels and UITextView. Or if using Cocos2d you can call
+         1.2 Cocos2d Label Example CCLabelTTF *header = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Insert font name here" fontSize:22];
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
