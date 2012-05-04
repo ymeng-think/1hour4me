@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F6FB23C15539E57000AE8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
+		6F6FB23E15539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
+		6F6FB24015539E57000AE8EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */; };
+		6F6FB24615539E57000AE8EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FB24415539E57000AE8EC /* InfoPlist.strings */; };
+		6F6FB24815539E57000AE8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FB24715539E57000AE8EC /* main.m */; };
+		6F6FB24C15539E57000AE8EC /* MEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */; };
+		6F6FB25415539E57000AE8EC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB25315539E57000AE8EC /* SenTestingKit.framework */; };
+		6F6FB25515539E57000AE8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
+		6F6FB25615539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
+		6F6FB25E15539E57000AE8EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FB25C15539E57000AE8EC /* InfoPlist.strings */; };
+		6F6FB26115539E57000AE8EC /* OneHour4MeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F6FB25715539E57000AE8EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F6FB22E15539E57000AE8EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F6FB23615539E57000AE8EC;
+			remoteInfo = OneHour4Me;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6F6FB23715539E57000AE8EC /* OneHour4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHour4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6FB23B15539E57000AE8EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6F6FB23D15539E57000AE8EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6F6FB24315539E57000AE8EC /* OneHour4Me-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneHour4Me-Info.plist"; sourceTree = "<group>"; };
+		6F6FB24515539E57000AE8EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F6FB24715539E57000AE8EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F6FB24915539E57000AE8EC /* OneHour4Me-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneHour4Me-Prefix.pch"; sourceTree = "<group>"; };
+		6F6FB24A15539E57000AE8EC /* MEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEAppDelegate.h; sourceTree = "<group>"; };
+		6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEAppDelegate.m; sourceTree = "<group>"; };
+		6F6FB25215539E57000AE8EC /* OneHour4MeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OneHour4MeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6FB25315539E57000AE8EC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6F6FB25B15539E57000AE8EC /* OneHour4MeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneHour4MeTests-Info.plist"; sourceTree = "<group>"; };
+		6F6FB25D15539E57000AE8EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F6FB25F15539E57000AE8EC /* OneHour4MeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneHour4MeTests.h; sourceTree = "<group>"; };
+		6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneHour4MeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F6FB23415539E57000AE8EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6FB23C15539E57000AE8EC /* UIKit.framework in Frameworks */,
+				6F6FB23E15539E57000AE8EC /* Foundation.framework in Frameworks */,
+				6F6FB24015539E57000AE8EC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6FB24E15539E57000AE8EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6FB25415539E57000AE8EC /* SenTestingKit.framework in Frameworks */,
+				6F6FB25515539E57000AE8EC /* UIKit.framework in Frameworks */,
+				6F6FB25615539E57000AE8EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F6FB22C15539E57000AE8EC = {
+			isa = PBXGroup;
+			children = (
+				6F6FB24115539E57000AE8EC /* OneHour4Me */,
+				6F6FB25915539E57000AE8EC /* OneHour4MeTests */,
+				6F6FB23A15539E57000AE8EC /* Frameworks */,
+				6F6FB23815539E57000AE8EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F6FB23815539E57000AE8EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FB23715539E57000AE8EC /* OneHour4Me.app */,
+				6F6FB25215539E57000AE8EC /* OneHour4MeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F6FB23A15539E57000AE8EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FB23B15539E57000AE8EC /* UIKit.framework */,
+				6F6FB23D15539E57000AE8EC /* Foundation.framework */,
+				6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */,
+				6F6FB25315539E57000AE8EC /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F6FB24115539E57000AE8EC /* OneHour4Me */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FB24A15539E57000AE8EC /* MEAppDelegate.h */,
+				6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */,
+				6F6FB24215539E57000AE8EC /* Supporting Files */,
+			);
+			path = OneHour4Me;
+			sourceTree = "<group>";
+		};
+		6F6FB24215539E57000AE8EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FB24315539E57000AE8EC /* OneHour4Me-Info.plist */,
+				6F6FB24415539E57000AE8EC /* InfoPlist.strings */,
+				6F6FB24715539E57000AE8EC /* main.m */,
+				6F6FB24915539E57000AE8EC /* OneHour4Me-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6F6FB25915539E57000AE8EC /* OneHour4MeTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FB25F15539E57000AE8EC /* OneHour4MeTests.h */,
+				6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */,
+				6F6FB25A15539E57000AE8EC /* Supporting Files */,
+			);
+			path = OneHour4MeTests;
+			sourceTree = "<group>";
+		};
+		6F6FB25A15539E57000AE8EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F6FB25B15539E57000AE8EC /* OneHour4MeTests-Info.plist */,
+				6F6FB25C15539E57000AE8EC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F6FB23615539E57000AE8EC /* OneHour4Me */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F6FB26415539E57000AE8EC /* Build configuration list for PBXNativeTarget "OneHour4Me" */;
+			buildPhases = (
+				6F6FB23315539E57000AE8EC /* Sources */,
+				6F6FB23415539E57000AE8EC /* Frameworks */,
+				6F6FB23515539E57000AE8EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneHour4Me;
+			productName = OneHour4Me;
+			productReference = 6F6FB23715539E57000AE8EC /* OneHour4Me.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6F6FB25115539E57000AE8EC /* OneHour4MeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F6FB26715539E57000AE8EC /* Build configuration list for PBXNativeTarget "OneHour4MeTests" */;
+			buildPhases = (
+				6F6FB24D15539E57000AE8EC /* Sources */,
+				6F6FB24E15539E57000AE8EC /* Frameworks */,
+				6F6FB24F15539E57000AE8EC /* Resources */,
+				6F6FB25015539E57000AE8EC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F6FB25815539E57000AE8EC /* PBXTargetDependency */,
+			);
+			name = OneHour4MeTests;
+			productName = OneHour4MeTests;
+			productReference = 6F6FB25215539E57000AE8EC /* OneHour4MeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F6FB22E15539E57000AE8EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ME;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = ThoughtWorks;
+			};
+			buildConfigurationList = 6F6FB23115539E57000AE8EC /* Build configuration list for PBXProject "OneHour4Me" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6F6FB22C15539E57000AE8EC;
+			productRefGroup = 6F6FB23815539E57000AE8EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F6FB23615539E57000AE8EC /* OneHour4Me */,
+				6F6FB25115539E57000AE8EC /* OneHour4MeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F6FB23515539E57000AE8EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6FB24615539E57000AE8EC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6FB24F15539E57000AE8EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6FB25E15539E57000AE8EC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F6FB25015539E57000AE8EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F6FB23315539E57000AE8EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6FB24815539E57000AE8EC /* main.m in Sources */,
+				6F6FB24C15539E57000AE8EC /* MEAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F6FB24D15539E57000AE8EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F6FB26115539E57000AE8EC /* OneHour4MeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F6FB25815539E57000AE8EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F6FB23615539E57000AE8EC /* OneHour4Me */;
+			targetProxy = 6F6FB25715539E57000AE8EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6F6FB24415539E57000AE8EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F6FB24515539E57000AE8EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6F6FB25C15539E57000AE8EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F6FB25D15539E57000AE8EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F6FB26215539E57000AE8EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6F6FB26315539E57000AE8EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F6FB26515539E57000AE8EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OneHour4Me/OneHour4Me-Prefix.pch";
+				INFOPLIST_FILE = "OneHour4Me/OneHour4Me-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6F6FB26615539E57000AE8EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OneHour4Me/OneHour4Me-Prefix.pch";
+				INFOPLIST_FILE = "OneHour4Me/OneHour4Me-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6F6FB26815539E57000AE8EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OneHour4Me.app/OneHour4Me";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OneHour4Me/OneHour4Me-Prefix.pch";
+				INFOPLIST_FILE = "OneHour4MeTests/OneHour4MeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		6F6FB26915539E57000AE8EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OneHour4Me.app/OneHour4Me";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OneHour4Me/OneHour4Me-Prefix.pch";
+				INFOPLIST_FILE = "OneHour4MeTests/OneHour4MeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F6FB23115539E57000AE8EC /* Build configuration list for PBXProject "OneHour4Me" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6FB26215539E57000AE8EC /* Debug */,
+				6F6FB26315539E57000AE8EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F6FB26415539E57000AE8EC /* Build configuration list for PBXNativeTarget "OneHour4Me" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6FB26515539E57000AE8EC /* Debug */,
+				6F6FB26615539E57000AE8EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6F6FB26715539E57000AE8EC /* Build configuration list for PBXNativeTarget "OneHour4MeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F6FB26815539E57000AE8EC /* Debug */,
+				6F6FB26915539E57000AE8EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F6FB22E15539E57000AE8EC /* Project object */;
+}

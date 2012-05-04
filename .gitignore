@@ -1,0 +1,6 @@
+## Mac meta-file to ignore
+.DS_Store
+
+## Xcode project files
+OneHour4Me/OneHour4Me.xcodeproj/project.xcworkspace
+OneHour4Me/OneHour4Me.xcodeproj/xcuserdata
