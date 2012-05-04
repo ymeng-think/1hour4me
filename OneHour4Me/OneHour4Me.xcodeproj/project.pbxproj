@@ -149,7 +149,7 @@
 				6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */,
 				6F6FB24715539E57000AE8EC /* main.m */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		6F6FB2701553A235000AE8EC /* Resources */ = {
