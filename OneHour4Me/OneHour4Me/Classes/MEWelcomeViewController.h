@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface MEWelcomeViewController : UIViewController {
-    UIFont *cursiveFont;
-    
     UILabel *header;
+    UILabel *target;
+    UILabel *description;
 }
 
 @property(nonatomic, retain) IBOutlet UILabel *header;
+@property(nonatomic, retain) IBOutlet UILabel *target;
+@property(nonatomic, retain) IBOutlet UILabel *description;
 
 @end

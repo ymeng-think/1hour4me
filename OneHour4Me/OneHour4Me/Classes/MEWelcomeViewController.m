@@ -10,18 +10,20 @@
 
 @interface MEWelcomeViewController ()
 
+- (void)showLabel:(UILabel *)label withFont:(UIFont *)font lineBreak:(BOOL)includesLineBreak;
+
 @end
 
 @implementation MEWelcomeViewController
 
-@synthesize header;
+@synthesize header, target, description;
 
 static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        cursiveFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
+        
     }
     return self;
 }
@@ -30,7 +32,12 @@ static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
     [super viewDidLoad];
 	
     self.navigationController.navigationBar.hidden = YES;
-    self.header.font = cursiveFont;
+    
+    UIFont *cursiveLargerFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
+    [self showLabel:header withFont:cursiveLargerFont lineBreak:NO];
+    UIFont *cursiveFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:13];
+    [self showLabel:target withFont:cursiveFont lineBreak:NO];
+    [self showLabel:description withFont:cursiveFont lineBreak:YES];
 }
 
 - (void)viewDidUnload {
@@ -40,6 +47,18 @@ static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)showLabel:(UILabel *)label withFont:(UIFont *)font lineBreak:(BOOL)includesLineBreak {
+    CGSize labelSize = [label.text sizeWithFont:font 
+                                    constrainedToSize:label.frame.size 
+                                        lineBreakMode:label.lineBreakMode];
+    label.numberOfLines = 0;
+    label.font = font;
+    label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, label.frame.size.width, labelSize.height);
+    if (includesLineBreak) {
+        label.text = [label.text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+    }
 }
 
 @end
