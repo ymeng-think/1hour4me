@@ -18,6 +18,7 @@
 		6F5AC9EF155524DD00DC48C4 /* MEStickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5AC9EE155524DD00DC48C4 /* MEStickerView.m */; };
 		6F5AC9F615552C0700DC48C4 /* sticker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9F515552C0700DC48C4 /* sticker.png */; };
 		6F5AC9F81555353100DC48C4 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9F71555353100DC48C4 /* button.png */; };
+		6F5AC9FA1555393700DC48C4 /* sticker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9F91555393700DC48C4 /* sticker@2x.png */; };
 		6F6FB23C15539E57000AE8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
 		6F6FB23E15539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
 		6F6FB24015539E57000AE8EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */; };
@@ -63,6 +64,7 @@
 		6F5AC9EE155524DD00DC48C4 /* MEStickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEStickerView.m; sourceTree = "<group>"; };
 		6F5AC9F515552C0700DC48C4 /* sticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker.png; sourceTree = "<group>"; };
 		6F5AC9F71555353100DC48C4 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		6F5AC9F91555393700DC48C4 /* sticker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sticker@2x.png"; sourceTree = "<group>"; };
 		6F6FB23715539E57000AE8EC /* OneHour4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHour4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6FB23B15539E57000AE8EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F6FB23D15539E57000AE8EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -226,6 +228,7 @@
 				6F5AC9DA155517ED00DC48C4 /* blackboard.png */,
 				6F5AC9DC1555181900DC48C4 /* blackboard@2x.png */,
 				6F5AC9F515552C0700DC48C4 /* sticker.png */,
+				6F5AC9F91555393700DC48C4 /* sticker@2x.png */,
 				6F5AC9F71555353100DC48C4 /* button.png */,
 			);
 			path = Images;
@@ -339,6 +342,7 @@
 				6F5AC9DD1555181900DC48C4 /* blackboard@2x.png in Resources */,
 				6F5AC9F615552C0700DC48C4 /* sticker.png in Resources */,
 				6F5AC9F81555353100DC48C4 /* button.png in Resources */,
+				6F5AC9FA1555393700DC48C4 /* sticker@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
