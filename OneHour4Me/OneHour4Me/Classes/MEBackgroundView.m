@@ -12,14 +12,6 @@
 
 @implementation MEBackgroundView
 
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     
