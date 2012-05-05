@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MESignInViewController : UIViewController
+@interface MESignInViewController : UIViewController <UITextFieldDelegate> {
+    UIScrollView *scrollView;
+    UIView *firstResponder;
+    
+    CGPoint oldOffset;
+}
 
 @end

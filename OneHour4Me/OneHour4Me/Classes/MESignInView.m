@@ -25,6 +25,8 @@
 
 @implementation MESignInView
 
+@synthesize textFieldEditingHandler;
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -115,6 +117,14 @@
 - (UIImage *)buttonBackground:(NSString *)imageName {
     UIImage *image = [UIImage imageNamed:imageName];
 	return [image stretchableImageWithLeftCapWidth:BUTTON_LEFT_CORNER_WIDTH topCapHeight:0];
+}
+
+- (void)setTextFieldEditingHandler:(id<UITextFieldDelegate>)delegate {
+    for (UIView *subview in stickerView.subviews) {
+        if ([subview isKindOfClass:[UITextField class]]) {
+            ((UITextField *)subview).delegate = delegate;
+        }
+    }
 }
 
 - (void)dealloc {

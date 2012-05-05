@@ -11,6 +11,9 @@
 
 @interface MESignInView : MEBackgroundView {
     MEStickerView *stickerView;
+    id<UITextFieldDelegate> textFiedEditingHandler;
 }
+
+@property (nonatomic, retain, setter = setTextFieldEditingHandler:) id<UITextFieldDelegate> textFieldEditingHandler;
 
 @end

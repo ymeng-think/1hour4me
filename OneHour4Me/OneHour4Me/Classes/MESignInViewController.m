@@ -18,18 +18,36 @@
 @implementation MESignInViewController
 
 - (void)loadView {
-    UIView *rootView = [[MESignInView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.view = rootView;
-    [rootView release];
+    CGRect mainScreen = [UIScreen mainScreen].bounds;
+    scrollView = [[UIScrollView alloc] initWithFrame:mainScreen];
+    MESignInView *signInView = [[MESignInView alloc] initWithFrame:mainScreen];
+    signInView.textFieldEditingHandler = self;
+    [scrollView addSubview:signInView];
+    self.view = scrollView;
+    [signInView release];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CGSize size = scrollView.bounds.size;
+    size.height *= 2;
+    scrollView.contentSize = size;
+    scrollView.scrollEnabled = NO;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                            selector:@selector(keyboardWillShow:) 
+                                                name:UIKeyboardWillShowNotification 
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:) 
+                                                 name:UIKeyboardWillHideNotification 
+                                               object:nil];
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
+
+    [scrollView release];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -40,6 +58,31 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    firstResponder = textField;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+    oldOffset = scrollView.contentOffset;
+    NSDictionary *userInfo = [notification userInfo];
+    CGRect keyboardRect = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    keyboardRect = [scrollView convertRect:keyboardRect fromView:nil];
+    CGRect frFrame = [firstResponder convertRect:firstResponder.bounds toView:scrollView];
+    CGFloat y = CGRectGetMaxY(frFrame) + keyboardRect.size.height - scrollView.bounds.size.height + 5;
+    if (keyboardRect.origin.y < CGRectGetMaxY(frFrame)) {
+        [scrollView setContentOffset:CGPointMake(0, y) animated:YES];
+    }
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    [scrollView setContentOffset:oldOffset animated:YES];
 }
 
 @end
