@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    [header whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont linkBreak:NO];
+    [header whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont];
     [letMeIn blackTextWithFont:[MEFontLibrary sharedLibrary].chalkboardLargerFont];
     UIFont *chalkboardFont = [MEFontLibrary sharedLibrary].chalkboardFont;
     [emailTip blackTextWithFont:chalkboardFont];

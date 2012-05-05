@@ -20,6 +20,10 @@
     [self textInColor:[UIColor blackColor] withFont:font linkBreak:NO];
 }
 
+- (void)whiteTextWithFont:(UIFont *)font {
+    [self whiteTextWithFont:font linkBreak:NO];
+}
+
 - (void)whiteTextWithFont:(UIFont *)font linkBreak:(BOOL)includesLineBreak {
     [self textInColor:[UIColor whiteColor] withFont:font linkBreak:includesLineBreak];
 }

@@ -11,6 +11,7 @@
 @interface UILabel (UILabelExtension)
 
 - (void)blackTextWithFont:(UIFont *)font;
+- (void)whiteTextWithFont:(UIFont *)font;
 - (void)whiteTextWithFont:(UIFont *)font linkBreak:(BOOL)includesLineBreak;
 
 @end
