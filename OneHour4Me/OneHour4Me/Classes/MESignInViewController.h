@@ -10,8 +10,14 @@
 
 @interface MESignInViewController : UIViewController {
     UILabel *header;
+    UILabel *letMeIn;
+    UILabel *emailTip;
+    UILabel *passwordTip;
 }
 
 @property(nonatomic, retain) IBOutlet UILabel *header;
+@property(nonatomic, retain) IBOutlet UILabel *letMeIn;
+@property(nonatomic, retain) IBOutlet UILabel *emailTip;
+@property(nonatomic, retain) IBOutlet UILabel *passwordTip;
 
 @end

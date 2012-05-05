@@ -33,10 +33,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [header showWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont linkBreak:NO];
+    [header whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont linkBreak:NO];
     UIFont *cursiveFont = [MEFontLibrary sharedLibrary].cursiveFont;
-    [target showWithFont:cursiveFont linkBreak:NO];
-    [description showWithFont:cursiveFont linkBreak:YES];
+    [target whiteTextWithFont:cursiveFont linkBreak:NO];
+    [description whiteTextWithFont:cursiveFont linkBreak:YES];
     
     [self registerGestureRecognizers];
 }

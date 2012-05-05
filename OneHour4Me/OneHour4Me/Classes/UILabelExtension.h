@@ -10,6 +10,7 @@
 
 @interface UILabel (UILabelExtension)
 
-- (void)showWithFont:(UIFont *)font linkBreak:(BOOL)includesLineBreak;
+- (void)blackTextWithFont:(UIFont *)font;
+- (void)whiteTextWithFont:(UIFont *)font linkBreak:(BOOL)includesLineBreak;
 
 @end

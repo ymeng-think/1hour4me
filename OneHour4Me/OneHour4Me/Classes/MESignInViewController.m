@@ -16,7 +16,7 @@
 
 @implementation MESignInViewController
 
-@synthesize header;
+@synthesize header, letMeIn, emailTip, passwordTip;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,7 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    [header showWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont linkBreak:NO];
+    [header whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont linkBreak:NO];
+    [letMeIn blackTextWithFont:[MEFontLibrary sharedLibrary].chalkboardLargerFont];
+    UIFont *chalkboardFont = [MEFontLibrary sharedLibrary].chalkboardFont;
+    [emailTip blackTextWithFont:chalkboardFont];
+    [passwordTip blackTextWithFont:chalkboardFont];
 }
 
 - (void)viewDidUnload {

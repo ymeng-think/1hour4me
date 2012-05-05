@@ -11,11 +11,15 @@
 @interface MEFontLibrary : NSObject {
     UIFont *cursiveLargerFont;
     UIFont *cursiveFont;
+    UIFont *chalkboardLargerFont;
+    UIFont *chalkboardFont;
 }
 
 + (MEFontLibrary *)sharedLibrary;
 
 @property(nonatomic, readonly) UIFont *cursiveLargerFont;
 @property(nonatomic, readonly) UIFont *cursiveFont;
+@property(nonatomic, readonly) UIFont *chalkboardLargerFont;
+@property(nonatomic, readonly) UIFont *chalkboardFont;
 
 @end
