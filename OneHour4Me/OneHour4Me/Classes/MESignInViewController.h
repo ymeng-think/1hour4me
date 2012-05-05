@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MESignInViewController : UIViewController
+@interface MESignInViewController : UIViewController {
+    UILabel *header;
+}
+
+@property(nonatomic, retain) IBOutlet UILabel *header;
 
 @end

@@ -7,12 +7,16 @@
 //
 
 #import "MESignInViewController.h"
+#import "MEFontLibrary.h"
+#import "UILabelExtension.h"
 
 @interface MESignInViewController ()
 
 @end
 
 @implementation MESignInViewController
+
+@synthesize header;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,7 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    [header showWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont linkBreak:NO];
 }
 
 - (void)viewDidUnload {

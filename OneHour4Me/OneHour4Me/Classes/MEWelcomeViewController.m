@@ -9,10 +9,10 @@
 #import "MEWelcomeViewController.h"
 #import "MESignInViewController.h"
 #import "MEFontLibrary.h"
+#import "UILabelExtension.h"
 
 @interface MEWelcomeViewController ()
 
-- (void)showLabel:(UILabel *)label withFont:(UIFont *)font lineBreak:(BOOL)includesLineBreak;
 - (void)registerGestureRecognizers;
 - (void)didClick:(UITapGestureRecognizer *)sender;
 
@@ -33,10 +33,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self showLabel:header withFont:[MEFontLibrary sharedLibrary].cursiveLargerFont lineBreak:NO];
+    [header showWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont linkBreak:NO];
     UIFont *cursiveFont = [MEFontLibrary sharedLibrary].cursiveFont;
-    [self showLabel:target withFont:cursiveFont lineBreak:NO];
-    [self showLabel:description withFont:cursiveFont lineBreak:YES];
+    [target showWithFont:cursiveFont linkBreak:NO];
+    [description showWithFont:cursiveFont linkBreak:YES];
     
     [self registerGestureRecognizers];
 }
@@ -54,18 +54,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (void)showLabel:(UILabel *)label withFont:(UIFont *)font lineBreak:(BOOL)includesLineBreak {
-    CGSize labelSize = [label.text sizeWithFont:font 
-                                    constrainedToSize:label.frame.size 
-                                        lineBreakMode:label.lineBreakMode];
-    label.numberOfLines = 0;
-    label.font = font;
-    label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, label.frame.size.width, labelSize.height);
-    if (includesLineBreak) {
-        label.text = [label.text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
-    }
 }
 
 - (void)registerGestureRecognizers {
