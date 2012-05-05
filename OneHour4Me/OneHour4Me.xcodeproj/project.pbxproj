@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F2B978D1554B10D0082E571 /* activities@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B978C1554B10D0082E571 /* activities@2x.png */; };
 		6F6FB23C15539E57000AE8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
 		6F6FB23E15539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
 		6F6FB24015539E57000AE8EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F2B978C1554B10D0082E571 /* activities@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activities@2x.png"; sourceTree = "<group>"; };
 		6F6FB23715539E57000AE8EC /* OneHour4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHour4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6FB23B15539E57000AE8EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F6FB23D15539E57000AE8EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				6FEBCACE155400D3004FC1B1 /* activities.png */,
+				6F2B978C1554B10D0082E571 /* activities@2x.png */,
 				6FEBCAC81553FD12004FC1B1 /* blackboard.png */,
 				6FEBCAD0155405FD004FC1B1 /* blackboard@2x.png */,
 			);
@@ -289,6 +292,7 @@
 				6FEBCACF155400D3004FC1B1 /* activities.png in Resources */,
 				6FEBCAD1155405FD004FC1B1 /* blackboard@2x.png in Resources */,
 				6FEBCAD41554063A004FC1B1 /* lucida-calligraphy-italic.ttf in Resources */,
+				6F2B978D1554B10D0082E571 /* activities@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
