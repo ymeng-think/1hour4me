@@ -8,9 +8,11 @@
 
 #import "MEWelcomeViewController.h"
 
-@interface MEWelcomeViewController ()
+@interface MEWelcomeViewController (Private)
 
 - (void)showLabel:(UILabel *)label withFont:(UIFont *)font lineBreak:(BOOL)includesLineBreak;
+- (void)registerGestureRecognizers;
+- (void)didClick:(UITapGestureRecognizer *)sender;
 
 @end
 
@@ -38,6 +40,8 @@ static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
     UIFont *cursiveFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:13];
     [self showLabel:target withFont:cursiveFont lineBreak:NO];
     [self showLabel:description withFont:cursiveFont lineBreak:YES];
+    
+    [self registerGestureRecognizers];
 }
 
 - (void)viewDidUnload {
@@ -58,6 +62,20 @@ static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
     label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, label.frame.size.width, labelSize.height);
     if (includesLineBreak) {
         label.text = [label.text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+    }
+}
+
+- (void)registerGestureRecognizers {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClick:)];
+    tap.numberOfTapsRequired = 1;
+    tap.numberOfTouchesRequired = 1;
+    [self.view addGestureRecognizer:tap];
+    [tap release];
+}
+
+- (void)didClick:(UITapGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"clicked me");
     }
 }
 

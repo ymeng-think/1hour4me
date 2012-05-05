@@ -18,12 +18,20 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    MEWelcomeViewController *welcomeController = [[MEWelcomeViewController alloc] initWithNibName:@"welcome" bundle:[NSBundle mainBundle]];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeController];
+    MEWelcomeViewController *welcomeController = [[MEWelcomeViewController alloc] initWithNibName:@"welcome" bundle:nil];
+    /*
+     == CAUTION: ==
+     We must initialize 'navigationController' as a class instance field rather than as a local variable (and release it after 
+        execute '[self.window addSubview:navigationController.view];')!
+     Because when we handle the event triggered on sub controller of navigation controller, we will not get that sub controller,
+        so that we will a tricky error, likes "
+            Terminating app due to uncaught exception 'NSInvalidArgumentExcepton' reason:'[NSCFString didClicked:]: unrecognized
+            sent to instance 0x44ele0'
+        ", or nothing than '(lldb)'.
+     */
+    navigationController = [[UINavigationController alloc] initWithRootViewController:welcomeController];
     navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     [self.window addSubview:navigationController.view];
-    
-    [navigationController release];
     [welcomeController release];
     
     [self.window makeKeyAndVisible];
@@ -55,6 +63,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)dealloc {
+    [navigationController release];
+    
+    [super dealloc];
 }
 
 @end

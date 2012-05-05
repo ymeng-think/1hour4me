@@ -23,3 +23,11 @@ display custom text
      to get the custom font to use with your UILabels and UITextView. Or if using Cocos2d you can call
          1.2 Cocos2d Label Example CCLabelTTF *header = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Insert font name here" fontSize:22];
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Question 3 - May 5, 2012
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Debugger GDB vs. LLDB
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+It depends on your compiler. 
+I would recommend using the lldb debugger with the "Apple LLVM compiler 3.0", and gdb for GCC flavors (including "LLVM GCC 4.2").
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
