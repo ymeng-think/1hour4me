@@ -12,16 +12,11 @@
 
 @implementation MEBackgroundView
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        self.backgroundColor = [UIColor clearColor];
+- (void)drawRect:(CGRect)rect {
+    if (!backgroundImage) {
         backgroundImage = [UIImage imageNamed:BACKGROUND_IMAGE];
     }
-    return self;
-}
-
-- (void)drawRect:(CGRect)rect {
+    
     [backgroundImage drawInRect:rect];
 }
 

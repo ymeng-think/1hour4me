@@ -58,7 +58,7 @@
 
 - (void)didClick:(UITapGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateEnded) {
-        MESignInViewController *signInController = [[MESignInViewController alloc] initWithNibName:@"signin" bundle:nil];
+        MESignInViewController *signInController = [[MESignInViewController alloc] init];
         [self.navigationController pushViewController:signInController animated:YES];
         [signInController release];
     }

@@ -7,8 +7,9 @@
 //
 
 #import "MESignInViewController.h"
-#import "MEFontLibrary.h"
-#import "UILabelExtension.h"
+#import "MESignInView.h"
+//#import "MEFontLibrary.h"
+//#import "UILabelExtension.h"
 
 @interface MESignInViewController ()
 
@@ -16,16 +17,14 @@
 
 @implementation MESignInViewController
 
-@synthesize header, letMeIn, emailTip, passwordTip;
+- (void)loadView {
+    UIView *rootView = [[MESignInView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.view = rootView;
+    [rootView release];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-    [header whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont];
-    [letMeIn blackTextWithFont:[MEFontLibrary sharedLibrary].chalkboardLargerFont];
-    UIFont *chalkboardFont = [MEFontLibrary sharedLibrary].chalkboardFont;
-    [emailTip blackTextWithFont:chalkboardFont];
-    [passwordTip blackTextWithFont:chalkboardFont];
 }
 
 - (void)viewDidUnload {
