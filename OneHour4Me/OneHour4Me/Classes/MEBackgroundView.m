@@ -12,10 +12,17 @@
 
 @implementation MEBackgroundView
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
-    self.image = [UIImage imageNamed:BACKGROUND_IMAGE];
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+        backgroundImage = [UIImage imageNamed:BACKGROUND_IMAGE];
+    }
+    return self;
+}
+
+- (void)drawRect:(CGRect)rect {
+    [backgroundImage drawInRect:rect];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MEBackgroundView : UIImageView
+@interface MEBackgroundView : UIView {
+    UIImage *backgroundImage;
+}
 
 @end
