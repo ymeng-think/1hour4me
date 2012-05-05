@@ -17,7 +17,7 @@
 - (void)addHeaderLabel;
 - (void)addSticker;
 - (void)addLabelInto:(UIView *)container inRect:(CGRect)rect font:(UIFont *)font color:(UIColor *)color content:(NSString *)content;
-- (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect;
+- (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect encrypted:(BOOL)isEncrypted;
 - (void)addButtonInto:(UIView *)container inRect:(CGRect)rect title:(NSString *)text;
 - (UIImage *)buttonBackground:(NSString *)imageName;
 
@@ -63,7 +63,8 @@
                  color:[UIColor blackColor]
                content:@"Email"];
     [self addTextFieldInto:stickerView
-                    inRect:CGRectMake(52, 128, 171, 31)];
+                    inRect:CGRectMake(52, 128, 171, 31)
+                 encrypted:NO];
     
     // password
     [self addLabelInto:stickerView 
@@ -72,7 +73,8 @@
                  color:[UIColor blackColor]
                content:@"Password"];
     [self addTextFieldInto:stickerView
-                    inRect:CGRectMake(52, 198, 171, 31)];
+                    inRect:CGRectMake(52, 198, 171, 31)
+                 encrypted:YES];
     
     // sign in
     [self addButtonInto:stickerView
@@ -95,8 +97,9 @@
     [label release];
 }
 
-- (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect {
+- (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect encrypted:(BOOL)isEncrypted {
     UITextField *textField = [[UITextField alloc] initWithFrame:rect];
+    [textField setSecureTextEntry:isEncrypted];
     
     [container addSubview:textField];
     
