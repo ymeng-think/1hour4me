@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6F2B978D1554B10D0082E571 /* activities@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B978C1554B10D0082E571 /* activities@2x.png */; };
+		6F2B97981554C8D30082E571 /* signin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B97971554C8D30082E571 /* signin.xib */; };
+		6F2B979D1554C9F20082E571 /* MEBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B979C1554C9F20082E571 /* MEBackgroundView.m */; };
+		6F2B979F1554CD3F0082E571 /* sticker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B979E1554CD3F0082E571 /* sticker.png */; };
+		6F2B97A21554CE040082E571 /* MESignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B97A11554CE040082E571 /* MESignInViewController.m */; };
 		6F6FB23C15539E57000AE8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
 		6F6FB23E15539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
 		6F6FB24015539E57000AE8EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */; };
@@ -39,6 +43,12 @@
 
 /* Begin PBXFileReference section */
 		6F2B978C1554B10D0082E571 /* activities@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activities@2x.png"; sourceTree = "<group>"; };
+		6F2B97971554C8D30082E571 /* signin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = signin.xib; sourceTree = "<group>"; };
+		6F2B979B1554C9F20082E571 /* MEBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEBackgroundView.h; sourceTree = "<group>"; };
+		6F2B979C1554C9F20082E571 /* MEBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEBackgroundView.m; sourceTree = "<group>"; };
+		6F2B979E1554CD3F0082E571 /* sticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker.png; sourceTree = "<group>"; };
+		6F2B97A01554CE040082E571 /* MESignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESignInViewController.h; sourceTree = "<group>"; };
+		6F2B97A11554CE040082E571 /* MESignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESignInViewController.m; sourceTree = "<group>"; };
 		6F6FB23715539E57000AE8EC /* OneHour4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHour4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6FB23B15539E57000AE8EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F6FB23D15539E57000AE8EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F2B979A1554C9CB0082E571 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F2B979B1554C9F20082E571 /* MEBackgroundView.h */,
+				6F2B979C1554C9F20082E571 /* MEBackgroundView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		6F6FB22C15539E57000AE8EC = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				6FEBCAC01553F72E004FC1B1 /* Controllers */,
+				6F2B979A1554C9CB0082E571 /* Views */,
 				6F6FB24A15539E57000AE8EC /* MEAppDelegate.h */,
 				6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */,
 				6F6FB24715539E57000AE8EC /* main.m */,
@@ -185,6 +205,7 @@
 				6F2B978C1554B10D0082E571 /* activities@2x.png */,
 				6FEBCAC81553FD12004FC1B1 /* blackboard.png */,
 				6FEBCAD0155405FD004FC1B1 /* blackboard@2x.png */,
+				6F2B979E1554CD3F0082E571 /* sticker.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -193,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				6FEBCABE1553F57B004FC1B1 /* welcome.xib */,
+				6F2B97971554C8D30082E571 /* signin.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -200,6 +222,8 @@
 		6FEBCAC01553F72E004FC1B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6F2B97A01554CE040082E571 /* MESignInViewController.h */,
+				6F2B97A11554CE040082E571 /* MESignInViewController.m */,
 				6FEBCAC11553F775004FC1B1 /* MEWelcomeViewController.h */,
 				6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */,
 			);
@@ -293,6 +317,8 @@
 				6FEBCAD1155405FD004FC1B1 /* blackboard@2x.png in Resources */,
 				6FEBCAD41554063A004FC1B1 /* lucida-calligraphy-italic.ttf in Resources */,
 				6F2B978D1554B10D0082E571 /* activities@2x.png in Resources */,
+				6F2B97981554C8D30082E571 /* signin.xib in Resources */,
+				6F2B979F1554CD3F0082E571 /* sticker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +356,8 @@
 				6F6FB24815539E57000AE8EC /* main.m in Sources */,
 				6F6FB24C15539E57000AE8EC /* MEAppDelegate.m in Sources */,
 				6FEBCAC31553F775004FC1B1 /* MEWelcomeViewController.m in Sources */,
+				6F2B979D1554C9F20082E571 /* MEBackgroundView.m in Sources */,
+				6F2B97A21554CE040082E571 /* MESignInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

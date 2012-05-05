@@ -7,6 +7,9 @@
 //
 
 #import "MEWelcomeViewController.h"
+#import "MESignInViewController.h"
+
+#define FONT_LUCIDA_CALLIGRAPHY @"Lucida Calligraphy"
 
 @interface MEWelcomeViewController (Private)
 
@@ -20,8 +23,6 @@
 
 @synthesize header, target, description;
 
-static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -33,7 +34,7 @@ static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    self.navigationController.navigationBar.hidden = YES;
+    self.title = @"Welcome";
     
     UIFont *cursiveLargerFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
     [self showLabel:header withFont:cursiveLargerFont lineBreak:NO];
@@ -47,6 +48,12 @@ static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
 - (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -75,7 +82,9 @@ static NSString *FONT_LUCIDA_CALLIGRAPHY = @"Lucida Calligraphy";
 
 - (void)didClick:(UITapGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateEnded) {
-        NSLog(@"clicked me");
+        MESignInViewController *signInController = [[MESignInViewController alloc] initWithNibName:@"signin" bundle:nil];
+        [self.navigationController pushViewController:signInController animated:YES];
+        [signInController release];
     }
 }
 
