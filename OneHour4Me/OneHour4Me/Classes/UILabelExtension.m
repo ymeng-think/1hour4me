@@ -16,6 +16,7 @@
                                  lineBreakMode:self.lineBreakMode];
     self.numberOfLines = 0;
     self.font = font;
+    self.textColor = [UIColor whiteColor];
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, labelSize.height);
     if (includesLineBreak) {
         self.text = [self.text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];

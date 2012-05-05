@@ -66,9 +66,9 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">1 Hour For Me</string>
-						<object class="NSColor" key="IBUITextColor" id="140961206">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MQA</bytes>
+						<object class="NSColor" key="IBUITextColor" id="392190727">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MCAwIDAAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -97,7 +97,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">I CAN do something great in 30 DAYS</string>
-						<reference key="IBUITextColor" ref="140961206"/>
+						<reference key="IBUITextColor" ref="392190727"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -125,7 +125,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string type="base64-UTF8" key="IBUIText">SUYgSSAobGlrZSBvdGhlciA5NDQgcGVvcGxlKSAuLi5cbiAgIFNFVCBBIFBMQU4gZm9yIG15c2VsZlxu
 ICAgU1BFTkQgMSBIT1VSIGV2ZXJ5ZGF5XG4gICBTSE9XIE1ZIFBST0dSRVNTIHRvIGV2ZXJ5b25lCg</string>
-						<reference key="IBUITextColor" ref="140961206"/>
+						<reference key="IBUITextColor" ref="392190727"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<float key="IBUIMinimumFontSize">10</float>
@@ -138,7 +138,6 @@ ICAgU1BFTkQgMSBIT1VSIGV2ZXJ5ZGF5XG4gICBTSE9XIE1ZIFBST0dSRVNTIHRvIGV2ZXJ5b25lCg</
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
