@@ -8,10 +8,9 @@
 
 #import "MEWelcomeViewController.h"
 #import "MESignInViewController.h"
+#import "MEFontLibrary.h"
 
-#define FONT_LUCIDA_CALLIGRAPHY @"Lucida Calligraphy"
-
-@interface MEWelcomeViewController (Private)
+@interface MEWelcomeViewController ()
 
 - (void)showLabel:(UILabel *)label withFont:(UIFont *)font lineBreak:(BOOL)includesLineBreak;
 - (void)registerGestureRecognizers;
@@ -33,12 +32,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-    self.title = @"Welcome";
     
-    UIFont *cursiveLargerFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
-    [self showLabel:header withFont:cursiveLargerFont lineBreak:NO];
-    UIFont *cursiveFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:13];
+    [self showLabel:header withFont:[MEFontLibrary sharedLibrary].cursiveLargerFont lineBreak:NO];
+    UIFont *cursiveFont = [MEFontLibrary sharedLibrary].cursiveFont;
     [self showLabel:target withFont:cursiveFont lineBreak:NO];
     [self showLabel:description withFont:cursiveFont lineBreak:YES];
     

@@ -12,6 +12,7 @@
 		6F2B979D1554C9F20082E571 /* MEBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B979C1554C9F20082E571 /* MEBackgroundView.m */; };
 		6F2B979F1554CD3F0082E571 /* sticker.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B979E1554CD3F0082E571 /* sticker.png */; };
 		6F2B97A21554CE040082E571 /* MESignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B97A11554CE040082E571 /* MESignInViewController.m */; };
+		6F2B97A51554D13F0082E571 /* MEFontLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B97A41554D13F0082E571 /* MEFontLibrary.m */; };
 		6F6FB23C15539E57000AE8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
 		6F6FB23E15539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
 		6F6FB24015539E57000AE8EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */; };
@@ -49,6 +50,8 @@
 		6F2B979E1554CD3F0082E571 /* sticker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker.png; sourceTree = "<group>"; };
 		6F2B97A01554CE040082E571 /* MESignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MESignInViewController.h; sourceTree = "<group>"; };
 		6F2B97A11554CE040082E571 /* MESignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MESignInViewController.m; sourceTree = "<group>"; };
+		6F2B97A31554D13F0082E571 /* MEFontLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFontLibrary.h; sourceTree = "<group>"; };
+		6F2B97A41554D13F0082E571 /* MEFontLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFontLibrary.m; sourceTree = "<group>"; };
 		6F6FB23715539E57000AE8EC /* OneHour4Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHour4Me.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6FB23B15539E57000AE8EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6F6FB23D15539E57000AE8EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -183,6 +186,8 @@
 				6F2B979A1554C9CB0082E571 /* Views */,
 				6F6FB24A15539E57000AE8EC /* MEAppDelegate.h */,
 				6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */,
+				6F2B97A31554D13F0082E571 /* MEFontLibrary.h */,
+				6F2B97A41554D13F0082E571 /* MEFontLibrary.m */,
 				6F6FB24715539E57000AE8EC /* main.m */,
 			);
 			path = Classes;
@@ -358,6 +363,7 @@
 				6FEBCAC31553F775004FC1B1 /* MEWelcomeViewController.m in Sources */,
 				6F2B979D1554C9F20082E571 /* MEBackgroundView.m in Sources */,
 				6F2B97A21554CE040082E571 /* MESignInViewController.m in Sources */,
+				6F2B97A51554D13F0082E571 /* MEFontLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
