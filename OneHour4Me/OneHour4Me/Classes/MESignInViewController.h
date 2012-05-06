@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MESignInView.h"
 
-@interface MESignInViewController : UIViewController <UITextFieldDelegate> {
+@interface MESignInViewController : UIViewController <UITextFieldDelegate, MESignInDelegate> {
     UIScrollView *scrollView;
     UIView *firstResponder;
     

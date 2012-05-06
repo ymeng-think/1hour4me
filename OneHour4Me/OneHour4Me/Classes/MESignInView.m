@@ -18,14 +18,14 @@
 - (void)addSticker;
 - (void)addLabelInto:(UIView *)container inRect:(CGRect)rect font:(UIFont *)font color:(UIColor *)color content:(NSString *)content;
 - (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect encrypted:(BOOL)isEncrypted;
-- (void)addButtonInto:(UIView *)container inRect:(CGRect)rect title:(NSString *)text;
+- (void)addButtonInto:(UIView *)container inRect:(CGRect)rect title:(NSString *)text action:(SEL)selector;
 - (UIImage *)buttonBackground:(NSString *)imageName;
 
 @end
 
 @implementation MESignInView
 
-@synthesize textFieldEditingHandler;
+@synthesize textFieldEditingHandler, signInDelegate;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -79,7 +79,8 @@
     // sign in
     [self addButtonInto:stickerView
                  inRect:CGRectMake(35, 260, 70, 31)
-                  title:@"Sign In"];
+                  title:@"Sign In"
+                 action:@selector(signIn:)];
 }
 
 - (void)addLabelInto:(UIView *)container inRect:(CGRect)rect font:(UIFont *)font color:(UIColor *)color content:(NSString *)content {
@@ -106,13 +107,14 @@
     [textField release];
 }
 
-- (void)addButtonInto:(UIView *)container inRect:(CGRect)rect title:(NSString *)text {
+- (void)addButtonInto:(UIView *)container inRect:(CGRect)rect title:(NSString *)text action:(SEL)selector {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = rect;
     [button setTitle:text forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setBackgroundImage:[self buttonBackground:@"button.png"] forState:UIControlStateNormal];
     [button.titleLabel blackTextWithFont:[MEFontLibrary sharedLibrary].cursiveFont];
+    [button addTarget:signInDelegate action:selector forControlEvents:UIControlEventTouchUpInside];
     
     [container addSubview:button];
 }

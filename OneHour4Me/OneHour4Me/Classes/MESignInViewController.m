@@ -7,9 +7,6 @@
 //
 
 #import "MESignInViewController.h"
-#import "MESignInView.h"
-//#import "MEFontLibrary.h"
-//#import "UILabelExtension.h"
 
 @interface MESignInViewController ()
 
@@ -83,6 +80,10 @@
 
 - (void)keyboardWillHide:(NSNotification *)notification {
     [scrollView setContentOffset:oldOffset animated:YES];
+}
+
+- (IBAction)signIn:(id)sender {
+    NSLog(@"clicked sign in button");
 }
 
 @end

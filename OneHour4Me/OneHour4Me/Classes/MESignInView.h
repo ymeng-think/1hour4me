@@ -9,11 +9,20 @@
 #import "MEBackgroundView.h"
 #import "MEStickerView.h"
 
+@protocol MESignInDelegate
+
+- (IBAction)signIn:(id)sender;
+
+@end
+
 @interface MESignInView : MEBackgroundView {
     MEStickerView *stickerView;
+    
     id<UITextFieldDelegate> textFiedEditingHandler;
+    id<MESignInDelegate> signInDelegate;
 }
 
 @property (nonatomic, retain, setter = setTextFieldEditingHandler:) id<UITextFieldDelegate> textFieldEditingHandler;
+@property (nonatomic, retain) id<MESignInDelegate> signInDelegate;
 
 @end
