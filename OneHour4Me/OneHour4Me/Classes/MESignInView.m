@@ -11,21 +11,24 @@
 #import "UILabelExtension.h"
 
 #define BUTTON_LEFT_CORNER_WIDTH 4.0
+#define TAG_OF_USERNAME 1
+#define TAG_OF_PASSWORD 2
 
 @interface MESignInView ()
 
 - (void)addHeaderLabel;
 - (void)addSticker;
 - (void)addLabelInto:(UIView *)container inRect:(CGRect)rect font:(UIFont *)font color:(UIColor *)color content:(NSString *)content;
-- (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect encrypted:(BOOL)isEncrypted;
+- (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect tag:(NSInteger)tag encrypted:(BOOL)isEncrypted;
 - (void)addButtonInto:(UIView *)container inRect:(CGRect)rect title:(NSString *)text action:(SEL)selector;
 - (UIImage *)buttonBackground:(NSString *)imageName;
+- (void)didPressSignInButton:(id)sender;
 
 @end
 
 @implementation MESignInView
 
-@synthesize textFieldEditingHandler, signInDelegate;
+@synthesize textFieldEditingDelegate, signInDelegate;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -64,6 +67,7 @@
                content:@"Email"];
     [self addTextFieldInto:stickerView
                     inRect:CGRectMake(52, 128, 171, 31)
+                       tag:TAG_OF_USERNAME
                  encrypted:NO];
     
     // password
@@ -74,13 +78,14 @@
                content:@"Password"];
     [self addTextFieldInto:stickerView
                     inRect:CGRectMake(52, 198, 171, 31)
+                       tag:TAG_OF_PASSWORD
                  encrypted:YES];
     
     // sign in
     [self addButtonInto:stickerView
                  inRect:CGRectMake(35, 260, 70, 31)
                   title:@"Sign In"
-                 action:@selector(signIn:)];
+                 action:@selector(didPressSignInButton:)];
 }
 
 - (void)addLabelInto:(UIView *)container inRect:(CGRect)rect font:(UIFont *)font color:(UIColor *)color content:(NSString *)content {
@@ -98,8 +103,9 @@
     [label release];
 }
 
-- (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect encrypted:(BOOL)isEncrypted {
+- (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect tag:(NSInteger)tag encrypted:(BOOL)isEncrypted {
     UITextField *textField = [[UITextField alloc] initWithFrame:rect];
+    textField.tag = tag;
     [textField setSecureTextEntry:isEncrypted];
     
     [container addSubview:textField];
@@ -114,7 +120,7 @@
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setBackgroundImage:[self buttonBackground:@"button.png"] forState:UIControlStateNormal];
     [button.titleLabel blackTextWithFont:[MEFontLibrary sharedLibrary].cursiveFont];
-    [button addTarget:signInDelegate action:selector forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
     
     [container addSubview:button];
 }
@@ -124,12 +130,19 @@
 	return [image stretchableImageWithLeftCapWidth:BUTTON_LEFT_CORNER_WIDTH topCapHeight:0];
 }
 
-- (void)setTextFieldEditingHandler:(id<UITextFieldDelegate>)delegate {
+- (void)setTextFieldEditingDelegate:(id<UITextFieldDelegate>)delegate {
     for (UIView *subview in stickerView.subviews) {
         if ([subview isKindOfClass:[UITextField class]]) {
             ((UITextField *)subview).delegate = delegate;
         }
     }
+}
+
+- (void)didPressSignInButton:(id)sender {
+    UITextField *userName = (UITextField *)[stickerView viewWithTag:TAG_OF_USERNAME];
+    UITextField *password = (UITextField *)[stickerView viewWithTag:TAG_OF_PASSWORD];
+    
+    [signInDelegate signInWithUserName:userName.text andPassword:password.text];
 }
 
 - (void)dealloc {

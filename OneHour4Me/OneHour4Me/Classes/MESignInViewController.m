@@ -19,7 +19,8 @@
     CGRect mainScreen = [UIScreen mainScreen].bounds;
     scrollView = [[UIScrollView alloc] initWithFrame:mainScreen];
     MESignInView *signInView = [[MESignInView alloc] initWithFrame:mainScreen];
-    signInView.textFieldEditingHandler = self;
+    signInView.textFieldEditingDelegate = self;
+    signInView.signInDelegate = self;
     [scrollView addSubview:signInView];
     self.view = scrollView;
     [signInView release];
@@ -83,14 +84,14 @@
     [scrollView setContentOffset:oldOffset animated:YES];
 }
 
-- (IBAction)signIn:(id)sender {
-    MEUser *user = [MEUser loginWithName:@"bob@gmail.com" password:@"12345"];
+- (void)signInWithUserName:(NSString *)userName andPassword:(NSString *)password {
+    MEUser *user = [MEUser loginWithName:userName password:password];
     if (user) {
-        NSLog(@"you have logged in, now you can navigate to next page");
+        NSLog(@"sign in with username: %@ and password: %@", userName, password);
     } else {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sign in failed" 
                                    message:@"Your username or password is not correct" 
-                                  delegate:nil 
+                                  delegate:nil
                          cancelButtonTitle:@"Try again" 
                          otherButtonTitles:nil];
         [alertView show];

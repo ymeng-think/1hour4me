@@ -11,18 +11,18 @@
 
 @protocol MESignInDelegate
 
-- (IBAction)signIn:(id)sender;
+- (void)signInWithUserName:(NSString *)userName andPassword:(NSString *)password;
 
 @end
 
 @interface MESignInView : MEBackgroundView {
     MEStickerView *stickerView;
     
-    id<UITextFieldDelegate> textFiedEditingHandler;
+    id<UITextFieldDelegate> textFieldEditingDelegate;
     id<MESignInDelegate> signInDelegate;
 }
 
-@property (nonatomic, retain, setter = setTextFieldEditingHandler:) id<UITextFieldDelegate> textFieldEditingHandler;
+@property (nonatomic, retain, setter = setTextFieldEditingDelegate:) id<UITextFieldDelegate> textFieldEditingDelegate;
 @property (nonatomic, retain) id<MESignInDelegate> signInDelegate;
 
 @end
