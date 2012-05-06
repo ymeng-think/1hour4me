@@ -15,6 +15,7 @@
 
 - (void)registerGestureRecognizers;
 - (void)didClick:(UITapGestureRecognizer *)sender;
+- (void)goToNextView;
 
 @end
 
@@ -44,6 +45,12 @@
     self.navigationController.navigationBar.hidden = YES;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self performSelector:@selector(goToNextView) withObject:nil afterDelay:1.0];
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
@@ -58,10 +65,14 @@
 
 - (void)didClick:(UITapGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateEnded) {
-        MESignInViewController *signInController = [[MESignInViewController alloc] init];
-        [self.navigationController pushViewController:signInController animated:YES];
-        [signInController release];
+        [self goToNextView];
     }
+}
+
+- (void)goToNextView {
+    MESignInViewController *signInController = [[MESignInViewController alloc] init];
+    [self.navigationController pushViewController:signInController animated:YES];
+    [signInController release];
 }
 
 @end
