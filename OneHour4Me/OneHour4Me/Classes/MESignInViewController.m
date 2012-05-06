@@ -7,6 +7,7 @@
 //
 
 #import "MESignInViewController.h"
+#import "MEUser.h"
 
 @interface MESignInViewController ()
 
@@ -83,7 +84,18 @@
 }
 
 - (IBAction)signIn:(id)sender {
-    NSLog(@"clicked sign in button");
+    MEUser *user = [MEUser loginWithName:@"bob@gmail.com" password:@"12345"];
+    if (user) {
+        NSLog(@"you have logged in, now you can navigate to next page");
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sign in failed" 
+                                   message:@"Your username or password is not correct" 
+                                  delegate:nil 
+                         cancelButtonTitle:@"Try again" 
+                         otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+    }
 }
 
 @end
