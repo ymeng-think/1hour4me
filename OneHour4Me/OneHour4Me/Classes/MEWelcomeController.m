@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MEWelcomeViewController.h"
+#import "MEWelcomeController.h"
 #import "MESignInViewController.h"
 #import "MEFontLibrary.h"
 #import "UILabelExtension.h"
 
-@interface MEWelcomeViewController ()
+@interface MEWelcomeController ()
 
 - (void)registerGestureRecognizers;
 - (void)didClick:(UITapGestureRecognizer *)sender;
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation MEWelcomeViewController
+@implementation MEWelcomeController
 
 @synthesize header, target, description;
 

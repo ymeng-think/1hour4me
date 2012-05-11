@@ -33,7 +33,7 @@
 		6F6FB25E15539E57000AE8EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FB25C15539E57000AE8EC /* InfoPlist.strings */; };
 		6F6FB26115539E57000AE8EC /* OneHour4MeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */; };
 		6FEBCABF1553F57B004FC1B1 /* welcome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCABE1553F57B004FC1B1 /* welcome.xib */; };
-		6FEBCAC31553F775004FC1B1 /* MEWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */; };
+		6FEBCAC31553F775004FC1B1 /* MEWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */; };
 		6FEBCACF155400D3004FC1B1 /* activities.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCACE155400D3004FC1B1 /* activities.png */; };
 		6FEBCAD41554063A004FC1B1 /* lucida-calligraphy-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCAD31554063A004FC1B1 /* lucida-calligraphy-italic.ttf */; };
 /* End PBXBuildFile section */
@@ -88,8 +88,8 @@
 		6F6FB25F15539E57000AE8EC /* OneHour4MeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneHour4MeTests.h; sourceTree = "<group>"; };
 		6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneHour4MeTests.m; sourceTree = "<group>"; };
 		6FEBCABE1553F57B004FC1B1 /* welcome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = welcome.xib; sourceTree = "<group>"; };
-		6FEBCAC11553F775004FC1B1 /* MEWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEWelcomeViewController.h; sourceTree = "<group>"; };
-		6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWelcomeViewController.m; sourceTree = "<group>"; };
+		6FEBCAC11553F775004FC1B1 /* MEWelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MEWelcomeController.h; sourceTree = "<group>"; };
+		6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWelcomeController.m; sourceTree = "<group>"; };
 		6FEBCACE155400D3004FC1B1 /* activities.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = activities.png; sourceTree = "<group>"; };
 		6FEBCAD31554063A004FC1B1 /* lucida-calligraphy-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lucida-calligraphy-italic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,8 +265,8 @@
 				6F340E45155CDAE3003722EA /* MECalendarViewController.m */,
 				6F2B97A01554CE040082E571 /* MESignInViewController.h */,
 				6F2B97A11554CE040082E571 /* MESignInViewController.m */,
-				6FEBCAC11553F775004FC1B1 /* MEWelcomeViewController.h */,
-				6FEBCAC21553F775004FC1B1 /* MEWelcomeViewController.m */,
+				6FEBCAC11553F775004FC1B1 /* MEWelcomeController.h */,
+				6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -397,7 +397,7 @@
 			files = (
 				6F6FB24815539E57000AE8EC /* main.m in Sources */,
 				6F6FB24C15539E57000AE8EC /* MEAppDelegate.m in Sources */,
-				6FEBCAC31553F775004FC1B1 /* MEWelcomeViewController.m in Sources */,
+				6FEBCAC31553F775004FC1B1 /* MEWelcomeController.m in Sources */,
 				6F2B979D1554C9F20082E571 /* MEBackgroundView.m in Sources */,
 				6F2B97A21554CE040082E571 /* MESignInViewController.m in Sources */,
 				6F2B97A51554D13F0082E571 /* MEFontLibrary.m in Sources */,

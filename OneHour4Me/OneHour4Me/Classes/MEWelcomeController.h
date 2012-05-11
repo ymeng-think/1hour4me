@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MEWelcomeViewController : UIViewController {
+@interface MEWelcomeController : UIViewController {
     UILabel *header;
     UILabel *target;
     UILabel *description;

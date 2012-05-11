@@ -7,7 +7,7 @@
 //
 
 #import "MEAppDelegate.h"
-#import "MEWelcomeViewController.h"
+#import "MEWelcomeController.h"
 
 @implementation MEAppDelegate
 
@@ -18,7 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    MEWelcomeViewController *welcomeController = [[MEWelcomeViewController alloc] initWithNibName:@"welcome" bundle:nil];
+    MEWelcomeController *welcomeController = [[MEWelcomeController alloc] initWithNibName:@"welcome" bundle:nil];
     /*
      == CAUTION: ==
      We must initialize 'navigationController' as a class instance field rather than as a local variable (and release it after 
