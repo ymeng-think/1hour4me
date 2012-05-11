@@ -1,5 +1,5 @@
 //
-//  MESignInViewController.h
+//  MESignInController.h
 //  OneHour4Me
 //
 //  Created by Meng Yu on 5/5/12.

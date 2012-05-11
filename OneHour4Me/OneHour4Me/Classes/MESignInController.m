@@ -1,5 +1,5 @@
 //
-//  MESignInViewController.m
+//  MESignInController.m
 //  OneHour4Me
 //
 //  Created by Meng Yu on 5/5/12.
@@ -8,7 +8,7 @@
 
 #import "MESignInController.h"
 #import "MEUser.h"
-#import "MECalendarViewController.h"
+#import "MECalendarController.h"
 
 @interface MESignInController ()
 
@@ -88,7 +88,7 @@
 - (void)signInWithUserName:(NSString *)userName andPassword:(NSString *)password {
     MEUser *user = [MEUser loginWithName:userName password:password];
     if (user) {
-        MECalendarViewController *calendarController = [[MECalendarViewController alloc] init];
+        MECalendarController *calendarController = [[MECalendarController alloc] init];
         [self.navigationController pushViewController:calendarController animated:YES];
         [calendarController release];
     } else {

@@ -1,18 +1,18 @@
 //
-//  MECalendarViewController.m
+//  MECalendarController.m
 //  OneHour4Me
 //
 //  Created by Meng Yu on 5/11/12.
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MECalendarViewController.h"
+#import "MECalendarController.h"
 
-@interface MECalendarViewController ()
+@interface MECalendarController ()
 
 @end
 
-@implementation MECalendarViewController
+@implementation MECalendarController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

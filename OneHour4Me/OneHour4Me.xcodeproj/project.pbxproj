@@ -12,7 +12,7 @@
 		6F2B97A21554CE040082E571 /* MESignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B97A11554CE040082E571 /* MESignInController.m */; };
 		6F2B97A51554D13F0082E571 /* MEFontLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B97A41554D13F0082E571 /* MEFontLibrary.m */; };
 		6F2B97A81554D4E50082E571 /* UILabelExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B97A71554D4E50082E571 /* UILabelExtension.m */; };
-		6F340E46155CDAE3003722EA /* MECalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E45155CDAE3003722EA /* MECalendarViewController.m */; };
+		6F340E46155CDAE3003722EA /* MECalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E45155CDAE3003722EA /* MECalendarController.m */; };
 		6F44B89F1556A217009FE6EC /* MEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F44B89E1556A217009FE6EC /* MEUser.m */; };
 		6F5AC9DB155517ED00DC48C4 /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DA155517ED00DC48C4 /* blackboard.png */; };
 		6F5AC9DD1555181900DC48C4 /* blackboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DC1555181900DC48C4 /* blackboard@2x.png */; };
@@ -58,8 +58,8 @@
 		6F2B97A41554D13F0082E571 /* MEFontLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFontLibrary.m; sourceTree = "<group>"; };
 		6F2B97A61554D4E50082E571 /* UILabelExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelExtension.h; sourceTree = "<group>"; };
 		6F2B97A71554D4E50082E571 /* UILabelExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelExtension.m; sourceTree = "<group>"; };
-		6F340E44155CDAE3003722EA /* MECalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECalendarViewController.h; sourceTree = "<group>"; };
-		6F340E45155CDAE3003722EA /* MECalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendarViewController.m; sourceTree = "<group>"; };
+		6F340E44155CDAE3003722EA /* MECalendarController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MECalendarController.h; sourceTree = "<group>"; };
+		6F340E45155CDAE3003722EA /* MECalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendarController.m; sourceTree = "<group>"; };
 		6F44B89D1556A217009FE6EC /* MEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEUser.h; sourceTree = "<group>"; };
 		6F44B89E1556A217009FE6EC /* MEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEUser.m; sourceTree = "<group>"; };
 		6F5AC9DA155517ED00DC48C4 /* blackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard.png; sourceTree = "<group>"; };
@@ -261,8 +261,8 @@
 		6FEBCAC01553F72E004FC1B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6F340E44155CDAE3003722EA /* MECalendarViewController.h */,
-				6F340E45155CDAE3003722EA /* MECalendarViewController.m */,
+				6F340E44155CDAE3003722EA /* MECalendarController.h */,
+				6F340E45155CDAE3003722EA /* MECalendarController.m */,
 				6F2B97A01554CE040082E571 /* MESignInController.h */,
 				6F2B97A11554CE040082E571 /* MESignInController.m */,
 				6FEBCAC11553F775004FC1B1 /* MEWelcomeController.h */,
@@ -405,7 +405,7 @@
 				6F5AC9E0155518B400DC48C4 /* MESignInView.m in Sources */,
 				6F5AC9EF155524DD00DC48C4 /* MEStickerView.m in Sources */,
 				6F44B89F1556A217009FE6EC /* MEUser.m in Sources */,
-				6F340E46155CDAE3003722EA /* MECalendarViewController.m in Sources */,
+				6F340E46155CDAE3003722EA /* MECalendarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

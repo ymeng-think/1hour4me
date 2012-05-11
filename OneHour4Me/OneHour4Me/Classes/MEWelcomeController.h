@@ -1,5 +1,5 @@
 //
-//  MEWelcomeViewController.h
+//  MEWelcomeController.h
 //  OneHour4Me
 //
 //  Created by Meng Yu on 5/4/12.
