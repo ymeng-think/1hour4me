@@ -7,6 +7,7 @@
 //
 
 #import "MECalendarController.h"
+#import "MECalendarView.h"
 
 @interface MECalendarController ()
 
@@ -14,8 +15,7 @@
 
 @implementation MECalendarController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -23,21 +23,25 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)loadView {
+    CGRect mainScreen = [UIScreen mainScreen].bounds;
+    MECalendarView *rootView = [[MECalendarView alloc] initWithFrame:mainScreen];
+    self.view = rootView;
+    [rootView release];
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
 @end
