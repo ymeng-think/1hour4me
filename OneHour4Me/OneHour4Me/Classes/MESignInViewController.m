@@ -8,6 +8,7 @@
 
 #import "MESignInViewController.h"
 #import "MEUser.h"
+#import "MECalendarViewController.h"
 
 @interface MESignInViewController ()
 
@@ -87,7 +88,9 @@
 - (void)signInWithUserName:(NSString *)userName andPassword:(NSString *)password {
     MEUser *user = [MEUser loginWithName:userName password:password];
     if (user) {
-        NSLog(@"sign in with username: %@ and password: %@", userName, password);
+        MECalendarViewController *calendarController = [[MECalendarViewController alloc] init];
+        [self.navigationController pushViewController:calendarController animated:YES];
+        [calendarController release];
     } else {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sign in failed" 
                                    message:@"Your username or password is not correct" 
