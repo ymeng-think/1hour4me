@@ -8,10 +8,26 @@
 
 #import "MEUser.h"
 
+@interface MEUser ()
+
++ (BOOL)stringIsEmpty:(NSString *)str;
+
+@end
+
 @implementation MEUser
 
++ (BOOL)stringIsEmpty:(NSString *)str {
+    if([str length] == 0) {
+        return YES;
+    }
+    if([[str stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
+        return YES;
+    }
+    return NO;
+} 
+
 + (MEUser *)loginWithName:(NSString *)userName password:(NSString *)password {
-    if (userName == nil || password == nil) {
+    if ([MEUser stringIsEmpty:userName] || [MEUser stringIsEmpty:password]) {
         return nil;
     }
     
