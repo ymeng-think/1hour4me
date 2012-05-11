@@ -7,7 +7,7 @@
 //
 
 #import "MEWelcomeController.h"
-#import "MESignInViewController.h"
+#import "MESignInController.h"
 #import "MEFontLibrary.h"
 #import "UILabelExtension.h"
 
@@ -70,7 +70,7 @@
 }
 
 - (void)goToNextView {
-    MESignInViewController *signInController = [[MESignInViewController alloc] init];
+    MESignInController *signInController = [[MESignInController alloc] init];
     [self.navigationController pushViewController:signInController animated:YES];
     [signInController release];
 }

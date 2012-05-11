@@ -6,15 +6,15 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MESignInViewController.h"
+#import "MESignInController.h"
 #import "MEUser.h"
 #import "MECalendarViewController.h"
 
-@interface MESignInViewController ()
+@interface MESignInController ()
 
 @end
 
-@implementation MESignInViewController
+@implementation MESignInController
 
 - (void)loadView {
     CGRect mainScreen = [UIScreen mainScreen].bounds;
