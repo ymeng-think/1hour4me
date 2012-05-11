@@ -57,7 +57,7 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return UIInterfaceOrientationIsPortrait(interfaceOrientation);
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
