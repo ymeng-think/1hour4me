@@ -14,6 +14,7 @@
 		6F2B97A81554D4E50082E571 /* UILabelExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B97A71554D4E50082E571 /* UILabelExtension.m */; };
 		6F340E46155CDAE3003722EA /* MECalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E45155CDAE3003722EA /* MECalendarController.m */; };
 		6F340E4F155D2067003722EA /* MECalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E4E155D2067003722EA /* MECalendarView.m */; };
+		6F340E52155D2F76003722EA /* MECalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E51155D2F76003722EA /* MECalendar.m */; };
 		6F44B89F1556A217009FE6EC /* MEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F44B89E1556A217009FE6EC /* MEUser.m */; };
 		6F5AC9DB155517ED00DC48C4 /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DA155517ED00DC48C4 /* blackboard.png */; };
 		6F5AC9DD1555181900DC48C4 /* blackboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DC1555181900DC48C4 /* blackboard@2x.png */; };
@@ -32,7 +33,7 @@
 		6F6FB25515539E57000AE8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
 		6F6FB25615539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
 		6F6FB25E15539E57000AE8EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FB25C15539E57000AE8EC /* InfoPlist.strings */; };
-		6F6FB26115539E57000AE8EC /* OneHour4MeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */; };
+		6F6FB26115539E57000AE8EC /* MeCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FB26015539E57000AE8EC /* MeCalendarTests.m */; };
 		6FEBCABF1553F57B004FC1B1 /* welcome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCABE1553F57B004FC1B1 /* welcome.xib */; };
 		6FEBCAC31553F775004FC1B1 /* MEWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */; };
 		6FEBCACF155400D3004FC1B1 /* activities.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCACE155400D3004FC1B1 /* activities.png */; };
@@ -63,6 +64,8 @@
 		6F340E45155CDAE3003722EA /* MECalendarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendarController.m; sourceTree = "<group>"; };
 		6F340E4D155D2067003722EA /* MECalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECalendarView.h; sourceTree = "<group>"; };
 		6F340E4E155D2067003722EA /* MECalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendarView.m; sourceTree = "<group>"; };
+		6F340E50155D2F76003722EA /* MECalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECalendar.h; sourceTree = "<group>"; };
+		6F340E51155D2F76003722EA /* MECalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendar.m; sourceTree = "<group>"; };
 		6F44B89D1556A217009FE6EC /* MEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEUser.h; sourceTree = "<group>"; };
 		6F44B89E1556A217009FE6EC /* MEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEUser.m; sourceTree = "<group>"; };
 		6F5AC9DA155517ED00DC48C4 /* blackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard.png; sourceTree = "<group>"; };
@@ -88,8 +91,8 @@
 		6F6FB25315539E57000AE8EC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		6F6FB25B15539E57000AE8EC /* OneHour4MeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneHour4MeTests-Info.plist"; sourceTree = "<group>"; };
 		6F6FB25D15539E57000AE8EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6F6FB25F15539E57000AE8EC /* OneHour4MeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneHour4MeTests.h; sourceTree = "<group>"; };
-		6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneHour4MeTests.m; sourceTree = "<group>"; };
+		6F6FB25F15539E57000AE8EC /* MeCalendarTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCalendarTests.h; sourceTree = "<group>"; };
+		6F6FB26015539E57000AE8EC /* MeCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCalendarTests.m; sourceTree = "<group>"; };
 		6FEBCABE1553F57B004FC1B1 /* welcome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = welcome.xib; sourceTree = "<group>"; };
 		6FEBCAC11553F775004FC1B1 /* MEWelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEWelcomeController.h; sourceTree = "<group>"; };
 		6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWelcomeController.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 			children = (
 				6F44B89D1556A217009FE6EC /* MEUser.h */,
 				6F44B89E1556A217009FE6EC /* MEUser.m */,
+				6F340E50155D2F76003722EA /* MECalendar.h */,
+				6F340E51155D2F76003722EA /* MECalendar.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -200,8 +205,8 @@
 		6F6FB25915539E57000AE8EC /* OneHour4MeTests */ = {
 			isa = PBXGroup;
 			children = (
-				6F6FB25F15539E57000AE8EC /* OneHour4MeTests.h */,
-				6F6FB26015539E57000AE8EC /* OneHour4MeTests.m */,
+				6F6FB25F15539E57000AE8EC /* MeCalendarTests.h */,
+				6F6FB26015539E57000AE8EC /* MeCalendarTests.m */,
 				6F6FB25A15539E57000AE8EC /* Supporting Files */,
 			);
 			path = OneHour4MeTests;
@@ -412,6 +417,7 @@
 				6F44B89F1556A217009FE6EC /* MEUser.m in Sources */,
 				6F340E46155CDAE3003722EA /* MECalendarController.m in Sources */,
 				6F340E4F155D2067003722EA /* MECalendarView.m in Sources */,
+				6F340E52155D2F76003722EA /* MECalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F6FB26115539E57000AE8EC /* OneHour4MeTests.m in Sources */,
+				6F6FB26115539E57000AE8EC /* MeCalendarTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

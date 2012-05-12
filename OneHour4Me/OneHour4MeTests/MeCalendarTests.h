@@ -1,5 +1,5 @@
 //
-//  OneHour4MeTests.h
+//  MeCalendarTests.h
 //  OneHour4MeTests
 //
 //  Created by Meng Yu on 5/4/12.
@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface OneHour4MeTests : SenTestCase
+@interface MeCalendarTests : SenTestCase
 
 @end
