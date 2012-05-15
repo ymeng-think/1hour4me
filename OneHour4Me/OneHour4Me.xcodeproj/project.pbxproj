@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F2666EF15627E8A004E56A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
+		6F2666F015627E8A004E56A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
+		6F2666F115627E8A004E56A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */; };
+		6F2666F715627E8A004E56A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F2666F515627E8A004E56A2 /* InfoPlist.strings */; };
+		6F26670815627ED6004E56A2 /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F26670715627ED6004E56A2 /* GHUnitIOS.framework */; };
+		6F26670B1562806B004E56A2 /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F26670A1562806B004E56A2 /* GHUnitIOSTestMain.m */; };
+		6F26670E15628190004E56A2 /* MEExampleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F26670D15628190004E56A2 /* MEExampleTest.m */; };
 		6F2B978D1554B10D0082E571 /* activities@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F2B978C1554B10D0082E571 /* activities@2x.png */; };
 		6F2B979D1554C9F20082E571 /* MEBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B979C1554C9F20082E571 /* MEBackgroundView.m */; };
 		6F2B97A21554CE040082E571 /* MESignInController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2B97A11554CE040082E571 /* MESignInController.m */; };
@@ -51,6 +58,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F2666ED15627E8A004E56A2 /* OneHour4MeGHTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHour4MeGHTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F2666F415627E8A004E56A2 /* OneHour4MeGHTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneHour4MeGHTests-Info.plist"; sourceTree = "<group>"; };
+		6F2666F615627E8A004E56A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6F2666FA15627E8A004E56A2 /* OneHour4MeGHTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OneHour4MeGHTests-Prefix.pch"; sourceTree = "<group>"; };
+		6F26670715627ED6004E56A2 /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GHUnitIOS.framework; sourceTree = "<group>"; };
+		6F26670A1562806B004E56A2 /* GHUnitIOSTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHUnitIOSTestMain.m; sourceTree = "<group>"; };
+		6F26670D15628190004E56A2 /* MEExampleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEExampleTest.m; sourceTree = "<group>"; };
 		6F2B978C1554B10D0082E571 /* activities@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activities@2x.png"; sourceTree = "<group>"; };
 		6F2B979B1554C9F20082E571 /* MEBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEBackgroundView.h; sourceTree = "<group>"; };
 		6F2B979C1554C9F20082E571 /* MEBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEBackgroundView.m; sourceTree = "<group>"; };
@@ -101,6 +115,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6F2666EA15627E8A004E56A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F26670815627ED6004E56A2 /* GHUnitIOS.framework in Frameworks */,
+				6F2666EF15627E8A004E56A2 /* UIKit.framework in Frameworks */,
+				6F2666F015627E8A004E56A2 /* Foundation.framework in Frameworks */,
+				6F2666F115627E8A004E56A2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6F6FB23415539E57000AE8EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,6 +149,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F2666F215627E8A004E56A2 /* OneHour4MeGHTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F2666F315627E8A004E56A2 /* Supporting Files */,
+				6F26670A1562806B004E56A2 /* GHUnitIOSTestMain.m */,
+				6F26670D15628190004E56A2 /* MEExampleTest.m */,
+			);
+			path = OneHour4MeGHTests;
+			sourceTree = "<group>";
+		};
+		6F2666F315627E8A004E56A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F2666F415627E8A004E56A2 /* OneHour4MeGHTests-Info.plist */,
+				6F2666F515627E8A004E56A2 /* InfoPlist.strings */,
+				6F2666FA15627E8A004E56A2 /* OneHour4MeGHTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6F2B979A1554C9CB0082E571 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +202,7 @@
 			children = (
 				6F6FB24115539E57000AE8EC /* OneHour4Me */,
 				6F6FB25915539E57000AE8EC /* OneHour4MeTests */,
+				6F2666F215627E8A004E56A2 /* OneHour4MeGHTests */,
 				6F6FB23A15539E57000AE8EC /* Frameworks */,
 				6F6FB23815539E57000AE8EC /* Products */,
 			);
@@ -167,6 +213,7 @@
 			children = (
 				6F6FB23715539E57000AE8EC /* OneHour4Me.app */,
 				6F6FB25215539E57000AE8EC /* OneHour4MeTests.octest */,
+				6F2666ED15627E8A004E56A2 /* OneHour4MeGHTests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +221,7 @@
 		6F6FB23A15539E57000AE8EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F26670715627ED6004E56A2 /* GHUnitIOS.framework */,
 				6F6FB23B15539E57000AE8EC /* UIKit.framework */,
 				6F6FB23D15539E57000AE8EC /* Foundation.framework */,
 				6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */,
@@ -292,6 +340,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6F2666EC15627E8A004E56A2 /* OneHour4MeGHTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F26670415627E8A004E56A2 /* Build configuration list for PBXNativeTarget "OneHour4MeGHTests" */;
+			buildPhases = (
+				6F2666E915627E8A004E56A2 /* Sources */,
+				6F2666EA15627E8A004E56A2 /* Frameworks */,
+				6F2666EB15627E8A004E56A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneHour4MeGHTests;
+			productName = OneHour4MeGHTests;
+			productReference = 6F2666ED15627E8A004E56A2 /* OneHour4MeGHTests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6F6FB23615539E57000AE8EC /* OneHour4Me */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F6FB26415539E57000AE8EC /* Build configuration list for PBXNativeTarget "OneHour4Me" */;
@@ -352,11 +417,20 @@
 			targets = (
 				6F6FB23615539E57000AE8EC /* OneHour4Me */,
 				6F6FB25115539E57000AE8EC /* OneHour4MeTests */,
+				6F2666EC15627E8A004E56A2 /* OneHour4MeGHTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6F2666EB15627E8A004E56A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F2666F715627E8A004E56A2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6F6FB23515539E57000AE8EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -401,6 +475,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6F2666E915627E8A004E56A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F26670B1562806B004E56A2 /* GHUnitIOSTestMain.m in Sources */,
+				6F26670E15628190004E56A2 /* MEExampleTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6F6FB23315539E57000AE8EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -440,6 +523,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6F2666F515627E8A004E56A2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F2666F615627E8A004E56A2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		6F6FB24415539E57000AE8EC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -459,6 +550,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6F26670515627E8A004E56A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OneHour4MeGHTests/OneHour4MeGHTests-Prefix.pch";
+				INFOPLIST_FILE = "OneHour4MeGHTests/OneHour4MeGHTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6F26670615627E8A004E56A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OneHour4MeGHTests/OneHour4MeGHTests-Prefix.pch";
+				INFOPLIST_FILE = "OneHour4MeGHTests/OneHour4MeGHTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		6F6FB26215539E57000AE8EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,6 +700,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6F26670415627E8A004E56A2 /* Build configuration list for PBXNativeTarget "OneHour4MeGHTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F26670515627E8A004E56A2 /* Debug */,
+				6F26670615627E8A004E56A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6F6FB23115539E57000AE8EC /* Build configuration list for PBXProject "OneHour4Me" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
