@@ -13,17 +13,17 @@
 
 @implementation MEFontLibrary
 
-@synthesize cursiveLargerFont, cursiveFont, chalkboardLargerFont, chalkboardFont;
+@synthesize cursiveLargeFont, cursiveSmallFont, chalkboardLargeFont, chalkboardSmallFont;
 
 static MEFontLibrary *sharedInstance;
 
 + (MEFontLibrary *)sharedLibrary {
     if (!sharedInstance) {
         sharedInstance = [[MEFontLibrary alloc] init];
-        sharedInstance->cursiveLargerFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
-        sharedInstance->cursiveFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:13];
-        sharedInstance->chalkboardLargerFont = [UIFont fontWithName:FONT_CHALKBOARD size:22];
-        sharedInstance->chalkboardFont = [UIFont fontWithName:FONT_CHALKBOARD size:15];
+        sharedInstance->cursiveLargeFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
+        sharedInstance->cursiveSmallFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:13];
+        sharedInstance->chalkboardLargeFont = [UIFont fontWithName:FONT_CHALKBOARD size:22];
+        sharedInstance->chalkboardSmallFont = [UIFont fontWithName:FONT_CHALKBOARD size:15];
     }
     return sharedInstance;
 }

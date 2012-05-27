@@ -26,8 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [header whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont];
-    UIFont *cursiveFont = [MEFontLibrary sharedLibrary].cursiveFont;
+    [header whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargeFont];
+    UIFont *cursiveFont = [MEFontLibrary sharedLibrary].cursiveSmallFont;
     [target whiteTextWithFont:cursiveFont];
     [description whiteTextWithFont:cursiveFont linkBreak:YES];
     

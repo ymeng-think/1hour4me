@@ -9,17 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @interface MEFontLibrary : NSObject {
-    UIFont *cursiveLargerFont;
-    UIFont *cursiveFont;
-    UIFont *chalkboardLargerFont;
-    UIFont *chalkboardFont;
+    UIFont *cursiveLargeFont;
+    UIFont *cursiveSmallFont;
+    UIFont *chalkboardLargeFont;
+    UIFont *chalkboardSmallFont;
 }
 
 + (MEFontLibrary *)sharedLibrary;
 
-@property(nonatomic, readonly) UIFont *cursiveLargerFont;
-@property(nonatomic, readonly) UIFont *cursiveFont;
-@property(nonatomic, readonly) UIFont *chalkboardLargerFont;
-@property(nonatomic, readonly) UIFont *chalkboardFont;
+@property(nonatomic, readonly) UIFont *cursiveLargeFont;
+@property(nonatomic, readonly) UIFont *cursiveSmallFont;
+@property(nonatomic, readonly) UIFont *chalkboardLargeFont;
+@property(nonatomic, readonly) UIFont *chalkboardSmallFont;
 
 @end

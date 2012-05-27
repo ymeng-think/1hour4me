@@ -37,7 +37,7 @@
 - (void)addMonthLabel {
     monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(PADDING, 0, self.bounds.size.width - PADDING * 2, LABEL_HEIGHT)];
     monthLabel.backgroundColor = [UIColor clearColor];
-    [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargerFont];
+    [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveLargeFont];
 
     
     [self addSubview:monthLabel];

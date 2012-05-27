@@ -42,7 +42,7 @@
 - (void)addHeaderLabel {
     [self addLabelInto:self 
                 inRect:CGRectMake(20, 20, 280, 21) 
-                  font:[MEFontLibrary sharedLibrary].cursiveLargerFont
+                  font:[MEFontLibrary sharedLibrary].cursiveLargeFont
                  color:[UIColor whiteColor]
                content:@"1 Hour For Me"];
 }
@@ -55,14 +55,14 @@
     // let me in ...
     [self addLabelInto:stickerView 
                 inRect:CGRectMake(35, 46, 118, 21)
-                  font:[MEFontLibrary sharedLibrary].chalkboardLargerFont 
+                  font:[MEFontLibrary sharedLibrary].chalkboardLargeFont 
                  color:[UIColor blackColor]
                content:@"Let me in ..."];
     
     // email
     [self addLabelInto:stickerView 
                 inRect:CGRectMake(35, 100, 118, 21)
-                  font:[MEFontLibrary sharedLibrary].chalkboardFont 
+                  font:[MEFontLibrary sharedLibrary].chalkboardSmallFont 
                  color:[UIColor blackColor]
                content:@"Email"];
     [self addTextFieldInto:stickerView
@@ -73,7 +73,7 @@
     // password
     [self addLabelInto:stickerView 
                 inRect:CGRectMake(35, 174, 118, 21)
-                  font:[MEFontLibrary sharedLibrary].chalkboardFont 
+                  font:[MEFontLibrary sharedLibrary].chalkboardSmallFont 
                  color:[UIColor blackColor]
                content:@"Password"];
     [self addTextFieldInto:stickerView
@@ -119,7 +119,7 @@
     [button setTitle:text forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setBackgroundImage:[self buttonBackground:@"button.png"] forState:UIControlStateNormal];
-    [button.titleLabel blackTextWithFont:[MEFontLibrary sharedLibrary].cursiveFont];
+    [button.titleLabel blackTextWithFont:[MEFontLibrary sharedLibrary].cursiveSmallFont];
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
     
     [container addSubview:button];
