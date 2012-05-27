@@ -8,7 +8,7 @@
 
 #import "MESignInView.h"
 #import "MEFontLibrary.h"
-#import "UILabelExtension.h"
+#import "MELabel.h"
 
 #define BUTTON_LEFT_CORNER_WIDTH 4.0
 #define TAG_OF_USERNAME 1
@@ -89,7 +89,7 @@
 }
 
 - (void)addLabelInto:(UIView *)container inRect:(CGRect)rect font:(UIFont *)font color:(UIColor *)color content:(NSString *)content {
-    UILabel *label = [[UILabel alloc] initWithFrame:rect];
+    MELabel *label = [[MELabel alloc] initWithFrame:rect];
     label.backgroundColor = [UIColor clearColor];
     label.text = content;
     if (color == [UIColor whiteColor]) {

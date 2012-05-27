@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UILabelExtension.h"
 
 @interface MELabel : UILabel
-
-- (void)blackTextWithFont:(UIFont *)font;
-- (void)whiteTextWithFont:(UIFont *)font;
-- (void)whiteTextWithFont:(UIFont *)font linkBreak:(BOOL)includesLineBreak;
 
 @end
