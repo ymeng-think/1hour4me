@@ -24,6 +24,7 @@
 		6F340E52155D2F76003722EA /* MECalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E51155D2F76003722EA /* MECalendar.m */; };
 		6F3E01061571D2C00085415C /* NSStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E01051571D2C00085415C /* NSStringExtension.m */; };
 		6F3E01091571D5CF0085415C /* MELabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E01081571D5CF0085415C /* MELabel.m */; };
+		6F3E01181571F9C40085415C /* MEWeekCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E01171571F9C40085415C /* MEWeekCell.m */; };
 		6F44B89F1556A217009FE6EC /* MEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F44B89E1556A217009FE6EC /* MEUser.m */; };
 		6F5AC9DB155517ED00DC48C4 /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DA155517ED00DC48C4 /* blackboard.png */; };
 		6F5AC9DD1555181900DC48C4 /* blackboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DC1555181900DC48C4 /* blackboard@2x.png */; };
@@ -87,6 +88,8 @@
 		6F3E01051571D2C00085415C /* NSStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtension.m; sourceTree = "<group>"; };
 		6F3E01071571D5CF0085415C /* MELabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELabel.h; sourceTree = "<group>"; };
 		6F3E01081571D5CF0085415C /* MELabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELabel.m; sourceTree = "<group>"; };
+		6F3E01161571F9C30085415C /* MEWeekCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEWeekCell.h; sourceTree = "<group>"; };
+		6F3E01171571F9C40085415C /* MEWeekCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWeekCell.m; sourceTree = "<group>"; };
 		6F44B89D1556A217009FE6EC /* MEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEUser.h; sourceTree = "<group>"; };
 		6F44B89E1556A217009FE6EC /* MEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEUser.m; sourceTree = "<group>"; };
 		6F5AC9DA155517ED00DC48C4 /* blackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard.png; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				6F5AC9DF155518B400DC48C4 /* MESignInView.m */,
 				6F5AC9ED155524DD00DC48C4 /* MEStickerView.h */,
 				6F5AC9EE155524DD00DC48C4 /* MEStickerView.m */,
+				6F3E01161571F9C30085415C /* MEWeekCell.h */,
+				6F3E01171571F9C40085415C /* MEWeekCell.m */,
 				6F2B97A61554D4E50082E571 /* UILabelExtension.h */,
 				6F2B97A71554D4E50082E571 /* UILabelExtension.m */,
 			);
@@ -519,6 +524,7 @@
 				6F8AEF7F156FE3EE001F0DF8 /* MEMonthView.m in Sources */,
 				6F3E01061571D2C00085415C /* NSStringExtension.m in Sources */,
 				6F3E01091571D5CF0085415C /* MELabel.m in Sources */,
+				6F3E01181571F9C40085415C /* MEWeekCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

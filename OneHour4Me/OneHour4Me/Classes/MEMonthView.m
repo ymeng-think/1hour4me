@@ -9,9 +9,18 @@
 #import "MEMonthView.h"
 #import "MEFontLibrary.h"
 #import "MECalendar.h"
+#import "MEWeekCell.h"
 
-#define PADDING         10.0
-#define LABEL_HEIGHT    20.0
+#define HORIZONTAL_PADDING 10.0
+#define VERTICAL_PADDING 40.0
+#define LABEL_HEIGHT 20.0
+
+@interface MEMonthView ()
+
+- (void)addMonthLabel;
+- (void)addDaysTable;
+
+@end
 
 @implementation MEMonthView
 
@@ -21,6 +30,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self addMonthLabel];
+        [self addDaysTable];
     }
     return self;
 }
@@ -35,12 +45,44 @@
 }
 
 - (void)addMonthLabel {
-    monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(PADDING, 0, self.bounds.size.width - PADDING * 2, LABEL_HEIGHT)];
+    monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(HORIZONTAL_PADDING, 0, self.bounds.size.width - HORIZONTAL_PADDING * 2, LABEL_HEIGHT)];
     monthLabel.backgroundColor = [UIColor clearColor];
     [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveMiddleFont];
-
     
     [self addSubview:monthLabel];
+}
+
+- (void)addDaysTable {
+    daysInMonth = [[UITableView alloc] initWithFrame:
+                   CGRectMake(HORIZONTAL_PADDING, 28, self.bounds.size.width - HORIZONTAL_PADDING * 2, self.bounds.size.height - VERTICAL_PADDING)];
+    daysInMonth.dataSource = self;
+    daysInMonth.delegate = self;
+    daysInMonth.scrollEnabled = false;
+    
+    [self addSubview:daysInMonth];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return daysInMonth.bounds.size.height / 5;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *kCellIdentifier = @"DayCellIdentifier";
+    
+    MEWeekCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
+    if (cell == nil) {
+        cell = [[[MEWeekCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier] autorelease];
+    }
+    
+    return cell;
 }
 
 - (void)dealloc {

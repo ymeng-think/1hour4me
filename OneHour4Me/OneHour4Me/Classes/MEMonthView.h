@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MELabel.h"
 
-@interface MEMonthView : UIView {
+@interface MEMonthView : UIView <UITableViewDataSource, UITableViewDelegate> {
     NSInteger month;
     
     MELabel *monthLabel;
+    UITableView *daysInMonth;
 }
 
 @property (nonatomic, setter = setMonth:) NSInteger month;

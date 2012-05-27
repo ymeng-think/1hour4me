@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MEBackgroundView.h"
 
-@interface MECalendarView : MEBackgroundView<UITableViewDataSource, UITableViewDelegate> {
+@interface MECalendarView : MEBackgroundView <UITableViewDataSource, UITableViewDelegate> {
     UITableView *monthList;
 }
 
