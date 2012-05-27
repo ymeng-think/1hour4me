@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "MEBackgroundView.h"
 
-@interface MECalendarView : MEBackgroundView
+@interface MECalendarView : MEBackgroundView<UITableViewDataSource, UITableViewDelegate> {
+    UITableView *monthList;
+}
 
 @end

@@ -1,21 +1,22 @@
 //
-//  UILabelExtension.m
+//  MELabel.m
 //  OneHour4Me
 //
-//  Created by Meng Yu on 5/5/12.
+//  Created by Meng Yu on 5/27/12.
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "UILabelExtension.h"
+#import "MELabel.h"
 #import "NSStringExtension.h"
 
-@interface UILabel (Private)
+@interface MELabel ()
 
 - (void)textInColor:(UIColor *)color withFont:(UIFont *)font linkBreak:(BOOL)includesLineBreak;
+- (void)adjustFrameWithContent;
 
 @end
 
-@implementation UILabel (UILabelExtension)
+@implementation MELabel
 
 - (void)blackTextWithFont:(UIFont *)font {
     [self textInColor:[UIColor blackColor] withFont:font linkBreak:NO];
@@ -30,20 +31,32 @@
 }
 
 - (void)textInColor:(UIColor *)color withFont:(UIFont *)font linkBreak:(BOOL)includesLineBreak {
+    self.numberOfLines = 0;
+    self.font = font;
+    self.textColor = color;
+    
+    [self adjustFrameWithContent];
+    
+    if (![NSString isEmptyOrNull:self.text] && includesLineBreak) {
+        self.text = [self.text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
+    }
+}
+
+- (void)adjustFrameWithContent {
     CGSize labelSize = CGSizeZero;
     if (![NSString isEmptyOrNull:self.text]) {
-        labelSize = [self.text sizeWithFont:font 
+        labelSize = [self.text sizeWithFont:self.font 
                           constrainedToSize:self.frame.size 
                               lineBreakMode:self.lineBreakMode];    
     }
     
-    self.numberOfLines = 0;
-    self.font = font;
-    self.textColor = color;
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, labelSize.height);
-    if (![NSString isEmptyOrNull:self.text] && includesLineBreak) {
-        self.text = [self.text stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
-    }
+}
+
+- (void)setText:(NSString *)text {
+    [super setText:text];
+    
+    [self adjustFrameWithContent];
 }
 
 @end

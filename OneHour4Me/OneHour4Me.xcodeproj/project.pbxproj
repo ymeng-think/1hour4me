@@ -22,6 +22,8 @@
 		6F340E46155CDAE3003722EA /* MECalendarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E45155CDAE3003722EA /* MECalendarController.m */; };
 		6F340E4F155D2067003722EA /* MECalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E4E155D2067003722EA /* MECalendarView.m */; };
 		6F340E52155D2F76003722EA /* MECalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F340E51155D2F76003722EA /* MECalendar.m */; };
+		6F3E01061571D2C00085415C /* NSStringExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E01051571D2C00085415C /* NSStringExtension.m */; };
+		6F3E01091571D5CF0085415C /* MELabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E01081571D5CF0085415C /* MELabel.m */; };
 		6F44B89F1556A217009FE6EC /* MEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F44B89E1556A217009FE6EC /* MEUser.m */; };
 		6F5AC9DB155517ED00DC48C4 /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DA155517ED00DC48C4 /* blackboard.png */; };
 		6F5AC9DD1555181900DC48C4 /* blackboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DC1555181900DC48C4 /* blackboard@2x.png */; };
@@ -41,6 +43,7 @@
 		6F6FB25615539E57000AE8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
 		6F6FB25E15539E57000AE8EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6F6FB25C15539E57000AE8EC /* InfoPlist.strings */; };
 		6F6FB26115539E57000AE8EC /* MeCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FB26015539E57000AE8EC /* MeCalendarTests.m */; };
+		6F8AEF7F156FE3EE001F0DF8 /* MEMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8AEF7E156FE3EE001F0DF8 /* MEMonthView.m */; };
 		6FEBCABF1553F57B004FC1B1 /* welcome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCABE1553F57B004FC1B1 /* welcome.xib */; };
 		6FEBCAC31553F775004FC1B1 /* MEWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */; };
 		6FEBCACF155400D3004FC1B1 /* activities.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCACE155400D3004FC1B1 /* activities.png */; };
@@ -80,6 +83,10 @@
 		6F340E4E155D2067003722EA /* MECalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendarView.m; sourceTree = "<group>"; };
 		6F340E50155D2F76003722EA /* MECalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECalendar.h; sourceTree = "<group>"; };
 		6F340E51155D2F76003722EA /* MECalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendar.m; sourceTree = "<group>"; };
+		6F3E01041571D2BF0085415C /* NSStringExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExtension.h; sourceTree = "<group>"; };
+		6F3E01051571D2C00085415C /* NSStringExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtension.m; sourceTree = "<group>"; };
+		6F3E01071571D5CF0085415C /* MELabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MELabel.h; sourceTree = "<group>"; };
+		6F3E01081571D5CF0085415C /* MELabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MELabel.m; sourceTree = "<group>"; };
 		6F44B89D1556A217009FE6EC /* MEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEUser.h; sourceTree = "<group>"; };
 		6F44B89E1556A217009FE6EC /* MEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEUser.m; sourceTree = "<group>"; };
 		6F5AC9DA155517ED00DC48C4 /* blackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard.png; sourceTree = "<group>"; };
@@ -107,6 +114,8 @@
 		6F6FB25D15539E57000AE8EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6F6FB25F15539E57000AE8EC /* MeCalendarTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeCalendarTests.h; sourceTree = "<group>"; };
 		6F6FB26015539E57000AE8EC /* MeCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeCalendarTests.m; sourceTree = "<group>"; };
+		6F8AEF7D156FE3EE001F0DF8 /* MEMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEMonthView.h; sourceTree = "<group>"; };
+		6F8AEF7E156FE3EE001F0DF8 /* MEMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMonthView.m; sourceTree = "<group>"; };
 		6FEBCABE1553F57B004FC1B1 /* welcome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = welcome.xib; sourceTree = "<group>"; };
 		6FEBCAC11553F775004FC1B1 /* MEWelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEWelcomeController.h; sourceTree = "<group>"; };
 		6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWelcomeController.m; sourceTree = "<group>"; };
@@ -176,6 +185,10 @@
 				6F2B979C1554C9F20082E571 /* MEBackgroundView.m */,
 				6F340E4D155D2067003722EA /* MECalendarView.h */,
 				6F340E4E155D2067003722EA /* MECalendarView.m */,
+				6F3E01071571D5CF0085415C /* MELabel.h */,
+				6F3E01081571D5CF0085415C /* MELabel.m */,
+				6F8AEF7D156FE3EE001F0DF8 /* MEMonthView.h */,
+				6F8AEF7E156FE3EE001F0DF8 /* MEMonthView.m */,
 				6F5AC9DE155518B400DC48C4 /* MESignInView.h */,
 				6F5AC9DF155518B400DC48C4 /* MESignInView.m */,
 				6F5AC9ED155524DD00DC48C4 /* MEStickerView.h */,
@@ -279,6 +292,8 @@
 				6F6FB24B15539E57000AE8EC /* MEAppDelegate.m */,
 				6F2B97A31554D13F0082E571 /* MEFontLibrary.h */,
 				6F2B97A41554D13F0082E571 /* MEFontLibrary.m */,
+				6F3E01041571D2BF0085415C /* NSStringExtension.h */,
+				6F3E01051571D2C00085415C /* NSStringExtension.m */,
 				6F6FB24715539E57000AE8EC /* main.m */,
 			);
 			path = Classes;
@@ -501,6 +516,9 @@
 				6F340E46155CDAE3003722EA /* MECalendarController.m in Sources */,
 				6F340E4F155D2067003722EA /* MECalendarView.m in Sources */,
 				6F340E52155D2F76003722EA /* MECalendar.m in Sources */,
+				6F8AEF7F156FE3EE001F0DF8 /* MEMonthView.m in Sources */,
+				6F3E01061571D2C00085415C /* NSStringExtension.m in Sources */,
+				6F3E01091571D5CF0085415C /* MELabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +725,7 @@
 				6F26670615627E8A004E56A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6F6FB23115539E57000AE8EC /* Build configuration list for PBXProject "OneHour4Me" */ = {
 			isa = XCConfigurationList;
