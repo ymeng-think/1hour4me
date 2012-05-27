@@ -202,10 +202,10 @@
 		6F44B89B1556A1BB009FE6EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6F44B89D1556A217009FE6EC /* MEUser.h */,
-				6F44B89E1556A217009FE6EC /* MEUser.m */,
 				6F340E50155D2F76003722EA /* MECalendar.h */,
 				6F340E51155D2F76003722EA /* MECalendar.m */,
+				6F44B89D1556A217009FE6EC /* MEUser.h */,
+				6F44B89E1556A217009FE6EC /* MEUser.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";

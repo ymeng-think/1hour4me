@@ -10,6 +10,7 @@
 
 @interface MECalendar : NSObject
 
++ (NSArray *)allMonths;
 + (NSDate *)today;
 + (NSRange)daysInMonthRelatedToDate:(NSDate *)date;
 

@@ -10,6 +10,15 @@
 
 @implementation MECalendar
 
++ (NSArray *)allMonths {
+    static NSArray *months = Nil;
+    if (!months) {
+        months = [[NSArray alloc] initWithObjects:@"January", @"February", @"March", @"April", @"May", @"June", 
+                    @"July", @"August", @"September", @"October", @"November", @"December", nil];
+    }
+    return months;
+}
+
 + (NSDate *)today {
     return [NSDate date];
 }

@@ -8,9 +8,9 @@
 
 #import "MECalendarView.h"
 #import "MEMonthView.h"
+#import "MECalendar.h"
 
 #define MONTH_VIEW_TAG          1
-#define NUM_OF_MONTHS           12
 #define NAVIGATION_BAR_HEIGHT   44.0
 
 @interface MECalendarView ()
@@ -32,7 +32,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return NUM_OF_MONTHS;
+    return [[MECalendar allMonths] count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

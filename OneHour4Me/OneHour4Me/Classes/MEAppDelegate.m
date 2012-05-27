@@ -18,7 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    MEWelcomeController *welcomeController = [[MEWelcomeController alloc] initWithNibName:@"welcome" bundle:nil];
+    UIViewController *welcomeController = [[MEWelcomeController alloc] initWithNibName:@"welcome" bundle:nil];
     /*
      == CAUTION: ==
      We must initialize 'navigationController' as a class instance field rather than as a local variable (and release it after 

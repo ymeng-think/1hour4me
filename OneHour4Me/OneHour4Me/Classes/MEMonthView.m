@@ -8,6 +8,7 @@
 
 #import "MEMonthView.h"
 #import "MEFontLibrary.h"
+#import "MECalendar.h"
 
 #define PADDING         10.0
 #define LABEL_HEIGHT    20.0
@@ -30,8 +31,7 @@
     }
     self->month = m;
     
-//    monthLabel.text = [NSString stringWithFormat:@"%i", self->month];
-    monthLabel.text = @"Feburary";
+    monthLabel.text = [[MECalendar allMonths] objectAtIndex:(self->month - 1)];
 }
 
 - (void)addMonthLabel {
