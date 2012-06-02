@@ -11,9 +11,9 @@
 #import "MECalendar.h"
 #import "MEWeekCell.h"
 
-#define HORIZONTAL_PADDING 10.0
-#define VERTICAL_PADDING 40.0
+#define PADDING 10.0
 #define LABEL_HEIGHT 20.0
+#define NUMBER_OF_WEEKS 6
 
 @interface MEMonthView ()
 
@@ -29,6 +29,8 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        NSLog(@"Month view's frame = %@", NSStringFromCGRect(frame));
+        NSLog(@"Month view's bounds = %@", NSStringFromCGRect(self.bounds));
         [self addMonthLabel];
         [self addDaysTable];
     }
@@ -45,7 +47,7 @@
 }
 
 - (void)addMonthLabel {
-    monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(HORIZONTAL_PADDING, 0, self.bounds.size.width - HORIZONTAL_PADDING * 2, LABEL_HEIGHT)];
+    monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, LABEL_HEIGHT)];
     monthLabel.backgroundColor = [UIColor clearColor];
     [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveMiddleFont];
     
@@ -53,8 +55,7 @@
 }
 
 - (void)addDaysTable {
-    daysInMonth = [[UITableView alloc] initWithFrame:
-                   CGRectMake(HORIZONTAL_PADDING, 28, self.bounds.size.width - HORIZONTAL_PADDING * 2, self.bounds.size.height - VERTICAL_PADDING)];
+    daysInMonth = [[UITableView alloc] initWithFrame:CGRectMake(0, 0 + LABEL_HEIGHT + PADDING, self.bounds.size.width, 300)];
     daysInMonth.dataSource = self;
     daysInMonth.delegate = self;
     daysInMonth.scrollEnabled = false;
@@ -63,7 +64,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return NUMBER_OF_WEEKS;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

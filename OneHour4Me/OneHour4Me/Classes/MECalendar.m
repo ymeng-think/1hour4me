@@ -19,8 +19,15 @@
     return months;
 }
 
-+ (NSDate *)today {
-    return [NSDate date];
++ (NSInteger)currentMonth {
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate *today = [NSDate date];
+    NSDateComponents *currentDateComponents = [calendar components:(NSWeekdayCalendarUnit | NSYearCalendarUnit | 
+                                                                    NSMonthCalendarUnit | NSHourCalendarUnit | 
+                                                                    NSMinuteCalendarUnit | NSWeekCalendarUnit) fromDate:today];
+    NSInteger month = [currentDateComponents month];
+    [calendar release];
+    return month;
 }
 
 + (NSRange)daysInMonthRelatedToDate:(NSDate *)date {

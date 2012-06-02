@@ -22,8 +22,8 @@
     [super setSelected:NO animated:NO];
 }
 
-- (void)drawRect:(CGRect)rect {
-    NSLog(@"drawing, and frame is %@", NSStringFromCGRect(self.frame));
+- (void)layoutSubviews {
+    NSLog(@"called layout subviews");
 }
 
 @end

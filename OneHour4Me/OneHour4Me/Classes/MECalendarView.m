@@ -7,15 +7,15 @@
 //
 
 #import "MECalendarView.h"
-#import "MEMonthView.h"
 #import "MECalendar.h"
 
-#define MONTH_VIEW_TAG          1
 #define NAVIGATION_BAR_HEIGHT   44.0
+#define MONTH_SELECTION_AREA_HEIGHT 60.0
+#define CURRENT_MONTH_VIEW_PADDING 20.0
 
 @interface MECalendarView ()
 
-- (void)addMonthList;
+- (void)addCurrentMonthView;
 - (CGFloat)viewWidth;
 - (CGFloat)viewHeight;
 
@@ -26,47 +26,22 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self addMonthList];
+        NSLog(@"Calendar frame is %@", NSStringFromCGRect(frame));
+        [self addCurrentMonthView];
     }
     return self;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[MECalendar allMonths] count];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self viewHeight] / 2;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *kCellIdentifier = @"MonthCellIdentifier";
+- (void)addCurrentMonthView {
+    CGFloat x = CURRENT_MONTH_VIEW_PADDING,
+            y = CURRENT_MONTH_VIEW_PADDING,
+            width = [self viewWidth] - CURRENT_MONTH_VIEW_PADDING * 2,
+            height = 350.0;
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier] autorelease];
-        
-        CGFloat monthViewWidth = [self viewWidth];
-        CGFloat monthViewHeight = [self viewHeight] / 2;
-        MEMonthView *oneMonth = [[MEMonthView alloc] initWithFrame:CGRectMake(0, 0, monthViewWidth, monthViewHeight)];
-        oneMonth.tag = MONTH_VIEW_TAG;
-        [cell addSubview:oneMonth];
-    }
-    
-	MEMonthView *monthView = (MEMonthView *)[cell viewWithTag:MONTH_VIEW_TAG];
-    monthView.month = [indexPath row] + 1;
-    
-    return cell;
-}
-
-- (void)addMonthList {
-    monthList = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    monthList.backgroundColor = [UIColor clearColor];
-    monthList.separatorStyle = UITableViewCellSeparatorStyleNone;
-    monthList.dataSource = self;
-    monthList.delegate = self;
-    
-    [self addSubview:monthList];
+    currentMonthView = [[MEMonthView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    NSLog(@"current month is %i", [MECalendar currentMonth]);
+    currentMonthView.month = [MECalendar currentMonth];
+    [self addSubview:currentMonthView];
 }
 
 - (CGFloat)viewWidth {
@@ -79,7 +54,7 @@
 }
 
 - (void)dealloc {
-    [monthList release];
+    [currentMonthView release];
 
     [super dealloc];
 }

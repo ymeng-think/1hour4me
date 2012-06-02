@@ -21,7 +21,7 @@ static MEFontLibrary *sharedInstance;
     if (!sharedInstance) {
         sharedInstance = [[MEFontLibrary alloc] init];
         sharedInstance->cursiveLargeFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
-        sharedInstance->cursiveMiddleFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:15];
+        sharedInstance->cursiveMiddleFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:17];
         sharedInstance->cursiveSmallFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:13];
         
         sharedInstance->chalkboardLargeFont = [UIFont fontWithName:FONT_CHALKBOARD size:22];
