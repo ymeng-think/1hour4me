@@ -29,8 +29,6 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        NSLog(@"Month view's frame = %@", NSStringFromCGRect(frame));
-        NSLog(@"Month view's bounds = %@", NSStringFromCGRect(self.bounds));
         [self addMonthLabel];
         [self addDaysTable];
     }
@@ -59,6 +57,7 @@
     daysInMonth.dataSource = self;
     daysInMonth.delegate = self;
     daysInMonth.scrollEnabled = false;
+    daysInMonth.backgroundColor = [UIColor clearColor];
     
     [self addSubview:daysInMonth];
 }
@@ -68,7 +67,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return daysInMonth.bounds.size.height / 5;
+    return tableView.bounds.size.width / 7;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MEWeekCell : UITableViewCell
+@interface MEWeekCell : UITableViewCell {
+    NSMutableArray *daysInWeek;
+}
 
 @end
