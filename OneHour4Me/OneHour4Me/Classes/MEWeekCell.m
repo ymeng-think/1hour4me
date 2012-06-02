@@ -7,6 +7,7 @@
 //
 
 #import "MEWeekCell.h"
+#import "MEDayView.h"
 
 #define NUMBER_OF_DAYS_IN_WEEK 7
 
@@ -40,14 +41,15 @@
     CGFloat dayViewHeight = self.bounds.size.height;
     
     for (NSInteger i = 0; i < daysInWeek.count; i++) {
-        UIView *dayView = [daysInWeek objectAtIndex:i];
+        MEDayView *dayView = [daysInWeek objectAtIndex:i];
         dayView.frame = CGRectMake(i * dayViewWidth, 0, dayViewWidth, dayViewHeight);
+        dayView.state = MEDayStateUnknown;
     }
 }
 
 - (void)addDayViews {
     for (NSInteger i = 0; i < NUMBER_OF_DAYS_IN_WEEK; i++) {
-        UIImageView *dayView = [[UIImageView alloc] initWithImage:[self imageUnknown]];
+        MEDayView *dayView = [[MEDayView alloc] init];
         [self addSubview:dayView];
         [daysInWeek addObject:dayView];
         [dayView release];

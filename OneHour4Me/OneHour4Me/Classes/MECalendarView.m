@@ -26,7 +26,6 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        NSLog(@"Calendar frame is %@", NSStringFromCGRect(frame));
         [self addCurrentMonthView];
     }
     return self;
@@ -39,7 +38,6 @@
             height = 350.0;
     
     currentMonthView = [[MEMonthView alloc] initWithFrame:CGRectMake(x, y, width, height)];
-    NSLog(@"current month is %i", [MECalendar currentMonth]);
     currentMonthView.month = [MECalendar currentMonth];
     [self addSubview:currentMonthView];
 }

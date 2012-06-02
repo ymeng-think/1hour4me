@@ -27,6 +27,7 @@
 		6F3E01181571F9C40085415C /* MEWeekCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3E01171571F9C40085415C /* MEWeekCell.m */; };
 		6F434AF4157A09D300616177 /* day-bad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F434AF2157A09D300616177 /* day-bad@2x.png */; };
 		6F434AF5157A09D300616177 /* day-unknown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F434AF3157A09D300616177 /* day-unknown@2x.png */; };
+		6F434AF9157A322400616177 /* MEDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F434AF8157A322400616177 /* MEDayView.m */; };
 		6F44B89F1556A217009FE6EC /* MEUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F44B89E1556A217009FE6EC /* MEUser.m */; };
 		6F5AC9DB155517ED00DC48C4 /* blackboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DA155517ED00DC48C4 /* blackboard.png */; };
 		6F5AC9DD1555181900DC48C4 /* blackboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F5AC9DC1555181900DC48C4 /* blackboard@2x.png */; };
@@ -94,6 +95,8 @@
 		6F3E01171571F9C40085415C /* MEWeekCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWeekCell.m; sourceTree = "<group>"; };
 		6F434AF2157A09D300616177 /* day-bad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day-bad@2x.png"; sourceTree = "<group>"; };
 		6F434AF3157A09D300616177 /* day-unknown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "day-unknown@2x.png"; sourceTree = "<group>"; };
+		6F434AF7157A322400616177 /* MEDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDayView.h; sourceTree = "<group>"; };
+		6F434AF8157A322400616177 /* MEDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDayView.m; sourceTree = "<group>"; };
 		6F44B89D1556A217009FE6EC /* MEUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEUser.h; sourceTree = "<group>"; };
 		6F44B89E1556A217009FE6EC /* MEUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEUser.m; sourceTree = "<group>"; };
 		6F5AC9DA155517ED00DC48C4 /* blackboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackboard.png; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				6F2B979C1554C9F20082E571 /* MEBackgroundView.m */,
 				6F340E4D155D2067003722EA /* MECalendarView.h */,
 				6F340E4E155D2067003722EA /* MECalendarView.m */,
+				6F434AF7157A322400616177 /* MEDayView.h */,
+				6F434AF8157A322400616177 /* MEDayView.m */,
 				6F3E01071571D5CF0085415C /* MELabel.h */,
 				6F3E01081571D5CF0085415C /* MELabel.m */,
 				6F8AEF7D156FE3EE001F0DF8 /* MEMonthView.h */,
@@ -533,6 +538,7 @@
 				6F3E01061571D2C00085415C /* NSStringExtension.m in Sources */,
 				6F3E01091571D5CF0085415C /* MELabel.m in Sources */,
 				6F3E01181571F9C40085415C /* MEWeekCell.m in Sources */,
+				6F434AF9157A322400616177 /* MEDayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
