@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MEWeekCell.h"
 #import "MEDayView.h"
+#import "MEWeekCell.h"
 
 #define NUMBER_OF_DAYS_IN_WEEK 7
 

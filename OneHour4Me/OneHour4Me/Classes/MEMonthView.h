@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MELabel.h"
+
+@class MELabel;
 
 @interface MEMonthView : UIView <UITableViewDataSource, UITableViewDelegate> {
     NSInteger month;

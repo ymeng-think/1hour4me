@@ -6,10 +6,12 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MEMonthView.h"
-#import "MEFontLibrary.h"
 #import "MECalendar.h"
+#import "MEFontLibrary.h"
+#import "MELabel.h"
+#import "MEMonthView.h"
 #import "MEWeekCell.h"
+
 
 #define PADDING 10.0
 #define LABEL_HEIGHT 20.0

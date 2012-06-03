@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "MEBackgroundView.h"
-#import "MEMonthView.h"
+
+@class MEMonthView;
 
 @interface MECalendarView : MEBackgroundView {
     MEMonthView *currentMonthView;

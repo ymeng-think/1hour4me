@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MEWelcomeController.h"
-#import "MESignInController.h"
 #import "MEFontLibrary.h"
+#import "MESignInController.h"
+#import "MEWelcomeController.h"
 #import "UILabelExtension.h"
 
 @interface MEWelcomeController ()

@@ -6,8 +6,9 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MECalendarView.h"
 #import "MECalendar.h"
+#import "MECalendarView.h"
+#import "MEMonthView.h"
 
 #define NAVIGATION_BAR_HEIGHT   44.0
 #define MONTH_SELECTION_AREA_HEIGHT 60.0

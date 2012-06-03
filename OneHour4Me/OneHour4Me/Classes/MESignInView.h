@@ -7,13 +7,14 @@
 //
 
 #import "MEBackgroundView.h"
-#import "MEStickerView.h"
 
 @protocol MESignInDelegate
 
 - (void)signInWithUserName:(NSString *)userName andPassword:(NSString *)password;
 
 @end
+
+@class MEStickerView;
 
 @interface MESignInView : MEBackgroundView {
     MEStickerView *stickerView;

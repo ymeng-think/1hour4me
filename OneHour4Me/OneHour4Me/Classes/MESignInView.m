@@ -6,9 +6,10 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MESignInView.h"
 #import "MEFontLibrary.h"
 #import "MELabel.h"
+#import "MESignInView.h"
+#import "MEStickerView.h"
 
 #define BUTTON_LEFT_CORNER_WIDTH 4.0
 #define TAG_OF_USERNAME 1
