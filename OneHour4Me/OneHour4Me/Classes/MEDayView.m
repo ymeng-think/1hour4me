@@ -8,6 +8,9 @@
 
 #import "MEDayView.h"
 
+#define IMAGE_DAY_BAD       @"day-bad.png"
+#define IMAGE_DAY_UNKNOWN   @"day-unknown.png"
+
 @interface MEDayView ()
 
 + (UIImage *)imageBad;
@@ -55,7 +58,7 @@
 + (UIImage *)imageBad {
     static UIImage *bad = Nil;
     if (!bad) {
-        bad = [UIImage imageNamed:@"day-bad.png"];
+        bad = [UIImage imageNamed:IMAGE_DAY_BAD];
     }
     return bad;
 }
@@ -63,7 +66,7 @@
 + (UIImage *)imageUnknown {
     static UIImage *unknown = Nil;
     if (!unknown) {
-        unknown = [UIImage imageNamed:@"day-unknown.png"];
+        unknown = [UIImage imageNamed:IMAGE_DAY_UNKNOWN];
     }
     return unknown;
 }
