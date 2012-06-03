@@ -11,7 +11,7 @@
 @interface MEStickerView ()
 
 - (NSArray *)textFields;
-- (void)drawDottedLineUnder:(UITextField *)textField context:(CGContextRef)context;
++ (void)drawDottedLineUnder:(UITextField *)textField context:(CGContextRef)context;
 
 @end
 
@@ -42,7 +42,7 @@
     NSArray *textFields = [[self textFields] retain];
     for (UITextField *textField in textFields) {
         textField.borderStyle = UITextBorderStyleNone;
-        [self drawDottedLineUnder:textField context:context];
+        [MEStickerView drawDottedLineUnder:textField context:context];
     }
     
     [textFields release];
@@ -58,7 +58,7 @@
     return array;
 }
 
-- (void)drawDottedLineUnder:(UITextField *)textField context:(CGContextRef)context {
++ (void)drawDottedLineUnder:(UITextField *)textField context:(CGContextRef)context {
     CGRect rect = textField.frame;
     CGPoint start = CGPointMake(rect.origin.x, rect.origin.y + rect.size.height);
     CGPoint end = CGPointMake(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height);

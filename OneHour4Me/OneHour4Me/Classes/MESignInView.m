@@ -22,8 +22,8 @@
 - (void)addLabelInto:(UIView *)container inRect:(CGRect)rect font:(UIFont *)font color:(UIColor *)color content:(NSString *)content;
 - (void)addTextFieldInto:(UIView *)container inRect:(CGRect)rect tag:(NSInteger)tag encrypted:(BOOL)isEncrypted;
 - (void)addButtonInto:(UIView *)container inRect:(CGRect)rect title:(NSString *)text action:(SEL)selector;
-- (UIImage *)buttonBackground:(NSString *)imageName;
 - (void)didPressSignInButton:(id)sender;
++ (UIImage *)buttonBackground:(NSString *)imageName;
 
 @end
 
@@ -119,14 +119,14 @@
     button.frame = rect;
     [button setTitle:text forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button setBackgroundImage:[self buttonBackground:@"button.png"] forState:UIControlStateNormal];
+    [button setBackgroundImage:[MESignInView buttonBackground:@"button.png"] forState:UIControlStateNormal];
     [button.titleLabel blackTextWithFont:[MEFontLibrary sharedLibrary].cursiveSmallFont];
     [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
     
     [container addSubview:button];
 }
 
-- (UIImage *)buttonBackground:(NSString *)imageName {
++ (UIImage *)buttonBackground:(NSString *)imageName {
     UIImage *image = [UIImage imageNamed:imageName];
 	return [image stretchableImageWithLeftCapWidth:BUTTON_LEFT_CORNER_WIDTH topCapHeight:0];
 }

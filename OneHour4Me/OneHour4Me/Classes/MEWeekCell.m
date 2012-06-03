@@ -14,8 +14,6 @@
 @interface MEWeekCell ()
 
 - (void)addDayViews;
-- (UIImage *)imageBad;
-- (UIImage *)imageUnknown;
 
 @end
 
@@ -54,22 +52,6 @@
         [daysInWeek addObject:dayView];
         [dayView release];
     }
-}
-
-- (UIImage *)imageBad {
-    static UIImage *bad = Nil;
-    if (!bad) {
-        bad = [UIImage imageNamed:@"day-bad.png"];
-    }
-    return bad;
-}
-
-- (UIImage *)imageUnknown {
-    static UIImage *unknown = Nil;
-    if (!unknown) {
-        unknown = [UIImage imageNamed:@"day-unknown.png"];
-    }
-    return unknown;
 }
 
 - (void)dealloc {

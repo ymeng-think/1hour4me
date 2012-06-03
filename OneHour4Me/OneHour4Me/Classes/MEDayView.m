@@ -10,11 +10,11 @@
 
 @interface MEDayView ()
 
-- (UIImage *)imageBad;
-- (UIImage *)imageUnknown;
-- (void)drawImage:(UIImage *)image inRect:(CGRect)rect onContext:(CGContextRef)context;
-- (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context;
-- (CGImageRef)flip:(CGImageRef)im;
++ (UIImage *)imageBad;
++ (UIImage *)imageUnknown;
++ (void)drawImage:(UIImage *)image inRect:(CGRect)rect onContext:(CGContextRef)context;
++ (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context;
++ (CGImageRef)flip:(CGImageRef)im;
 
 @end
 
@@ -34,10 +34,10 @@
     UIImage *backgroundImage;
     switch (self.state) {
         case MEDayStateBad:
-            backgroundImage = [self imageBad];
+            backgroundImage = [MEDayView imageBad];
             break;
         case MEDayStateUnknown:
-            backgroundImage = [self imageUnknown];
+            backgroundImage = [MEDayView imageUnknown];
             break;
         default:
             backgroundImage = Nil;
@@ -47,12 +47,12 @@
     if (backgroundImage) {
         CGContextRef context = UIGraphicsGetCurrentContext();
         
-        [self drawImage:backgroundImage inRect:rect onContext:context];
-        [self drawText:@"1" inRect:rect onContext:context];
+        [MEDayView drawImage:backgroundImage inRect:rect onContext:context];
+        [MEDayView drawText:@"1" inRect:rect onContext:context];
     }
 }
 
-- (UIImage *)imageBad {
++ (UIImage *)imageBad {
     static UIImage *bad = Nil;
     if (!bad) {
         bad = [UIImage imageNamed:@"day-bad.png"];
@@ -60,7 +60,7 @@
     return bad;
 }
 
-- (UIImage *)imageUnknown {
++ (UIImage *)imageUnknown {
     static UIImage *unknown = Nil;
     if (!unknown) {
         unknown = [UIImage imageNamed:@"day-unknown.png"];
@@ -68,12 +68,12 @@
     return unknown;
 }
 
-- (void)drawImage:(UIImage *)image inRect:(CGRect)rect onContext:(CGContextRef)context {
-    CGImageRef flipped = [self flip:[image CGImage]];
++ (void)drawImage:(UIImage *)image inRect:(CGRect)rect onContext:(CGContextRef)context {
+    CGImageRef flipped = [MEDayView flip:[image CGImage]];
     CGContextDrawImage(context, rect, flipped);
 }
 
-- (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context {
++ (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context {
     static const char *fontName = "Helvetica";
     CGFloat fontSize = 15.0f;
     CGColorRef whiteColor = [[UIColor whiteColor] CGColor];
@@ -94,7 +94,7 @@
     UIGraphicsPopContext();
 }
 
-- (CGImageRef)flip:(CGImageRef)im {
++ (CGImageRef)flip:(CGImageRef)im {
     CGSize sz = CGSizeMake(CGImageGetWidth(im), CGImageGetHeight(im));
     UIGraphicsBeginImageContext(sz);
     CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, sz.width, sz.height), im);
