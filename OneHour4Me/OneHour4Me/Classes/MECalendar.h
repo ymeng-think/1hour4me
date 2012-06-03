@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MECalendar : NSObject
+@interface MECalendar : NSObject {
+    NSDateComponents *currentComponent;
+}
 
+- (NSInteger)currentMonth;
+- (NSInteger)currentYear;
++ (MECalendar *)calendar;
 + (NSArray *)allMonths;
-+ (NSInteger)currentMonth;
 + (NSRange)daysInMonthRelatedToDate:(NSDate *)date;
 
 @end

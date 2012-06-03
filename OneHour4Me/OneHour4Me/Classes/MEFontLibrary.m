@@ -11,11 +11,11 @@
 #define FONT_LUCIDA_CALLIGRAPHY @"Lucida Calligraphy"
 #define FONT_CHALKBOARD @"Chalkboard SE"
 
+static MEFontLibrary *sharedInstance;
+
 @implementation MEFontLibrary
 
 @synthesize cursiveLargeFont, cursiveMiddleFont, cursiveSmallFont, chalkboardLargeFont, chalkboardSmallFont;
-
-static MEFontLibrary *sharedInstance;
 
 + (MEFontLibrary *)sharedLibrary {
     if (!sharedInstance) {
