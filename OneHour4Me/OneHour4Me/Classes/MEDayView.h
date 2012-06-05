@@ -17,8 +17,10 @@ typedef enum {
 
 @interface MEDayView : UIView {
     MEDayState state;
+    NSInteger day;
 }
 
 @property (nonatomic) MEDayState state;
+@property (nonatomic) NSInteger day;
 
 @end

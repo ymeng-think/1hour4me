@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface MEWeekCell : UITableViewCell {
-    NSMutableArray *daysInWeek;
+    NSMutableArray *dayViews;
+    NSArray *daysInWeek;
 }
+
+@property (nonatomic, retain) NSArray *daysInWeek;
 
 @end

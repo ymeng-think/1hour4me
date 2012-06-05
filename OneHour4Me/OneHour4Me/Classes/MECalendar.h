@@ -8,14 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+struct MEMonthInfo {
+    NSInteger daysInMonth;
+    NSInteger startFromWeekday;
+};
+typedef struct MEMonthInfo MEMonthInfo;
+
+
 @interface MECalendar : NSObject {
     NSDateComponents *currentComponent;
 }
 
 - (NSInteger)currentMonth;
 - (NSInteger)currentYear;
+- (MEMonthInfo)daysInYear:(NSInteger)year andMonth:(NSInteger)month;
 + (MECalendar *)calendar;
 + (NSArray *)allMonths;
-+ (NSRange)daysInMonthRelatedToDate:(NSDate *)date;
 
 @end

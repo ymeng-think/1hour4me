@@ -10,21 +10,25 @@
 #import "MEWeekCell.h"
 
 #define NUMBER_OF_DAYS_IN_WEEK 7
+#define ERROR -1
 
 @interface MEWeekCell ()
 
 - (void)addDayViews;
+- (NSInteger)dayAt:(NSUInteger)index;
 
 @end
 
 @implementation MEWeekCell
+
+@synthesize daysInWeek;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        daysInWeek = [[NSMutableArray alloc] init];
+        dayViews = [[NSMutableArray alloc] init];
         [self addDayViews];
     }
     return self;
@@ -38,10 +42,16 @@
     CGFloat dayViewWidth = self.bounds.size.width / NUMBER_OF_DAYS_IN_WEEK;
     CGFloat dayViewHeight = self.bounds.size.height;
     
-    for (NSInteger i = 0; i < daysInWeek.count; i++) {
-        MEDayView *dayView = [daysInWeek objectAtIndex:i];
+    for (NSInteger i = 0; i < dayViews.count; i++) {
+        MEDayView *dayView = [dayViews objectAtIndex:i];
         dayView.frame = CGRectMake(i * dayViewWidth, 0, dayViewWidth, dayViewHeight);
-        dayView.state = MEDayStateUnknown;
+        NSInteger day = [self dayAt:i];
+        MEDayState state = MEDayStateNone;
+        if (day > 0) {
+            state = MEDayStateUnknown;
+        }
+        dayView.state = state;
+        dayView.day = day;
     }
 }
 
@@ -49,13 +59,21 @@
     for (NSInteger i = 0; i < NUMBER_OF_DAYS_IN_WEEK; i++) {
         MEDayView *dayView = [[MEDayView alloc] init];
         [self addSubview:dayView];
-        [daysInWeek addObject:dayView];
+        [dayViews addObject:dayView];
         [dayView release];
     }
 }
 
+- (NSInteger)dayAt:(NSUInteger)index {
+    if (!daysInWeek || index >= daysInWeek.count) {
+        return ERROR;
+    }
+    NSNumber *value = [daysInWeek objectAtIndex:index];
+    return [value integerValue];
+}
+
 - (void)dealloc {
-    [daysInWeek release];
+    [dayViews release];
     
     [super dealloc];
 }

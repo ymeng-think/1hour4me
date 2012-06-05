@@ -8,15 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+#define ALL_DAYS_NUMBER_IN_MONTH 42
+
 @class MELabel;
 
 @interface MEMonthView : UIView <UITableViewDataSource, UITableViewDelegate> {
     NSInteger month;
+    NSInteger year;
+    NSInteger days[ALL_DAYS_NUMBER_IN_MONTH];
     
     MELabel *monthLabel;
     UITableView *daysInMonth;
 }
-
-@property (nonatomic, setter = setMonth:) NSInteger month;
 
 @end

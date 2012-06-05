@@ -23,7 +23,7 @@
 
 @implementation MEDayView
 
-@synthesize state;
+@synthesize state, day;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -51,7 +51,7 @@
         CGContextRef context = UIGraphicsGetCurrentContext();
         
         [MEDayView drawImage:backgroundImage inRect:rect onContext:context];
-        [MEDayView drawText:@"1" inRect:rect onContext:context];
+        [MEDayView drawText:[NSString stringWithFormat:@"%i", day] inRect:rect onContext:context];
     }
 }
 

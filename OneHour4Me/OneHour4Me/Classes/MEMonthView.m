@@ -21,33 +21,30 @@
 
 - (void)addMonthLabel;
 - (void)addDaysTable;
+- (void)matrixDays;
 
 @end
 
 @implementation MEMonthView
 
-@synthesize month;
-
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        year = [[MECalendar calendar] currentYear];
+        month = [[MECalendar calendar] currentMonth];
+        
         [self addMonthLabel];
         [self addDaysTable];
+        [self matrixDays];
     }
     return self;
 }
 
-- (void)setMonth:(NSInteger)m {
-    if (m < 1 || m > 12) {
-        [NSException raise:NSInvalidArgumentException format:@"Month must be between 1 and 12"];
-    }
-    self->month = m;
-    
-    monthLabel.text = [[MECalendar allMonths] objectAtIndex:(self->month - 1)];
-}
-
 - (void)addMonthLabel {
     monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, LABEL_HEIGHT)];
+    if (month >= 1 && month <= 12) {
+        monthLabel.text = [[MECalendar allMonths] objectAtIndex:(month - 1)];
+    }
     monthLabel.backgroundColor = [UIColor clearColor];
     [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveMiddleFont];
     
@@ -62,6 +59,22 @@
     daysInMonth.backgroundColor = [UIColor clearColor];
     
     [self addSubview:daysInMonth];
+}
+
+- (void)matrixDays {
+    MEMonthInfo monthInfo = [[MECalendar calendar] daysInYear:year andMonth:month];
+
+    NSInteger i = 0;
+    NSInteger day = 1;
+    for (; i < monthInfo.startFromWeekday; i++) {
+        days[i] = -1;
+    }
+    for (NSInteger j = 0; j < monthInfo.daysInMonth; i++, j++) {
+        days[i] = day++;
+    }
+    for (; i < ALL_DAYS_NUMBER_IN_MONTH; i++) {
+        days[i] = -1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -83,6 +96,15 @@
     if (cell == nil) {
         cell = [[[MEWeekCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellIdentifier] autorelease];
     }
+    
+    NSMutableArray *daysInWeek = [[NSMutableArray alloc] initWithCapacity:7];
+    NSInteger start = [indexPath row] * 7;
+    NSInteger end = start + 7;
+    for (NSInteger i = start; i < end; i++) {
+        NSNumber *value = [NSNumber numberWithInteger:days[i]];
+        [daysInWeek addObject:value];
+    }
+    cell.daysInWeek = daysInWeek;
     
     return cell;
 }

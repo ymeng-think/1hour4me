@@ -39,7 +39,6 @@
             height = 350.0;
     
     currentMonthView = [[MEMonthView alloc] initWithFrame:CGRectMake(x, y, width, height)];
-    currentMonthView.month = [[MECalendar calendar] currentMonth];
     [self addSubview:currentMonthView];
 }
 
