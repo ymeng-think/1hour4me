@@ -11,6 +11,7 @@
 #import "MELabel.h"
 #import "MEMonthView.h"
 #import "MEWeekCell.h"
+#import "MEWeekHeader.h"
 
 
 #define PADDING 10.0
@@ -57,6 +58,10 @@
     daysInMonth.delegate = self;
     daysInMonth.scrollEnabled = false;
     daysInMonth.backgroundColor = [UIColor clearColor];
+    
+    MEWeekHeader *header = [[MEWeekHeader alloc] initWithFrame:CGRectMake(0, 0, daysInMonth.bounds.size.width, 30)];
+    daysInMonth.tableHeaderView = header;
+    [header release];
     
     [self addSubview:daysInMonth];
 }

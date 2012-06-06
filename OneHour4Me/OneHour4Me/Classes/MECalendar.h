@@ -24,5 +24,6 @@ typedef struct MEMonthInfo MEMonthInfo;
 - (MEMonthInfo)daysInYear:(NSInteger)year andMonth:(NSInteger)month;
 + (MECalendar *)calendar;
 + (NSArray *)allMonths;
++ (NSArray *)allWeekdays;
 
 @end

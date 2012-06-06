@@ -29,10 +29,18 @@ static MECalendar *_calendar;
 + (NSArray *)allMonths {
     static NSArray *months = nil;
     if (!months) {
-        months = [[NSArray alloc] initWithObjects:@"January", @"February", @"March", @"April", @"May", @"June", 
-                    @"July", @"August", @"September", @"October", @"November", @"December", nil];
+        months = [[[NSArray alloc] initWithObjects:@"January", @"February", @"March", @"April", @"May", @"June",
+                    @"July", @"August", @"September", @"October", @"November", @"December", nil] autorelease];
     }
     return months;
+}
+
++ (NSArray *)allWeekdays {
+    static NSArray *weekdays = nil;
+    if (!weekdays) {
+        weekdays = [[[NSArray alloc] initWithObjects:@"Sun", @"Mon", @"Tue", @"Wed", @"Thu", @"Fri", @"Sat", nil] autorelease];
+    }
+    return weekdays;
 }
 
 + (BOOL)isLeapYear:(NSInteger)year {
