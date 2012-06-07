@@ -24,7 +24,6 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        labels = [[NSMutableArray alloc] initWithCapacity:NUMBER_OF_DAYS_IN_WEEK];
         [self addLabels];
     }
     return self;
@@ -38,7 +37,6 @@
         label.backgroundColor = [UIColor clearColor];
         [label whiteTextWithFont:[MEFontLibrary sharedLibrary].chalkboardSmallFont];
         
-        [labels addObject:label];
         [self addSubview:label];
         
         [label release];
@@ -50,16 +48,10 @@
     CGFloat height = self.bounds.size.height;
     CGFloat x = 0;
     
-    for (UILabel *label in labels) {
+    for (UILabel *label in self.subviews) {
         label.frame = CGRectMake(x, 0, width, height);
         x += width;
     }
-}
-
-- (void)dealloc {
-    [labels release];
-    
-    [super dealloc];
 }
 
 @end

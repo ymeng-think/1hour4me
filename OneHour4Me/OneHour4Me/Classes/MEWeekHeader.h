@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MEWeekHeader : UIView {
-    NSMutableArray *labels;
-}
+@interface MEWeekHeader : UIView
 
 @end
