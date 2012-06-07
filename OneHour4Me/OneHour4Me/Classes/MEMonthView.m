@@ -14,7 +14,7 @@
 #import "MEWeekHeader.h"
 
 
-#define PADDING 10.0
+#define PADDING 20.0
 #define LABEL_HEIGHT 20.0
 #define NUMBER_OF_WEEKS 6
 
@@ -47,7 +47,7 @@
         monthLabel.text = [[MECalendar allMonths] objectAtIndex:(month - 1)];
     }
     monthLabel.backgroundColor = [UIColor clearColor];
-    [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].cursiveMiddleFont];
+    [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].chalkboardLargeFont];
     
     [self addSubview:monthLabel];
 }
