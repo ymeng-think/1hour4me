@@ -11,23 +11,23 @@
 #define FONT_LUCIDA_CALLIGRAPHY @"Lucida Calligraphy"
 #define FONT_CHALKBOARD @"Chalkboard SE"
 
-static MEFontLibrary *sharedInstance;
+static MEFontLibrary *gSharedInstance;
 
 @implementation MEFontLibrary
 
 @synthesize cursiveLargeFont, cursiveMiddleFont, cursiveSmallFont, chalkboardLargeFont, chalkboardSmallFont;
 
 + (MEFontLibrary *)sharedLibrary {
-    if (!sharedInstance) {
-        sharedInstance = [[MEFontLibrary alloc] init];
-        sharedInstance->cursiveLargeFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
-        sharedInstance->cursiveMiddleFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:17];
-        sharedInstance->cursiveSmallFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:13];
+    if (!gSharedInstance) {
+        gSharedInstance = [[MEFontLibrary alloc] init];
+        gSharedInstance->cursiveLargeFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:22];
+        gSharedInstance->cursiveMiddleFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:17];
+        gSharedInstance->cursiveSmallFont = [UIFont fontWithName:FONT_LUCIDA_CALLIGRAPHY size:13];
         
-        sharedInstance->chalkboardLargeFont = [UIFont fontWithName:FONT_CHALKBOARD size:22];
-        sharedInstance->chalkboardSmallFont = [UIFont fontWithName:FONT_CHALKBOARD size:15];
+        gSharedInstance->chalkboardLargeFont = [UIFont fontWithName:FONT_CHALKBOARD size:22];
+        gSharedInstance->chalkboardSmallFont = [UIFont fontWithName:FONT_CHALKBOARD size:15];
     }
-    return sharedInstance;
+    return gSharedInstance;
 }
 
 @end

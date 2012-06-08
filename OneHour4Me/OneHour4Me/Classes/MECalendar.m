@@ -8,7 +8,7 @@
 
 #import "MECalendar.h"
 
-static MECalendar *_calendar;
+static MECalendar *gCalendar;
 
 @interface MECalendar ()
 
@@ -20,10 +20,10 @@ static MECalendar *_calendar;
 @implementation MECalendar
 
 + (MECalendar *)calendar {
-    if (!_calendar) {
-        _calendar = [[MECalendar alloc] init];        
+    if (!gCalendar) {
+        gCalendar = [[MECalendar alloc] init];        
     }
-    return _calendar;
+    return gCalendar;
 }
 
 + (NSArray *)allMonths {
