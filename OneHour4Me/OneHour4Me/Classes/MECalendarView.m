@@ -12,7 +12,8 @@
 
 #define NAVIGATION_BAR_HEIGHT   44.0
 #define MONTH_SELECTION_AREA_HEIGHT 60.0
-#define CURRENT_MONTH_VIEW_PADDING 20.0
+#define CURRENT_MONTH_VIEW_PADDING_X 20.0
+#define CURRENT_MONTH_VIEW_PADDING_Y 5.0
 
 @interface MECalendarView ()
 
@@ -33,9 +34,9 @@
 }
 
 - (void)addCurrentMonthView {
-    CGFloat x = CURRENT_MONTH_VIEW_PADDING,
-            y = CURRENT_MONTH_VIEW_PADDING,
-            width = [self viewWidth] - CURRENT_MONTH_VIEW_PADDING * 2,
+    CGFloat x = CURRENT_MONTH_VIEW_PADDING_X,
+            y = CURRENT_MONTH_VIEW_PADDING_Y,
+            width = [self viewWidth] - CURRENT_MONTH_VIEW_PADDING_X * 2,
             height = 350.0;
     
     currentMonthView = [[MEMonthView alloc] initWithFrame:CGRectMake(x, y, width, height)];
