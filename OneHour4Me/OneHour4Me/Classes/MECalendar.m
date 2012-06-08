@@ -8,6 +8,8 @@
 
 #import "MECalendar.h"
 
+#define SUNDAY_OFFSET 1
+
 static MECalendar *gCalendar;
 
 @interface MECalendar ()
@@ -87,7 +89,7 @@ static MECalendar *gCalendar;
     
     NSDateComponents *extractComps = [[NSCalendar currentCalendar] components:(NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit) 
                                                                      fromDate:firstDate];
-    monthInfo.startFromWeekday = [extractComps weekday];
+    monthInfo.startFromWeekday = [extractComps weekday] - SUNDAY_OFFSET;
     
     return monthInfo;
 }
