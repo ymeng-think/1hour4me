@@ -10,14 +10,17 @@
 #import "MECalendarView.h"
 #import "MEMonthView.h"
 
-#define NAVIGATION_BAR_HEIGHT   44.0
-#define MONTH_SELECTION_AREA_HEIGHT 60.0
+#define NAVIGATION_BAR_HEIGHT        44.0
+#define MONTH_SELECTION_AREA_HEIGHT  60.0
 #define CURRENT_MONTH_VIEW_PADDING_X 20.0
 #define CURRENT_MONTH_VIEW_PADDING_Y 5.0
+#define CURRENT_MONTH_VIEW_HEIGHT    320.0
+#define ERASER_SLOT_Y                325.0
 
 @interface MECalendarView ()
 
 - (void)addCurrentMonthView;
+- (void)addEraserSlot;
 - (CGFloat)viewWidth;
 - (CGFloat)viewHeight;
 
@@ -29,6 +32,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self addCurrentMonthView];
+        [self addEraserSlot];
     }
     return self;
 }
@@ -37,10 +41,22 @@
     CGFloat x = CURRENT_MONTH_VIEW_PADDING_X,
             y = CURRENT_MONTH_VIEW_PADDING_Y,
             width = [self viewWidth] - CURRENT_MONTH_VIEW_PADDING_X * 2,
-            height = 350.0;
+            height = CURRENT_MONTH_VIEW_HEIGHT;
     
     currentMonthView = [[MEMonthView alloc] initWithFrame:CGRectMake(x, y, width, height)];
     [self addSubview:currentMonthView];
+}
+
+- (void)addEraserSlot {
+    UIImage *image = [UIImage imageNamed:@"eraser-slot.png"];
+    UIImageView *eraserSlotView = [[UIImageView alloc] initWithImage:image];
+    CGRect frame = eraserSlotView.frame;
+    frame.origin.y = ERASER_SLOT_Y;
+    eraserSlotView.frame = frame;
+    
+    [self addSubview:eraserSlotView];
+    
+    [eraserSlotView release];
 }
 
 - (CGFloat)viewWidth {
