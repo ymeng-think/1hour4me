@@ -7,6 +7,7 @@
 //
 
 #import "MEDayView.h"
+#import "MEDrawer.h"
 
 #define IMAGE_DAY_BAD       @"day-bad.png"
 #define IMAGE_DAY_UNKNOWN   @"day-unknown.png"
@@ -15,9 +16,7 @@
 
 + (UIImage *)imageBad;
 + (UIImage *)imageUnknown;
-+ (void)drawImage:(UIImage *)image inRect:(CGRect)rect onContext:(CGContextRef)context;
 + (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context;
-+ (CGImageRef)flip:(CGImageRef)im;
 
 @end
 
@@ -50,7 +49,7 @@
     if (backgroundImage) {
         CGContextRef context = UIGraphicsGetCurrentContext();
         
-        [MEDayView drawImage:backgroundImage inRect:rect onContext:context];
+        [MEDrawer drawImage:backgroundImage inRect:rect onContext:context];
         [MEDayView drawText:[NSString stringWithFormat:@"%i", day] inRect:rect onContext:context];
     }
 }
@@ -69,11 +68,6 @@
         unknown = [UIImage imageNamed:IMAGE_DAY_UNKNOWN];
     }
     return unknown;
-}
-
-+ (void)drawImage:(UIImage *)image inRect:(CGRect)rect onContext:(CGContextRef)context {
-    CGImageRef flipped = [MEDayView flip:[image CGImage]];
-    CGContextDrawImage(context, rect, flipped);
 }
 
 + (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context {
@@ -95,15 +89,6 @@
     CGContextShowTextAtPoint(context, 15, 15, str, strlen(str));
     
     UIGraphicsPopContext();
-}
-
-+ (CGImageRef)flip:(CGImageRef)im {
-    CGSize sz = CGSizeMake(CGImageGetWidth(im), CGImageGetHeight(im));
-    UIGraphicsBeginImageContext(sz);
-    CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, sz.width, sz.height), im);
-    CGImageRef result = [UIGraphicsGetImageFromCurrentImageContext() CGImage];
-    UIGraphicsEndImageContext();
-    return result;
 }
 
 @end
