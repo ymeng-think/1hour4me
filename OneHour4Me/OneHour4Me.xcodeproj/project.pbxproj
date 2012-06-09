@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F02C38B158388DF001B66A5 /* MEMonthlyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C38A158388DF001B66A5 /* MEMonthlyCalendarView.m */; };
 		6F2666EF15627E8A004E56A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
 		6F2666F015627E8A004E56A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
 		6F2666F115627E8A004E56A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23F15539E57000AE8EC /* CoreGraphics.framework */; };
@@ -53,6 +54,10 @@
 		6F8AEF7F156FE3EE001F0DF8 /* MEMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8AEF7E156FE3EE001F0DF8 /* MEMonthView.m */; };
 		6F95034015821CCB00B95CEF /* eraser-slot.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F95033E15821CCB00B95CEF /* eraser-slot.png */; };
 		6F95034115821CCB00B95CEF /* eraser-slot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F95033F15821CCB00B95CEF /* eraser-slot@2x.png */; };
+		6FCF2BAD15825FBF00F56236 /* month.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF2BA915825FBF00F56236 /* month.png */; };
+		6FCF2BAE15825FBF00F56236 /* month@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF2BAA15825FBF00F56236 /* month@2x.png */; };
+		6FCF2BAF15825FBF00F56236 /* month-highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF2BAB15825FBF00F56236 /* month-highlight@2x.png */; };
+		6FCF2BB015825FBF00F56236 /* month-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FCF2BAC15825FBF00F56236 /* month-highlight.png */; };
 		6FEBCABF1553F57B004FC1B1 /* welcome.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCABE1553F57B004FC1B1 /* welcome.xib */; };
 		6FEBCAC31553F775004FC1B1 /* MEWelcomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */; };
 		6FEBCACF155400D3004FC1B1 /* activities.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FEBCACE155400D3004FC1B1 /* activities.png */; };
@@ -70,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F02C389158388DF001B66A5 /* MEMonthlyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEMonthlyCalendarView.h; sourceTree = "<group>"; };
+		6F02C38A158388DF001B66A5 /* MEMonthlyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMonthlyCalendarView.m; sourceTree = "<group>"; };
 		6F2666ED15627E8A004E56A2 /* OneHour4MeGHTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHour4MeGHTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F2666F415627E8A004E56A2 /* OneHour4MeGHTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OneHour4MeGHTests-Info.plist"; sourceTree = "<group>"; };
 		6F2666F615627E8A004E56A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -137,6 +144,10 @@
 		6F8AEF7E156FE3EE001F0DF8 /* MEMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMonthView.m; sourceTree = "<group>"; };
 		6F95033E15821CCB00B95CEF /* eraser-slot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser-slot.png"; sourceTree = "<group>"; };
 		6F95033F15821CCB00B95CEF /* eraser-slot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser-slot@2x.png"; sourceTree = "<group>"; };
+		6FCF2BA915825FBF00F56236 /* month.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = month.png; sourceTree = "<group>"; };
+		6FCF2BAA15825FBF00F56236 /* month@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "month@2x.png"; sourceTree = "<group>"; };
+		6FCF2BAB15825FBF00F56236 /* month-highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "month-highlight@2x.png"; sourceTree = "<group>"; };
+		6FCF2BAC15825FBF00F56236 /* month-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "month-highlight.png"; sourceTree = "<group>"; };
 		6FEBCABE1553F57B004FC1B1 /* welcome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = welcome.xib; sourceTree = "<group>"; };
 		6FEBCAC11553F775004FC1B1 /* MEWelcomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEWelcomeController.h; sourceTree = "<group>"; };
 		6FEBCAC21553F775004FC1B1 /* MEWelcomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEWelcomeController.m; sourceTree = "<group>"; };
@@ -212,6 +223,8 @@
 				6F3E01081571D5CF0085415C /* MELabel.m */,
 				6F8AEF7D156FE3EE001F0DF8 /* MEMonthView.h */,
 				6F8AEF7E156FE3EE001F0DF8 /* MEMonthView.m */,
+				6F02C389158388DF001B66A5 /* MEMonthlyCalendarView.h */,
+				6F02C38A158388DF001B66A5 /* MEMonthlyCalendarView.m */,
 				6F5AC9DE155518B400DC48C4 /* MESignInView.h */,
 				6F5AC9DF155518B400DC48C4 /* MESignInView.m */,
 				6F5AC9ED155524DD00DC48C4 /* MEStickerView.h */,
@@ -350,6 +363,10 @@
 				6F95033F15821CCB00B95CEF /* eraser-slot@2x.png */,
 				6F54340415803C5A007858AE /* favicon.png */,
 				6F54340615803C68007858AE /* favicon@2x.png */,
+				6FCF2BA915825FBF00F56236 /* month.png */,
+				6FCF2BAA15825FBF00F56236 /* month@2x.png */,
+				6FCF2BAC15825FBF00F56236 /* month-highlight.png */,
+				6FCF2BAB15825FBF00F56236 /* month-highlight@2x.png */,
 				6F5AC9F515552C0700DC48C4 /* sticker.png */,
 				6F5AC9F91555393700DC48C4 /* sticker@2x.png */,
 			);
@@ -499,6 +516,10 @@
 				6F54340715803C68007858AE /* favicon@2x.png in Resources */,
 				6F95034015821CCB00B95CEF /* eraser-slot.png in Resources */,
 				6F95034115821CCB00B95CEF /* eraser-slot@2x.png in Resources */,
+				6FCF2BAD15825FBF00F56236 /* month.png in Resources */,
+				6FCF2BAE15825FBF00F56236 /* month@2x.png in Resources */,
+				6FCF2BAF15825FBF00F56236 /* month-highlight@2x.png in Resources */,
+				6FCF2BB015825FBF00F56236 /* month-highlight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +582,7 @@
 				6F3E01181571F9C40085415C /* MEWeekCell.m in Sources */,
 				6F434AF9157A322400616177 /* MEDayView.m in Sources */,
 				6F742245157F188A00847B50 /* MEWeekHeader.m in Sources */,
+				6F02C38B158388DF001B66A5 /* MEMonthlyCalendarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

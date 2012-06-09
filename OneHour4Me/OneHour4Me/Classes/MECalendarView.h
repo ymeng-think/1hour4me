@@ -11,8 +11,6 @@
 
 @class MEMonthView;
 
-@interface MECalendarView : MEBackgroundView {
-    MEMonthView *currentMonthView;
-}
+@interface MECalendarView : MEBackgroundView
 
 @end
