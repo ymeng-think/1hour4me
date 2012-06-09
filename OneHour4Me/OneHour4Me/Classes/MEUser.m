@@ -31,7 +31,7 @@
         return nil;
     }
     
-    MEUser *user = [[MEUser alloc] init];
+    MEUser *user = [[[MEUser alloc] init] autorelease];
     return user;
 }
 

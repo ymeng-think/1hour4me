@@ -110,6 +110,7 @@
         [daysInWeek addObject:value];
     }
     cell.daysInWeek = daysInWeek;
+    [daysInWeek release];
     
     return cell;
 }
