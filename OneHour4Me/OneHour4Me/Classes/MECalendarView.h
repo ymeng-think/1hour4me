@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MEBackgroundView.h"
 
-@class MEMonthView;
-
 @interface MECalendarView : MEBackgroundView {
     NSInteger currentMonth;
 }

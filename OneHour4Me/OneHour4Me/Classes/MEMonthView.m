@@ -14,8 +14,8 @@
 #import "MEWeekHeader.h"
 
 
-#define PADDING 20.0
-#define LABEL_HEIGHT 20.0
+#define PADDING         20.0
+#define LABEL_HEIGHT    20.0
 #define NUMBER_OF_WEEKS 6
 
 @interface MEMonthView ()
@@ -42,7 +42,7 @@
 }
 
 - (void)addMonthLabel {
-    monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, LABEL_HEIGHT)];
+    MELabel *monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, LABEL_HEIGHT)];
     if (month >= 1 && month <= 12) {
         monthLabel.text = [[MECalendar allMonths] objectAtIndex:(month - 1)];
     }
@@ -50,10 +50,11 @@
     [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].chalkboardLargeFont];
     
     [self addSubview:monthLabel];
+    [monthLabel release];
 }
 
 - (void)addDaysTable {
-    daysInMonth = [[UITableView alloc] initWithFrame:CGRectMake(0, 0 + LABEL_HEIGHT + PADDING, self.bounds.size.width, 300)];
+    UITableView *daysInMonth = [[UITableView alloc] initWithFrame:CGRectMake(0, 0 + LABEL_HEIGHT + PADDING, self.bounds.size.width, 300)];
     daysInMonth.dataSource = self;
     daysInMonth.delegate = self;
     daysInMonth.scrollEnabled = false;
@@ -64,6 +65,7 @@
     [header release];
     
     [self addSubview:daysInMonth];
+    [daysInMonth release];
 }
 
 - (void)matrixDays {
@@ -113,12 +115,6 @@
     [daysInWeek release];
     
     return cell;
-}
-
-- (void)dealloc {
-    [monthLabel release];
-    
-    [super dealloc];
 }
 
 @end

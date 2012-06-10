@@ -16,9 +16,6 @@
     NSInteger month;
     NSInteger year;
     NSInteger days[ALL_DAYS_NUMBER_IN_MONTH];
-    
-    MELabel *monthLabel;
-    UITableView *daysInMonth;
 }
 
 @end
