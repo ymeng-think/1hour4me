@@ -219,6 +219,7 @@
 		6F2B979A1554C9CB0082E571 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6F4818331584CCB500258C9E /* Utils */,
 				6F2B979B1554C9F20082E571 /* MEBackgroundView.h */,
 				6F2B979C1554C9F20082E571 /* MEBackgroundView.m */,
 				6F02C38C15839452001B66A5 /* MECalendarCardView.h */,
@@ -227,8 +228,6 @@
 				6F340E4E155D2067003722EA /* MECalendarView.m */,
 				6F434AF7157A322400616177 /* MEDayView.h */,
 				6F434AF8157A322400616177 /* MEDayView.m */,
-				6F02C38F158395E1001B66A5 /* MEDrawer.h */,
-				6F02C390158395E2001B66A5 /* MEDrawer.m */,
 				6F3E01071571D5CF0085415C /* MELabel.h */,
 				6F3E01081571D5CF0085415C /* MELabel.m */,
 				6F8AEF7D156FE3EE001F0DF8 /* MEMonthView.h */,
@@ -252,12 +251,21 @@
 		6F44B89B1556A1BB009FE6EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6F340E50155D2F76003722EA /* MECalendar.h */,
-				6F340E51155D2F76003722EA /* MECalendar.m */,
 				6F44B89D1556A217009FE6EC /* MEUser.h */,
 				6F44B89E1556A217009FE6EC /* MEUser.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		6F4818331584CCB500258C9E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F340E50155D2F76003722EA /* MECalendar.h */,
+				6F340E51155D2F76003722EA /* MECalendar.m */,
+				6F02C38F158395E1001B66A5 /* MEDrawer.h */,
+				6F02C390158395E2001B66A5 /* MEDrawer.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 		6F6FB22C15539E57000AE8EC = {

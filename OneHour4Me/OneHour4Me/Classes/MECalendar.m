@@ -32,8 +32,8 @@ static MECalendar *gCalendar;
 + (NSArray *)allMonths {
     static NSArray *months = nil;
     if (!months) {
-        months = [[[NSArray alloc] initWithObjects:@"January", @"February", @"March", @"April", @"May", @"June",
-                    @"July", @"August", @"September", @"October", @"November", @"December", nil] autorelease];
+        months = [[NSArray alloc] initWithObjects:@"January", @"February", @"March", @"April", @"May", @"June",
+                    @"July", @"August", @"September", @"October", @"November", @"December", nil];
     }
     return months;
 }
