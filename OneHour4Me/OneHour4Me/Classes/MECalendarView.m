@@ -35,6 +35,8 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        currentMonth = [[MECalendar calendar] currentMonth];
+        
         [self addCurrentMonth];
         [self addEraserSlot];
         [self addMonthlyCalendar];
@@ -72,6 +74,7 @@
     CGRect scrollFrame = CGRectMake(0, y, self.bounds.size.width, self.bounds.size.height - y - STATUS_BAR_HEIGHT - NAVIGATION_BAR_HEIGHT);
     
     MEMonthlyCalendarView *monthlyCalendar = [[MEMonthlyCalendarView alloc] initWithFrame:scrollFrame];
+    [monthlyCalendar selectMonth:currentMonth];
     [self addSubview:monthlyCalendar];
     [monthlyCalendar release];
 }

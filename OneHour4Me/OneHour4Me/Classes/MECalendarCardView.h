@@ -14,8 +14,10 @@
     MELabel *label;
     
     NSInteger month;
+    BOOL isSelected;
 }
 
 @property (nonatomic, setter = setMonth:) NSInteger month;
+@property (nonatomic) BOOL isSelected;
 
 @end

@@ -13,17 +13,19 @@
 #import "MELabel.h"
 
 #define IMAGE_COLOR_MONTH @"month-highlight.png"
+#define IMAGE_GRAY_MONTH  @"month.png"
 
 @interface MECalendarCardView ()
 
 + (UIImage *)imageColorMonth;
++ (UIImage *)imageGrayMonth;
 - (void)addMonthLabel;
 
 @end
 
 @implementation MECalendarCardView
 
-@synthesize month;
+@synthesize month, isSelected;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -36,7 +38,12 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    UIImage *backgroundImage = [MECalendarCardView imageColorMonth];
+    UIImage *backgroundImage = nil;
+    if (isSelected) {
+        backgroundImage = [MECalendarCardView imageColorMonth];
+    } else {
+        backgroundImage = [MECalendarCardView imageGrayMonth];
+    }
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     [MEDrawer drawImage:backgroundImage inRect:rect onContext:context];
@@ -51,7 +58,7 @@
 }
 
 - (void)setMonth:(NSInteger)m {
-    if (m < 0 || m > 11) {
+    if (m < 1 || m > 12) {
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"month" userInfo:nil];
     }
     self->month = m;
@@ -70,6 +77,14 @@
         colorMonth = [UIImage imageNamed:IMAGE_COLOR_MONTH];
     }
     return colorMonth;
+}
+
++ (UIImage *)imageGrayMonth {
+    static UIImage *grayMonth = Nil;
+    if (!grayMonth) {
+        grayMonth = [UIImage imageNamed:IMAGE_GRAY_MONTH];
+    }
+    return grayMonth;
 }
 
 @end

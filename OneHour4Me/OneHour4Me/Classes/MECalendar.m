@@ -56,7 +56,7 @@ static MECalendar *gCalendar;
 }
 
 + (NSString *)monthAbbreviation:(NSInteger)month {
-    NSString *monthName = [[MECalendar allMonths] objectAtIndex:month];
+    NSString *monthName = [[MECalendar allMonths] objectAtIndex:(month - 1)];
     return [monthName substringToIndex:MONTH_ABBREVIATION_LENGTH];
 }
 

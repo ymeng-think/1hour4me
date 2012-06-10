@@ -11,6 +11,8 @@
 
 @class MEMonthView;
 
-@interface MECalendarView : MEBackgroundView
+@interface MECalendarView : MEBackgroundView {
+    NSInteger currentMonth;
+}
 
 @end

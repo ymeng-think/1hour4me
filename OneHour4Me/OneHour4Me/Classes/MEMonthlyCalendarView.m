@@ -37,7 +37,7 @@
     for (NSInteger i = 0; i < container.subviews.count; i++) {
         MECalendarCardView *card = [container.subviews objectAtIndex:i];
         card.frame = CGRectMake(x, y, CALENDAR_CARD_WIDTH, CALENDAR_CARD_HEIGHT);
-        card.month = i;
+        card.month = i + 1;
         x += CALENDAR_CARD_WIDTH + PADDING;
     }
 }
@@ -46,12 +46,17 @@
     CGFloat containerWidth = CALENDAR_CARD_WIDTH * MONTH_NUM + PADDING * (MONTH_NUM - 1);
     container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, containerWidth, self.bounds.size.height)];
     [self addSubview:container];
-    
+
     for (NSInteger i = 0; i < MONTH_NUM; i++) {
         MECalendarCardView *card = [[MECalendarCardView alloc] initWithFrame:CGRectZero];
         [container addSubview:card];
         [card release];
     }
+}
+
+- (void)selectMonth:(NSInteger)month {
+    MECalendarCardView *card = [container.subviews objectAtIndex:(month - 1)];
+    card.isSelected = YES;
 }
 
 - (void)dealloc {

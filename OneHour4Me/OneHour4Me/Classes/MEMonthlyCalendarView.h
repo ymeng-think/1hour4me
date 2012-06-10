@@ -12,4 +12,6 @@
     UIView *container;
 }
 
+- (void)selectMonth:(NSInteger)month;
+
 @end
