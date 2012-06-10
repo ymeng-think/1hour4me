@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
+#import "MECalendarController.h"
 #import "MEFontLibrary.h"
-#import "MESignInController.h"
 #import "MEWelcomeController.h"
 #import "UILabelExtension.h"
 
@@ -70,9 +70,9 @@
 }
 
 - (void)goToNextView {
-    MESignInController *signInController = [[MESignInController alloc] init];
-    [self.navigationController pushViewController:signInController animated:YES];
-    [signInController release];
+    UIViewController *calendarController = [[MECalendarController alloc] init];
+    [self.navigationController pushViewController:calendarController animated:YES];
+    [calendarController release];
 }
 
 @end
