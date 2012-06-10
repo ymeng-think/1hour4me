@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MEMonthlyCalendarView : UIView
+@interface MEMonthlyCalendarView : UIScrollView {
+    UIView *container;
+}
 
 @end

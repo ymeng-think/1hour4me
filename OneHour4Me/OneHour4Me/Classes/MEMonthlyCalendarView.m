@@ -23,10 +23,10 @@
 @implementation MEMonthlyCalendarView
 
 - (id)initWithFrame:(CGRect)frame {
-    CGFloat width = CALENDAR_CARD_WIDTH * MONTH_NUM + PADDING * (MONTH_NUM - 1);
-    self = [super initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, width, frame.size.height)];
+    self = [super initWithFrame:frame];
     if (self) {
         [self addAllCalendarCards];
+        self.contentSize = container.bounds.size;
     }
     return self;
 }
@@ -34,8 +34,8 @@
 - (void)layoutSubviews {
     CGFloat x = 0.0;
     CGFloat y = (self.frame.size.height - CALENDAR_CARD_HEIGHT) / 2;
-    for (NSInteger i = 0; i < self.subviews.count; i++) {
-        MECalendarCardView *card = [self.subviews objectAtIndex:i];
+    for (NSInteger i = 0; i < container.subviews.count; i++) {
+        MECalendarCardView *card = [container.subviews objectAtIndex:i];
         card.frame = CGRectMake(x, y, CALENDAR_CARD_WIDTH, CALENDAR_CARD_HEIGHT);
         card.month = i;
         x += CALENDAR_CARD_WIDTH + PADDING;
@@ -43,11 +43,21 @@
 }
 
 - (void)addAllCalendarCards {
+    CGFloat containerWidth = CALENDAR_CARD_WIDTH * MONTH_NUM + PADDING * (MONTH_NUM - 1);
+    container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, containerWidth, self.bounds.size.height)];
+    [self addSubview:container];
+    
     for (NSInteger i = 0; i < MONTH_NUM; i++) {
         MECalendarCardView *card = [[MECalendarCardView alloc] initWithFrame:CGRectZero];
-        [self addSubview:card];
+        [container addSubview:card];
         [card release];
     }
+}
+
+- (void)dealloc {
+    [container release];
+    
+    [super dealloc];
 }
 
 @end

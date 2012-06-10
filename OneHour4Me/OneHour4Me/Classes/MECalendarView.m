@@ -70,16 +70,10 @@
     
     CGFloat y = eraserSlotView.frame.origin.y + eraserSlotView.frame.size.height;
     CGRect scrollFrame = CGRectMake(0, y, self.bounds.size.width, self.bounds.size.height - y - STATUS_BAR_HEIGHT - NAVIGATION_BAR_HEIGHT);
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:scrollFrame];
     
-    MEMonthlyCalendarView *monthlyCalendar = [[MEMonthlyCalendarView alloc] 
-                                              initWithFrame:CGRectMake(0, 0, 0, scrollFrame.size.height)];
-    scrollView.contentSize = monthlyCalendar.bounds.size;
-    [scrollView addSubview:monthlyCalendar];
+    MEMonthlyCalendarView *monthlyCalendar = [[MEMonthlyCalendarView alloc] initWithFrame:scrollFrame];
+    [self addSubview:monthlyCalendar];
     [monthlyCalendar release];
-    
-    [self addSubview:scrollView];
-    [scrollView release];
 }
 
 - (CGFloat)viewWidth {
