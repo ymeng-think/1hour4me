@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MECalendarCardView : UIView
+@class MELabel;
+
+@interface MECalendarCardView : UIView {
+    MELabel *label;
+    
+    NSInteger month;
+}
+
+@property (nonatomic, setter = setMonth:) NSInteger month;
 
 @end

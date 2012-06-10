@@ -34,8 +34,10 @@
 - (void)layoutSubviews {
     CGFloat x = 0.0;
     CGFloat y = (self.frame.size.height - CALENDAR_CARD_HEIGHT) / 2;
-    for (MECalendarCardView *card in self.subviews) {
+    for (NSInteger i = 0; i < self.subviews.count; i++) {
+        MECalendarCardView *card = [self.subviews objectAtIndex:i];
         card.frame = CGRectMake(x, y, CALENDAR_CARD_WIDTH, CALENDAR_CARD_HEIGHT);
+        card.month = i;
         x += CALENDAR_CARD_WIDTH + PADDING;
     }
 }

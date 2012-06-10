@@ -8,7 +8,8 @@
 
 #import "MECalendar.h"
 
-#define SUNDAY_OFFSET 1
+#define SUNDAY_OFFSET             1
+#define MONTH_ABBREVIATION_LENGTH 3
 
 static MECalendar *gCalendar;
 
@@ -52,6 +53,11 @@ static MECalendar *gCalendar;
 + (NSInteger)daysOfYear:(NSInteger)year month:(NSInteger)month {
     static NSInteger daysNumber[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     return [MECalendar isLeapYear:year] && month == 2 ? 29 : daysNumber[month - 1];
+}
+
++ (NSString *)monthAbbreviation:(NSInteger)month {
+    NSString *monthName = [[MECalendar allMonths] objectAtIndex:month];
+    return [monthName substringToIndex:MONTH_ABBREVIATION_LENGTH];
 }
 
 - (id)init {
