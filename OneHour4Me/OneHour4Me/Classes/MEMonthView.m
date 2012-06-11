@@ -22,7 +22,7 @@
 
 - (void)addMonthLabel;
 - (void)addDaysTable;
-- (void)matrixDays;
+- (void)matrixDaysForYear:(NSInteger)year andMonth:(NSInteger)month;
 
 @end
 
@@ -31,21 +31,14 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        year = [[MECalendar calendar] currentYear];
-        month = [[MECalendar calendar] currentMonth];
-        
         [self addMonthLabel];
         [self addDaysTable];
-        [self matrixDays];
     }
     return self;
 }
 
 - (void)addMonthLabel {
-    MELabel *monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, LABEL_HEIGHT)];
-    if (month >= 1 && month <= 12) {
-        monthLabel.text = [[MECalendar allMonths] objectAtIndex:(month - 1)];
-    }
+    monthLabel = [[MELabel alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, LABEL_HEIGHT)];
     monthLabel.backgroundColor = [UIColor clearColor];
     [monthLabel whiteTextWithFont:[MEFontLibrary sharedLibrary].chalkboardLargeFont];
     
@@ -68,7 +61,7 @@
     [daysInMonth release];
 }
 
-- (void)matrixDays {
+- (void)matrixDaysForYear:(NSInteger)year andMonth:(NSInteger)month {
     MEMonthInfo monthInfo = [[MECalendar calendar] daysInYear:year andMonth:month];
 
     NSInteger i = 0;
@@ -82,6 +75,14 @@
     for (; i < ALL_DAYS_NUMBER_IN_MONTH; i++) {
         days[i] = -1;
     }
+}
+
+- (void)setYear:(NSInteger)year andMonth:(NSInteger)month {
+    if (month >= 1 && month <= 12) {
+        monthLabel.text = [[MECalendar allMonths] objectAtIndex:(month - 1)];
+    }
+    
+    [self matrixDaysForYear:year andMonth:month];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -115,6 +116,12 @@
     [daysInWeek release];
     
     return cell;
+}
+
+- (void)dealloc {
+    [monthLabel release];
+    
+    [super dealloc];
 }
 
 @end

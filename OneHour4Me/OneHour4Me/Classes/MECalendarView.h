@@ -10,7 +10,10 @@
 #import "MEBackgroundView.h"
 
 @interface MECalendarView : MEBackgroundView {
+    NSInteger currentYear;
     NSInteger currentMonth;
+    
+    UIView *eraserSlotView;
 }
 
 @end

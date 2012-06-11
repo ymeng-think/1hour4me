@@ -10,12 +10,12 @@
 
 #define ALL_DAYS_NUMBER_IN_MONTH 42
 
-@class MELabel;
-
 @interface MEMonthView : UIView <UITableViewDataSource, UITableViewDelegate> {
-    NSInteger month;
-    NSInteger year;
     NSInteger days[ALL_DAYS_NUMBER_IN_MONTH];
+    
+    UILabel *monthLabel;
 }
+
+- (void)setYear:(NSInteger)year andMonth:(NSInteger)month;
 
 @end

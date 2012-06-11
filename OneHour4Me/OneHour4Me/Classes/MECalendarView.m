@@ -18,7 +18,6 @@
 #define CURRENT_MONTH_VIEW_PADDING_Y 5.0
 #define CURRENT_MONTH_VIEW_HEIGHT    320.0
 #define ERASER_SLOT_Y                325.0
-#define TAG_ERASER_SLOT              1
 
 @interface MECalendarView ()
 
@@ -35,6 +34,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        currentYear = [[MECalendar calendar] currentYear];
         currentMonth = [[MECalendar calendar] currentMonth];
         
         [self addCurrentMonth];
@@ -51,25 +51,22 @@
             height = CURRENT_MONTH_VIEW_HEIGHT;
     
     MEMonthView *currentMonthView = [[MEMonthView alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [currentMonthView setYear:currentYear andMonth:currentMonth];
     [self addSubview:currentMonthView];
     [currentMonthView release];
 }
 
 - (void)addEraserSlot {
-    UIImage *image = [UIImage imageNamed:@"eraser-slot.png"];
-    UIImageView *eraserSlotView = [[UIImageView alloc] initWithImage:image];
+    eraserSlotView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"eraser-slot.png"]];
     CGRect frame = eraserSlotView.frame;
     frame.origin.y = ERASER_SLOT_Y;
     eraserSlotView.frame = frame;
-    eraserSlotView.tag = TAG_ERASER_SLOT;
     
     [self addSubview:eraserSlotView];
     [eraserSlotView release];
 }
 
 - (void)addMonthlyCalendar {
-    UIView *eraserSlotView = [self viewWithTag:TAG_ERASER_SLOT];
-    
     CGFloat y = eraserSlotView.frame.origin.y + eraserSlotView.frame.size.height;
     CGRect scrollFrame = CGRectMake(0, y, self.bounds.size.width, self.bounds.size.height - y - STATUS_BAR_HEIGHT - NAVIGATION_BAR_HEIGHT);
     
@@ -86,6 +83,12 @@
 - (CGFloat)viewHeight {
     CGRect screenRect = [UIScreen mainScreen].applicationFrame;
     return screenRect.size.height - NAVIGATION_BAR_HEIGHT;
+}
+
+- (void)dealloc {
+    [eraserSlotView release];
+    
+    [super dealloc];
 }
 
 @end
