@@ -58,9 +58,8 @@
 }
 
 - (void)setMonth:(NSInteger)m {
-    if (m < 1 || m > 12) {
-        @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"month" userInfo:nil];
-    }
+    NSParameterAssert(m >= 1 && m <= 12);
+
     self->month = m;
     label.text = [MECalendar monthAbbreviation:self->month];
 }
