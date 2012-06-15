@@ -1,0 +1,13 @@
+Question:
+
+How to check parameters?
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Answer:
+
+(1) Check with exception:
+	A. [NSException raise:NSInternalInconsistencyException format:@"Mumblefart can't be something or othered"];
+	   return nil;	// Can't actually get here. Awkward code … But it's necessary, otherwise the compiler doesn't recognize that this represents a throw and sometimes you wind
+			   up with awkward: "Control may reach end of non-void function" case.
+	B. @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"pageIndex is out of range" userInfo:nil];
+(2) Use the NSAssert() and NSParameterAssert() macros. They do the testing without a visible if () block, and they become no-ops when you define NS_BLOCK_ASSERTIONS in your release
+    builds.

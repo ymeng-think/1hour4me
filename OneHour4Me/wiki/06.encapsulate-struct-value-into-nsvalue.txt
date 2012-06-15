@@ -1,0 +1,12 @@
+Question:
+
+How to encapsulate struct value into NSValue?
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Answer:
+
+Encapsulate:
+	CGPoint pt = CGPointMake(1, 2);
+	NSValue *boxedPt = [NSValue valueWithBytes:&pt objCType:@encode(CGPoint)];
+Decapsulate:
+	CGPoint pt2;
+	[boxedPt getValue:&pt2];

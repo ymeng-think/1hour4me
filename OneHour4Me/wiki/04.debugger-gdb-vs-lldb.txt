@@ -1,0 +1,8 @@
+Question:
+
+Debugger GDB vs. LLDB
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Answer:
+
+It depends on your compiler. 
+I would recommend using the lldb debugger with the "Apple LLVM compiler 3.0", and gdb for GCC flavors (including "LLVM GCC 4.2").

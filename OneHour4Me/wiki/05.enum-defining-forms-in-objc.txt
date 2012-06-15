@@ -1,0 +1,28 @@
+Question:
+
+Enum defining forms in Objective-C
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Answer:
+
+typedef enum {
+	. . .
+} Name;
+
+and
+
+enum {
+	. . .
+};
+typedef NSUInteger Name;
+? If functionality is the same, what is the second form good for? Isn't it unnecessarily messy?
+
+The former defines a type name to refer to an enum. This is the way most enums are named in C.
+The later is a bit different though, and it's prevalent in the Cocoa frameworks. There's two reasons to use the later. The first is if your enum defines a bitfield, and you'd want
+it here because when you're providing a 'Name' value you'll be providing a combination of the enum values. In other words, if you say something like:
+	[self doSomethingWithBitfield:(Enum1 | Enum2)]
+you're not passing a value of Name but rather an integer that's a combination of the two.
+However, Cocoa frameworks use this idiom even for non-bitfield values, for a very good reason: API stability. According to the C standard, the underlying integral type of an enum
+is requires to be able to contain all values in the enum, but is otherwise chosen by the compiler. This means that adding a enum value could change the integral typeof the enum(
+e.g. adding -1 can make it signed, adding 6 billion can make it to a long long, etc.) This is a bad thing from an API stability standpoint, because the type encoding of methods 
+which take values of this enum could change unexpectedly and potentially break existing code and binaries. In order to prevent this, the Cocoa frameworks generally define the type
+as being an NSUInteger (or NSInteger if they need negative numbers), so the API and type encodings stay stable.
