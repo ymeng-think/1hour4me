@@ -10,6 +10,7 @@
 
 @interface MEMonthlyCalendarView : UIScrollView {
     UIView *container;
+    NSInteger selectedMonth;
 }
 
 - (void)selectMonth:(NSInteger)month;

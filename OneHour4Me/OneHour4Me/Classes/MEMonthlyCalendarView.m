@@ -9,10 +9,13 @@
 #import "MECalendarCardView.h"
 #import "MEMonthlyCalendarView.h"
 
-#define CALENDAR_CARD_WIDTH  44.0
-#define CALENDAR_CARD_HEIGHT 44.0
-#define MONTH_NUM            12
-#define PADDING              20.0
+#define MONTH_NUM                       12
+#define UNSELECTED_CALENDAR_CARD_WIDTH  33.0
+#define UNSELECTED_CALENDAR_CARD_HEIGHT 33.0
+#define SELECTED_CALENDAR_CARD_WIDTH    44.0
+#define SELECTED_CALENDAR_CARD_HEIGHT   44.0
+#define PADDING                         10.0
+#define SELECTED_MONTH_BOTH_END_PADDING 20.0
 
 @interface MEMonthlyCalendarView ()
 
@@ -27,23 +30,42 @@
     if (self) {
         [self addAllCalendarCards];
         self.contentSize = container.bounds.size;
+        self.showsHorizontalScrollIndicator = NO;
     }
     return self;
 }
 
 - (void)layoutSubviews {
-    CGFloat x = 0.0;
-    CGFloat y = (self.frame.size.height - CALENDAR_CARD_HEIGHT) / 2;
+    CGFloat x = 0.0, y, w, h;
+    CGFloat selectedCardY = (self.frame.size.height - SELECTED_CALENDAR_CARD_HEIGHT) / 2;
+    CGFloat unselectedCardY = selectedCardY + SELECTED_CALENDAR_CARD_HEIGHT - UNSELECTED_CALENDAR_CARD_HEIGHT;
+    
     for (NSInteger i = 0; i < container.subviews.count; i++) {
-        MECalendarCardView *card = [container.subviews objectAtIndex:i];
-        card.frame = CGRectMake(x, y, CALENDAR_CARD_WIDTH, CALENDAR_CARD_HEIGHT);
+        MECalendarCardView *card = [container.subviews objectAtIndex:i];    
+        
+        if (i + 1 == selectedMonth) {
+            y = selectedCardY;
+            w = SELECTED_CALENDAR_CARD_WIDTH;
+            h = SELECTED_CALENDAR_CARD_HEIGHT;
+        } else {
+            y = unselectedCardY;
+            w = UNSELECTED_CALENDAR_CARD_WIDTH;
+            h = UNSELECTED_CALENDAR_CARD_HEIGHT;
+        }
+        
+        card.frame = CGRectMake(x, y, w, h);
         card.month = i + 1;
-        x += CALENDAR_CARD_WIDTH + PADDING;
+        
+        if (i + 2 == selectedMonth || i == selectedMonth - 1) {
+            x += w + SELECTED_MONTH_BOTH_END_PADDING;
+        } else {
+            x += w + PADDING;
+        }
     }
 }
 
 - (void)addAllCalendarCards {
-    CGFloat containerWidth = CALENDAR_CARD_WIDTH * MONTH_NUM + PADDING * (MONTH_NUM - 1);
+    CGFloat containerWidth = SELECTED_CALENDAR_CARD_WIDTH + (UNSELECTED_CALENDAR_CARD_WIDTH + PADDING) * (MONTH_NUM - 1);
     container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, containerWidth, self.bounds.size.height)];
     [self addSubview:container];
 
@@ -57,6 +79,7 @@
 - (void)selectMonth:(NSInteger)month {
     MECalendarCardView *card = [container.subviews objectAtIndex:(month - 1)];
     card.isSelected = YES;
+    selectedMonth = month;
 }
 
 - (void)dealloc {
