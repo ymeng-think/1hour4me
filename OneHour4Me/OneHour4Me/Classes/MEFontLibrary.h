@@ -15,6 +15,8 @@
     
     UIFont *chalkboardLargeFont;
     UIFont *chalkboardSmallFont;
+    
+    UIFont *helveticaSmallFont;
 }
 
 + (MEFontLibrary *)sharedLibrary;
@@ -24,5 +26,6 @@
 @property(nonatomic, readonly) UIFont *cursiveSmallFont;
 @property(nonatomic, readonly) UIFont *chalkboardLargeFont;
 @property(nonatomic, readonly) UIFont *chalkboardSmallFont;
+@property(nonatomic, readonly) UIFont *helveticaSmallFont;
 
 @end

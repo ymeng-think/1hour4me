@@ -10,12 +10,13 @@
 
 #define FONT_LUCIDA_CALLIGRAPHY @"Lucida Calligraphy"
 #define FONT_CHALKBOARD @"Chalkboard SE"
+#define FONT_HELVETICA @"Helvetica"
 
 static MEFontLibrary *gSharedInstance;
 
 @implementation MEFontLibrary
 
-@synthesize cursiveLargeFont, cursiveMiddleFont, cursiveSmallFont, chalkboardLargeFont, chalkboardSmallFont;
+@synthesize cursiveLargeFont, cursiveMiddleFont, cursiveSmallFont, chalkboardLargeFont, chalkboardSmallFont, helveticaSmallFont;
 
 + (MEFontLibrary *)sharedLibrary {
     if (!gSharedInstance) {
@@ -26,6 +27,8 @@ static MEFontLibrary *gSharedInstance;
         
         gSharedInstance->chalkboardLargeFont = [UIFont fontWithName:FONT_CHALKBOARD size:22];
         gSharedInstance->chalkboardSmallFont = [UIFont fontWithName:FONT_CHALKBOARD size:15];
+        
+        gSharedInstance->helveticaSmallFont = [UIFont fontWithName:FONT_HELVETICA size:15];
     }
     return gSharedInstance;
 }

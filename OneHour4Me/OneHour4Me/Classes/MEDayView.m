@@ -8,6 +8,7 @@
 
 #import "MEDayView.h"
 #import "MEDrawer.h"
+#import "MEFontLibrary.h"
 
 #define IMAGE_DAY_BAD       @"day-bad.png"
 #define IMAGE_DAY_UNKNOWN   @"day-unknown.png"
@@ -71,8 +72,7 @@
 }
 
 + (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context {
-    static const char *fontName = "Helvetica";
-    CGFloat fontSize = 15.0f;
+    UIFont *font = [MEFontLibrary sharedLibrary].helveticaSmallFont;
     CGColorRef whiteColor = [[UIColor whiteColor] CGColor];
     
     CGContextTranslateCTM(context, 0, rect.size.height);
@@ -81,12 +81,15 @@
     
     CGContextSetStrokeColorWithColor(context, whiteColor);
     CGContextSetFillColorWithColor(context, whiteColor);
-    CGContextSelectFont(context, fontName, fontSize, kCGEncodingMacRoman);
+    CGContextSelectFont(context, [font.fontName UTF8String], font.pointSize, kCGEncodingMacRoman);
     CGContextSetCharacterSpacing(context, 1);
     CGContextSetTextDrawingMode(context, kCGTextFillStroke);
     
+    CGSize textSize = [text sizeWithFont:font forWidth:rect.size.width lineBreakMode:UILineBreakModeWordWrap];
     const char *str = [text UTF8String];
-    CGContextShowTextAtPoint(context, 15, 15, str, strlen(str));
+    CGFloat x = (rect.size.width - textSize.width) / 2;
+    CGFloat y = (rect.size.height - textSize.height) / 2 + 4;
+    CGContextShowTextAtPoint(context, x, y, str, strlen(str));
     
     UIGraphicsPopContext();
 }
