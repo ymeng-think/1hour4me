@@ -1,0 +1,38 @@
+Question:
+
+Using GitHub on port 443 through a proxy
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Answer:
+
+Internet access at work goes through a proxy and firewall. The proxy allows connections out on port 80 (HTTP) and 443 (HTTPS) only. I needed to install Git for Windows (msysgit - 1.7.9) 
+on my Windows 7 PC and two Windows 2008 servers.
+
+I followed these instructions and installed Git, set up my SSH keys, passphrase and added my public key to GitHub. I then tried to SSH to GitHub using: ssh -T git@github.com and because 
+port 22 is blocked it failed to connect, returning the error message:
+
+	ssh: connect to host github.com port 22: Bad file number
+
+To make GitHub work on Windows, through port 443 and a HTTP proxy server – with proxy authentication (Intergrated) – the following worked for me:
+
+    Create a new file named config inside your ~/.ssh/ folder.
+    This is usually located here: C:\Users\USERNAME\.ssh\
+    Paste the following code into your config file.
+    ProxyCommand connect.exe -H proxy_user@proxy_server:proxy_port %h %p
+     
+    Host github.com
+    User git
+    Hostname ssh.github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+    Port 44
+
+    Update the ProxyCommand values:
+
+    proxy_user: your proxy username
+    proxy_server: your proxy server
+    proxy_port: your proxy port
+
+    %h and %p will be replaced on invoking proxy command with the target hostname and port specified to the SSH command.
+
+Creating this config file allowed me to successfully connect to GitHub at work.
+I do have to authenticate with my proxy password every time I connect though. If you know a secure way to store the proxy password please comment.

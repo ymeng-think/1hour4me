@@ -11,5 +11,6 @@
 @interface MEDrawer : NSObject
 
 + (void)drawImage:(UIImage *)image inRect:(CGRect)rect onContext:(CGContextRef)context;
++ (void)drawText:(NSString *)text withFont:(UIFont *)font inRect:(CGRect)rect onContext:(CGContextRef)context;
 
 @end

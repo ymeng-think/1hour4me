@@ -21,6 +21,28 @@
     CGContextDrawImage(context, rect, flipped);
 }
 
++ (void)drawText:(NSString *)text withFont:(UIFont *)font inRect:(CGRect)rect onContext:(CGContextRef)context {
+    CGColorRef whiteColor = [[UIColor whiteColor] CGColor];
+    
+    CGContextTranslateCTM(context, 0, rect.size.height);
+    CGContextScaleCTM(context, 1.0f, -1.0f);
+    UIGraphicsPushContext(context);
+    
+    CGContextSetStrokeColorWithColor(context, whiteColor);
+    CGContextSetFillColorWithColor(context, whiteColor);
+    CGContextSelectFont(context, [font.fontName UTF8String], font.pointSize, kCGEncodingMacRoman);
+    CGContextSetCharacterSpacing(context, 1);
+    CGContextSetTextDrawingMode(context, kCGTextFillStroke);
+    
+    CGSize textSize = [text sizeWithFont:font forWidth:rect.size.width lineBreakMode:UILineBreakModeWordWrap];
+    const char *str = [text UTF8String];
+    CGFloat x = (rect.size.width - textSize.width) / 2;
+    CGFloat y = (rect.size.height - textSize.height) / 2 + 4;
+    CGContextShowTextAtPoint(context, x, y, str, strlen(str));
+    
+    UIGraphicsPopContext();
+}
+
 + (CGImageRef)flip:(CGImageRef)im {
     CGSize sz = CGSizeMake(CGImageGetWidth(im), CGImageGetHeight(im));
     UIGraphicsBeginImageContext(sz);

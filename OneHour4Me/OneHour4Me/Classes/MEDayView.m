@@ -17,7 +17,6 @@
 
 + (UIImage *)imageBad;
 + (UIImage *)imageUnknown;
-+ (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context;
 
 @end
 
@@ -51,7 +50,7 @@
         CGContextRef context = UIGraphicsGetCurrentContext();
         
         [MEDrawer drawImage:backgroundImage inRect:rect onContext:context];
-        [MEDayView drawText:[NSString stringWithFormat:@"%i", day] inRect:rect onContext:context];
+        [MEDrawer drawText:[NSString stringWithFormat:@"%i", day] withFont:[MEFontLibrary sharedLibrary].helveticaSmallFont inRect:rect onContext:context];
     }
 }
 
@@ -69,29 +68,6 @@
         unknown = [UIImage imageNamed:IMAGE_DAY_UNKNOWN];
     }
     return unknown;
-}
-
-+ (void)drawText:(NSString *)text inRect:(CGRect)rect onContext:(CGContextRef)context {
-    UIFont *font = [MEFontLibrary sharedLibrary].helveticaSmallFont;
-    CGColorRef whiteColor = [[UIColor whiteColor] CGColor];
-    
-    CGContextTranslateCTM(context, 0, rect.size.height);
-    CGContextScaleCTM(context, 1.0f, -1.0f);
-    UIGraphicsPushContext(context);
-    
-    CGContextSetStrokeColorWithColor(context, whiteColor);
-    CGContextSetFillColorWithColor(context, whiteColor);
-    CGContextSelectFont(context, [font.fontName UTF8String], font.pointSize, kCGEncodingMacRoman);
-    CGContextSetCharacterSpacing(context, 1);
-    CGContextSetTextDrawingMode(context, kCGTextFillStroke);
-    
-    CGSize textSize = [text sizeWithFont:font forWidth:rect.size.width lineBreakMode:UILineBreakModeWordWrap];
-    const char *str = [text UTF8String];
-    CGFloat x = (rect.size.width - textSize.width) / 2;
-    CGFloat y = (rect.size.height - textSize.height) / 2 + 4;
-    CGContextShowTextAtPoint(context, x, y, str, strlen(str));
-    
-    UIGraphicsPopContext();
 }
 
 @end
