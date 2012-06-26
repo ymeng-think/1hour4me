@@ -50,7 +50,11 @@
         CGContextRef context = UIGraphicsGetCurrentContext();
         
         [MEDrawer drawImage:backgroundImage inRect:rect onContext:context];
-        [MEDrawer drawText:[NSString stringWithFormat:@"%i", day] withFont:[MEFontLibrary sharedLibrary].helveticaSmallFont inRect:rect onContext:context];
+        [MEDrawer drawText:[NSString stringWithFormat:@"%i", day] 
+                withConfig:MEFontConfigMake([MEFontLibrary sharedLibrary].helveticaSmallFont, [UIColor whiteColor], YES)
+                    inRect:rect 
+                   offsetY:4.0 
+                 onContext:context];
     }
 }
 

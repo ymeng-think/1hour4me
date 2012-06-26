@@ -8,9 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+typedef struct {
+    UIFont *font;
+    UIColor *color;
+    BOOL isBold;
+} MEFontConfig;
+
+CG_INLINE MEFontConfig
+MEFontConfigMake(UIFont *font, UIColor *color, BOOL isBold)
+{
+    MEFontConfig config = { .font = font, .color = color, .isBold = isBold };
+    return config;
+}
+
+
 @interface MEDrawer : NSObject
 
 + (void)drawImage:(UIImage *)image inRect:(CGRect)rect onContext:(CGContextRef)context;
-+ (void)drawText:(NSString *)text withFont:(UIFont *)font inRect:(CGRect)rect onContext:(CGContextRef)context;
++ (void)drawText:(NSString *)text withConfig:(MEFontConfig)config inRect:(CGRect)rect offsetY:(CGFloat)offsetY onContext:(CGContextRef)context;
 
 @end

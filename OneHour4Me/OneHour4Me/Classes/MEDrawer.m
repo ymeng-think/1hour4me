@@ -21,8 +21,8 @@
     CGContextDrawImage(context, rect, flipped);
 }
 
-+ (void)drawText:(NSString *)text withFont:(UIFont *)font inRect:(CGRect)rect onContext:(CGContextRef)context {
-    CGColorRef whiteColor = [[UIColor whiteColor] CGColor];
++ (void)drawText:(NSString *)text withConfig:(MEFontConfig)config inRect:(CGRect)rect offsetY:(CGFloat)offsetY onContext:(CGContextRef)context {
+    CGColorRef whiteColor = [config.color CGColor];
     
     CGContextTranslateCTM(context, 0, rect.size.height);
     CGContextScaleCTM(context, 1.0f, -1.0f);
@@ -30,14 +30,14 @@
     
     CGContextSetStrokeColorWithColor(context, whiteColor);
     CGContextSetFillColorWithColor(context, whiteColor);
-    CGContextSelectFont(context, [font.fontName UTF8String], font.pointSize, kCGEncodingMacRoman);
+    CGContextSelectFont(context, [config.font.fontName UTF8String], config.font.pointSize, kCGEncodingMacRoman);
     CGContextSetCharacterSpacing(context, 1);
-    CGContextSetTextDrawingMode(context, kCGTextFillStroke);
+    CGContextSetTextDrawingMode(context, config.isBold ? kCGTextFillStroke : kCGTextFill);
     
-    CGSize textSize = [text sizeWithFont:font forWidth:rect.size.width lineBreakMode:UILineBreakModeWordWrap];
+    CGSize textSize = [text sizeWithFont:config.font forWidth:rect.size.width lineBreakMode:UILineBreakModeWordWrap];
     const char *str = [text UTF8String];
     CGFloat x = (rect.size.width - textSize.width) / 2;
-    CGFloat y = (rect.size.height - textSize.height) / 2 + 4;
+    CGFloat y = (rect.size.height - textSize.height) / 2 + offsetY;
     CGContextShowTextAtPoint(context, x, y, str, strlen(str));
     
     UIGraphicsPopContext();

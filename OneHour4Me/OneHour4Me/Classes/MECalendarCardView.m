@@ -19,7 +19,6 @@
 
 + (UIImage *)imageColorMonth;
 + (UIImage *)imageGrayMonth;
-- (void)addMonthLabel;
 
 @end
 
@@ -31,8 +30,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
-        
-        [self addMonthLabel];
     }
     return self;
 }
@@ -47,21 +44,18 @@
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     [MEDrawer drawImage:backgroundImage inRect:rect onContext:context];
-}
-
-- (void)addMonthLabel {
-    label = [[MELabel alloc] initWithFrame:CGRectMake(10, 18, 30, 20)];
-    label.backgroundColor = [UIColor clearColor];
-    [label blackTextWithFont:[MEFontLibrary sharedLibrary].chalkboardSmallFont];
-    [self addSubview:label];
-    [label release];
+    
+    [MEDrawer drawText:[NSString stringWithFormat:@"%@", [MECalendar monthAbbreviation:self->month]] 
+            withConfig:MEFontConfigMake([MEFontLibrary sharedLibrary].chalkboardSmallFont, [UIColor blackColor], NO)
+                inRect:rect 
+               offsetY:0.0 
+             onContext:context];
 }
 
 - (void)setMonth:(NSInteger)m {
     NSParameterAssert(m >= 1 && m <= 12);
 
     self->month = m;
-    label.text = [MECalendar monthAbbreviation:self->month];
 }
 
 - (void)dealloc {
