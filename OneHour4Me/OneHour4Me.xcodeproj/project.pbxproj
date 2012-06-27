@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F02C38B158388DF001B66A5 /* MEMonthlyCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C38A158388DF001B66A5 /* MEMonthlyCalendarView.m */; };
+		6F02C38B158388DF001B66A5 /* MEMonthSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C38A158388DF001B66A5 /* MEMonthSelection.m */; };
 		6F02C38E15839453001B66A5 /* MECalendarCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C38D15839452001B66A5 /* MECalendarCardView.m */; };
 		6F02C391158395E2001B66A5 /* MEDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C390158395E2001B66A5 /* MEDrawer.m */; };
 		6F2666EF15627E8A004E56A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
@@ -77,8 +77,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6F02C389158388DF001B66A5 /* MEMonthlyCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEMonthlyCalendarView.h; sourceTree = "<group>"; };
-		6F02C38A158388DF001B66A5 /* MEMonthlyCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMonthlyCalendarView.m; sourceTree = "<group>"; };
+		6F02C389158388DF001B66A5 /* MEMonthSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MEMonthSelection.h; sourceTree = "<group>"; };
+		6F02C38A158388DF001B66A5 /* MEMonthSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMonthSelection.m; sourceTree = "<group>"; };
 		6F02C38C15839452001B66A5 /* MECalendarCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECalendarCardView.h; sourceTree = "<group>"; };
 		6F02C38D15839452001B66A5 /* MECalendarCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendarCardView.m; sourceTree = "<group>"; };
 		6F02C38F158395E1001B66A5 /* MEDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDrawer.h; sourceTree = "<group>"; };
@@ -232,8 +232,8 @@
 				6F3E01081571D5CF0085415C /* MELabel.m */,
 				6F8AEF7D156FE3EE001F0DF8 /* MEMonthView.h */,
 				6F8AEF7E156FE3EE001F0DF8 /* MEMonthView.m */,
-				6F02C389158388DF001B66A5 /* MEMonthlyCalendarView.h */,
-				6F02C38A158388DF001B66A5 /* MEMonthlyCalendarView.m */,
+				6F02C389158388DF001B66A5 /* MEMonthSelection.h */,
+				6F02C38A158388DF001B66A5 /* MEMonthSelection.m */,
 				6F5AC9DE155518B400DC48C4 /* MESignInView.h */,
 				6F5AC9DF155518B400DC48C4 /* MESignInView.m */,
 				6F5AC9ED155524DD00DC48C4 /* MEStickerView.h */,
@@ -600,7 +600,7 @@
 				6F3E01181571F9C40085415C /* MEWeekCell.m in Sources */,
 				6F434AF9157A322400616177 /* MEDayView.m in Sources */,
 				6F742245157F188A00847B50 /* MEWeekHeader.m in Sources */,
-				6F02C38B158388DF001B66A5 /* MEMonthlyCalendarView.m in Sources */,
+				6F02C38B158388DF001B66A5 /* MEMonthSelection.m in Sources */,
 				6F02C38E15839453001B66A5 /* MECalendarCardView.m in Sources */,
 				6F02C391158395E2001B66A5 /* MEDrawer.m in Sources */,
 			);

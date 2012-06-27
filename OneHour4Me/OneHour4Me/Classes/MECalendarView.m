@@ -9,7 +9,7 @@
 #import "MECalendar.h"
 #import "MECalendarView.h"
 #import "MEMonthView.h"
-#import "MEMonthlyCalendarView.h"
+#import "MEMonthSelection.h"
 
 #define STATUS_BAR_HEIGHT            20.0
 #define NAVIGATION_BAR_HEIGHT        44.0
@@ -70,10 +70,10 @@
     CGFloat y = eraserSlotView.frame.origin.y + eraserSlotView.frame.size.height;
     CGRect scrollFrame = CGRectMake(0, y, self.bounds.size.width, self.bounds.size.height - y - STATUS_BAR_HEIGHT - NAVIGATION_BAR_HEIGHT);
     
-    MEMonthlyCalendarView *monthlyCalendar = [[MEMonthlyCalendarView alloc] initWithFrame:scrollFrame];
-    [monthlyCalendar selectMonth:currentMonth];
-    [self addSubview:monthlyCalendar];
-    [monthlyCalendar release];
+    MEMonthSelection *monthlSelection = [[MEMonthSelection alloc] initWithFrame:scrollFrame];
+    [monthlSelection selectMonth:currentMonth];
+    [self addSubview:monthlSelection];
+    [monthlSelection release];
 }
 
 - (CGFloat)viewWidth {

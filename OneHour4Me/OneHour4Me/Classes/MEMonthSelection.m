@@ -7,14 +7,14 @@
 //
 
 #import "MECalendarCardView.h"
-#import "MEMonthlyCalendarView.h"
+#import "MEMonthSelection.h"
 
 #define MONTH_NUM              12
 #define CALENDAR_CARD_WIDTH    44.0
 #define CALENDAR_CARD_HEIGHT   44.0
 #define PADDING                16.0
 
-@interface MEMonthlyCalendarView ()
+@interface MEMonthSelection ()
 
 - (void)addAllCalendarCards;
 - (void)layoutAllCards;
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation MEMonthlyCalendarView
+@implementation MEMonthSelection
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
