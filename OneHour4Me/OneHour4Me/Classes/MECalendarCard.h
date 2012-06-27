@@ -8,16 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
-@class MELabel;
+@class MELabel, MECalendarCard;
+
+@protocol MECalendarCardDelegate
+
+- (void)didTap:(MECalendarCard *)card ofMonth:(NSInteger)month;
+
+@end
 
 @interface MECalendarCard : UIView {
     MELabel *label;
     
     NSInteger month;
     BOOL isSelected;
+    
+    id<NSObject, MECalendarCardDelegate> delegate;
 }
 
 @property (nonatomic, setter = setMonth:) NSInteger month;
 @property (nonatomic) BOOL isSelected;
+@property (nonatomic, retain) id<NSObject, MECalendarCardDelegate> delegate;
 
 @end

@@ -6,7 +6,6 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MECalendarCard.h"
 #import "MEMonthSelection.h"
 
 #define MONTH_NUM              12
@@ -47,6 +46,7 @@
 
     for (NSInteger i = 0; i < MONTH_NUM; i++) {
         MECalendarCard *card = [[MECalendarCard alloc] initWithFrame:CGRectZero];
+        card.delegate = self;
         [container addSubview:card];
         [card release];
     }
@@ -93,6 +93,20 @@
     
     CGFloat offsetX = startX - self.bounds.size.width + self.bounds.size.width / 2 + width / 2;
     self.contentOffset = CGPointMake(offsetX, 0.0);
+}
+
+- (void)didTap:(MECalendarCard *)card ofMonth:(NSInteger)month {
+    MECalendarCard *selectedCard = [self lookupSelectedCard];
+    if (selectedCard) {
+        selectedCard.isSelected = NO;
+    }
+    
+    card.isSelected = YES;
+    
+    [self centralizeCard:card];
+    
+    [selectedCard setNeedsDisplay];
+    [card setNeedsDisplay];
 }
 
 - (void)dealloc {

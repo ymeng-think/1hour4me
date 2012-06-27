@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MECalendarCard.h"
 
-@interface MEMonthSelection : UIScrollView {
+@interface MEMonthSelection : UIScrollView <MECalendarCardDelegate> {
     UIView *container;
     NSInteger selectedMonth;
 }

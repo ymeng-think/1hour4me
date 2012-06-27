@@ -19,17 +19,20 @@
 
 + (UIImage *)imageColorMonth;
 + (UIImage *)imageGrayMonth;
+- (void)listenTapEvent;
+- (void)didTap:(id)sender;
 
 @end
 
 @implementation MECalendarCard
 
-@synthesize month, isSelected;
+@synthesize month, isSelected, delegate;
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        [self listenTapEvent];
     }
     return self;
 }
@@ -56,6 +59,23 @@
     NSParameterAssert(m >= 1 && m <= 12);
 
     self->month = m;
+}
+
+- (void)listenTapEvent {
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap:)];
+    tap.numberOfTapsRequired = 1;
+    tap.numberOfTouchesRequired = 1;
+    [self addGestureRecognizer:tap];
+    [tap release];
+}
+
+- (void)didTap:(UITapGestureRecognizer *)recognizer {
+    if (!delegate) {
+        return;
+    }
+    
+    MECalendarCard *card = (MECalendarCard *)recognizer.view;
+    [delegate didTap:card ofMonth:card->month];
 }
 
 - (void)dealloc {
