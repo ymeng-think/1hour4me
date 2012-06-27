@@ -10,7 +10,7 @@
 
 @class MELabel;
 
-@interface MECalendarCardView : UIView {
+@interface MECalendarCard : UIView {
     MELabel *label;
     
     NSInteger month;

@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 ThoughtWorks. All rights reserved.
 //
 
-#import "MECalendarCardView.h"
+#import "MECalendarCard.h"
 #import "MEMonthSelection.h"
 
 #define MONTH_NUM              12
@@ -18,8 +18,8 @@
 
 - (void)addAllCalendarCards;
 - (void)layoutAllCards;
-- (MECalendarCardView *)lookupSelectedCard;
-- (void)centralizeCard:(MECalendarCardView *)card;
+- (MECalendarCard *)lookupSelectedCard;
+- (void)centralizeCard:(MECalendarCard *)card;
 
 @end
 
@@ -46,7 +46,7 @@
     [self addSubview:container];
 
     for (NSInteger i = 0; i < MONTH_NUM; i++) {
-        MECalendarCardView *card = [[MECalendarCardView alloc] initWithFrame:CGRectZero];
+        MECalendarCard *card = [[MECalendarCard alloc] initWithFrame:CGRectZero];
         [container addSubview:card];
         [card release];
     }
@@ -59,7 +59,7 @@
     CGFloat h = CALENDAR_CARD_HEIGHT;
     
     for (NSInteger i = 0; i < container.subviews.count; i++) {
-        MECalendarCardView *card = [container.subviews objectAtIndex:i];    
+        MECalendarCard *card = [container.subviews objectAtIndex:i];    
         
         card.frame = CGRectMake(x, y, w, h);
         card.month = i + 1;
@@ -69,13 +69,13 @@
 }
 
 - (void)selectMonth:(NSInteger)month {
-    MECalendarCardView *card = [container.subviews objectAtIndex:(month - 1)];
+    MECalendarCard *card = [container.subviews objectAtIndex:(month - 1)];
     card.isSelected = YES;
     selectedMonth = month;
 }
 
-- (MECalendarCardView *)lookupSelectedCard {
-    for (MECalendarCardView *card in container.subviews) {
+- (MECalendarCard *)lookupSelectedCard {
+    for (MECalendarCard *card in container.subviews) {
         if (card.isSelected) {
             return card;
         }
@@ -83,7 +83,7 @@
     return nil;
 }
 
-- (void)centralizeCard:(MECalendarCardView *)card {
+- (void)centralizeCard:(MECalendarCard *)card {
     if (card == nil) {
         return;
     }

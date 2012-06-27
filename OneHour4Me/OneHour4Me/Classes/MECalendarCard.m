@@ -7,7 +7,7 @@
 //
 
 #import "MECalendar.h"
-#import "MECalendarCardView.h"
+#import "MECalendarCard.h"
 #import "MEDrawer.h"
 #import "MEFontLibrary.h"
 #import "MELabel.h"
@@ -15,14 +15,14 @@
 #define IMAGE_COLOR_MONTH @"month-highlight.png"
 #define IMAGE_GRAY_MONTH  @"month.png"
 
-@interface MECalendarCardView ()
+@interface MECalendarCard ()
 
 + (UIImage *)imageColorMonth;
 + (UIImage *)imageGrayMonth;
 
 @end
 
-@implementation MECalendarCardView
+@implementation MECalendarCard
 
 @synthesize month, isSelected;
 
@@ -37,9 +37,9 @@
 - (void)drawRect:(CGRect)rect {
     UIImage *backgroundImage = nil;
     if (isSelected) {
-        backgroundImage = [MECalendarCardView imageColorMonth];
+        backgroundImage = [MECalendarCard imageColorMonth];
     } else {
-        backgroundImage = [MECalendarCardView imageGrayMonth];
+        backgroundImage = [MECalendarCard imageGrayMonth];
     }
     
     CGContextRef context = UIGraphicsGetCurrentContext();

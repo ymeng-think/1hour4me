@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F02C38B158388DF001B66A5 /* MEMonthSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C38A158388DF001B66A5 /* MEMonthSelection.m */; };
-		6F02C38E15839453001B66A5 /* MECalendarCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C38D15839452001B66A5 /* MECalendarCardView.m */; };
+		6F02C38E15839453001B66A5 /* MECalendarCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C38D15839452001B66A5 /* MECalendarCard.m */; };
 		6F02C391158395E2001B66A5 /* MEDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F02C390158395E2001B66A5 /* MEDrawer.m */; };
 		6F2666EF15627E8A004E56A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23B15539E57000AE8EC /* UIKit.framework */; };
 		6F2666F015627E8A004E56A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6FB23D15539E57000AE8EC /* Foundation.framework */; };
@@ -79,8 +79,8 @@
 /* Begin PBXFileReference section */
 		6F02C389158388DF001B66A5 /* MEMonthSelection.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MEMonthSelection.h; sourceTree = "<group>"; };
 		6F02C38A158388DF001B66A5 /* MEMonthSelection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEMonthSelection.m; sourceTree = "<group>"; };
-		6F02C38C15839452001B66A5 /* MECalendarCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MECalendarCardView.h; sourceTree = "<group>"; };
-		6F02C38D15839452001B66A5 /* MECalendarCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendarCardView.m; sourceTree = "<group>"; };
+		6F02C38C15839452001B66A5 /* MECalendarCard.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MECalendarCard.h; sourceTree = "<group>"; };
+		6F02C38D15839452001B66A5 /* MECalendarCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MECalendarCard.m; sourceTree = "<group>"; };
 		6F02C38F158395E1001B66A5 /* MEDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDrawer.h; sourceTree = "<group>"; };
 		6F02C390158395E2001B66A5 /* MEDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDrawer.m; sourceTree = "<group>"; };
 		6F2666ED15627E8A004E56A2 /* OneHour4MeGHTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneHour4MeGHTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,8 +222,8 @@
 				6F4818331584CCB500258C9E /* Utils */,
 				6F2B979B1554C9F20082E571 /* MEBackgroundView.h */,
 				6F2B979C1554C9F20082E571 /* MEBackgroundView.m */,
-				6F02C38C15839452001B66A5 /* MECalendarCardView.h */,
-				6F02C38D15839452001B66A5 /* MECalendarCardView.m */,
+				6F02C38C15839452001B66A5 /* MECalendarCard.h */,
+				6F02C38D15839452001B66A5 /* MECalendarCard.m */,
 				6F340E4D155D2067003722EA /* MECalendarView.h */,
 				6F340E4E155D2067003722EA /* MECalendarView.m */,
 				6F434AF7157A322400616177 /* MEDayView.h */,
@@ -601,7 +601,7 @@
 				6F434AF9157A322400616177 /* MEDayView.m in Sources */,
 				6F742245157F188A00847B50 /* MEWeekHeader.m in Sources */,
 				6F02C38B158388DF001B66A5 /* MEMonthSelection.m in Sources */,
-				6F02C38E15839453001B66A5 /* MECalendarCardView.m in Sources */,
+				6F02C38E15839453001B66A5 /* MECalendarCard.m in Sources */,
 				6F02C391158395E2001B66A5 /* MEDrawer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
