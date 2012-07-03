@@ -1,0 +1,30 @@
+Question:
+
+How To Read a File From Your Application Bundle
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Answer:
+
+First you need to add your file to the Resources folder of your Xcode project. Then you can access the file like this (assuming the file is called MyFile.txt):
+
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"MyFile" ofType:@"txt"];  
+    NSData *myData = [NSData dataWithContentsOfFile:filePath];  
+    if (myData) {  
+        // do something useful  
+    }  
+
+Here’s a complete example reading a help text file into a UIWebView.
+
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"HelpDoc" ofType:@"htm"];  
+    NSData *htmlData = [NSData dataWithContentsOfFile:filePath];  
+    if (htmlData) {  
+        [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:@"http://iphoneincubator.com"]];  
+    }  
+
+If you want to read the file into a string, which you can then display in a UITextView, for example, then do this:
+
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"important" ofType:@"txt"];  
+    if (filePath) {  
+        NSString *myText = [NSString stringWithContentsOfFile:filePath];  
+        if (myText) {  
+            textView.text= myText;  
+        }
