@@ -1,0 +1,7 @@
+Question:
+
+Where is the app location in simulator?
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Answer:
+
+~/Library/Application Support/iPhone Simulator/[version]/[app id]
